@@ -2453,7 +2453,7 @@
 
   ::-webkit-scrollbar-thumb {
     border-radius: 33.559px;
-    background: #523003;
+    background: #082555;
     box-shadow: 0px 2.685px 2.685px 0px rgba(0, 0, 0, 0.25);
   }
 
