@@ -358,31 +358,6 @@
     margin-left: 35px;
   }
 
-  /* .bg-activity-all {
-    background-image: url('<?php echo base_url("docs/k.bg-activity.jpg"); ?>');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 650px;
-    width: 1166px;
-    margin: auto;
-    margin-top: 200px;
-
-  } */
-
-  .bg-activity {
-    /* height: 650px;
-    width: 1166px;
-    margin: auto;
-    position: absolute; */
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    /* border-radius: 24px;
-    backdrop-filter: blur(3px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 4px rgba(8, 7, 16, 0.6); */
-  }
-
-
-
   .bg-activity {
     background-image: url('<?php echo base_url("docs/k.bg-activity2.jpg"); ?>');
     background-repeat: no-repeat;
@@ -519,6 +494,10 @@
 
   .mar-left-5 {
     margin-left: 5%;
+  }
+
+  .mar-left-3 {
+    margin-left: 3%;
   }
 
   .mar-top-19 {
@@ -673,7 +652,7 @@
   .slick-prev-otop,
   .slick-next-otop {
     position: absolute;
-    top: 42%;
+    top: 45%;
     transform: translateY(-50%);
     z-index: 1;
     /* ตั้งค่า z-index เพื่อให้ปุ่มอยู่ข้างบนของเนื้อหา */
@@ -784,11 +763,11 @@
   }
 
   .bg-page-bottom {
-    background-image: url('<?php echo base_url("docs/s.bg-page-btm2.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/k.bg-page-btm2.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1280px;
-    height: 2450px;
+    height: 2000px;
     z-index: 1;
   }
 
@@ -804,11 +783,11 @@
   }
 
   .font-e-service-25 {
-    color: #693708;
-    text-align: center;
-    text-shadow: 0px 2.668px 2.668px rgba(0, 0, 0, 0.25);
+    color: var(--text, #EEE);
+    -webkit-text-stroke-width: 0.30000001192092896;
+    -webkit-text-stroke-color: #000;
     font-family: Kanit;
-    font-size: 25.35px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -825,12 +804,14 @@
   }
 
   .bg-view {
-    border-radius: 19.306px;
-    background: rgba(255, 255, 255, 0.70);
-    width: 369px;
-    height: 329px;
+    border-radius: 34px;
+    border: 1px solid var(--Radial, #9E5313);
+    background: #FFF;
+    width: 350px;
+    height: 413px;
     flex-shrink: 0;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25); */
+
   }
 
   .head-view {
@@ -839,8 +820,8 @@
   }
 
   .font-view {
-    color: #693708;
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    color: #7FD9FF;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 24px;
     font-style: normal;
@@ -853,13 +834,11 @@
   }
 
   .card-view {
-    color: #693708;
+    color: #000;
     font-family: Kanit;
-    font-size: 14.764px;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 22.146px;
-    /* 150% */
+    font-weight: 300;
   }
 
   .bg-q-a {
@@ -919,13 +898,13 @@
   }
 
   .bg-like {
-    border-radius: 19.306px;
-    background: rgba(255, 255, 255, 0.70);
-    box-shadow: 0px 0px 5.678px 0px rgba(0, 0, 0, 0.25);
-    width: 370px;
-    height: 370px;
+    border-radius: 34px;
+    border: 1px solid var(--Style, #9E5313);
+    background: #FFF;
+    width: 339px;
+    height: 413px;
     flex-shrink: 0;
-    margin-top: 35px;
+    margin-left: 20px;
   }
 
   .head-like {
@@ -934,8 +913,8 @@
   }
 
   .font-like {
-    color: #693708;
-    text-shadow: 0px 0px 5.678px rgba(0, 0, 0, 0.25);
+    color: #7FD9FF;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 24px;
     font-style: normal;
@@ -945,12 +924,11 @@
 
   .content-like {
     padding-top: 25px;
-    padding-left: 40px;
+    padding-left: 30px;
   }
 
   .border-like {
-    border: 1.334px solid #693708;
-    /* ให้ border เป็นสีที่โปร่ง */
+    border: 1.2px solid #006DBC;
   }
 
 
@@ -962,13 +940,14 @@
   }
 
   .font-like-label {
-    color: #693708;
-    text-shadow: 0px 1.334px 2.668px rgba(0, 0, 0, 0.25);
-    font-family: Kanit;
-    font-size: 20px;
+    color: #000;
+    text-shadow: 0px 1.2px 2.399px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 16.795px;
     font-style: normal;
     font-weight: 300;
-    line-height: 33.356px;
+    line-height: 29.991px;
+    /* 178.571% */
   }
 
   .progress-bar {
@@ -987,18 +966,18 @@
 
   /* swipper link icon ************************************************** */
   .swiper {
-    background-image: url('<?php echo base_url("docs/s.bg-link.png"); ?>');
+    /* background-image: url('<?php echo base_url("docs/s.bg-link.png"); ?>');
     background-size: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     width: 1000px;
     height: 715px;
     padding-top: 280px;
     padding-bottom: 280px;
     padding-left: 60px;
     padding-right: 30px;
-    margin-top: -200px;
     z-index: 5;
+    margin-top: -240px;
   }
 
   .custom-button-prev {
@@ -1073,37 +1052,40 @@
 
 
   .footer {
-    background-image: url('<?php echo base_url("docs/s.bg-footer.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.bg-footer.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
-    min-height: 425px;
+    min-height: 284px;
     width: 1280px;
     position: relative;
     z-index: 2;
     /* เพิ่มบรรทัดนี้ */
-    margin-top: -350px;
+    margin-top: -135px;
   }
 
   .credit {
     /* ให้ข้อความที่อยู่ข้างใน div นี้ไปอยู่ชิดล่างกลาง */
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 35%;
     transform: translateX(-25%);
     text-align: center;
     font-size: 24px;
     width: 1000px;
+    height: auto;
+    padding-top: 150px;
   }
 
   .font-footer {
-    color: #693708;
+    color: #EEE;
     text-align: center;
+    text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
-    font-size: 20px;
+    font-size: 18.75px;
     font-style: normal;
-    line-height: 33.366px;
-    /* 178.571% */
+    font-weight: 400;
+    line-height: normal;
   }
 
 
@@ -2891,5 +2873,49 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+  }
+
+  .bg-qa-list {
+    background-image: url('<?php echo base_url("docs/k-bg-qa-list.png"); ?>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 513px;
+    width: 702px;
+    margin: auto;
+    padding: 95px 22px;
+  }
+
+  .bg-content-qa-list {
+    padding: 0 16.529px;
+    align-items: center;
+    gap: 38.018px;
+    align-self: stretch;
+    border-radius: 82.647px;
+    border: 1px solid #006DBC;
+    background: #FFF;
+    width: 653px;
+    height: 42px;
+  }
+
+  .font-qa-list-content {
+    color: #000;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Kanit;
+    font-size: 14.876px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .font-qa-list-content-name {
+    color: #000;
+    leading-trim: both;
+    text-edge: cap;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Kanit;
+    font-size: 13.224px;
+    font-style: normal;
+    font-weight: 300;
   }
 </style>

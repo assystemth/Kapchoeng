@@ -32,8 +32,12 @@
   <!-- สไลด์ Slick Carousel -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
+<!-- facebook -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="MXdATBI7"></script>
+
   <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
-  <title>องค์การบริหารส่วนตำบลกาบเชิง</title>
+  <title>เทศบาลตำบลกาบเชิง</title>
 </head>
 
 <!-- Messenger ปลั๊กอินแชท Code -->

@@ -3,13 +3,10 @@
         var obj = {
             values: [
                 <?php echo $onlineUsersDay; ?>,
-                <?php echo $onlineUsersAll; ?>,
-                <?php echo $onlineUsersYear; ?>,
                 <?php echo $onlineUsersMonth; ?>,
-                <?php echo (!empty($onlineUsersWeek) ? $onlineUsersWeek[0]->user_count : 0); ?>,
                 <?php echo $onlineUsersCount; ?>
             ],
-            colors: ['#D7D7D7', '#D6AE8B ', '#FFBE5C', '#FFE98E', '#FFE1BA', '#FFE4E2'],
+            colors: ['#AEE1F7', '#FFDF63', '#1D4A95'],
             animation: true,
             animationSpeed: 10,
             fillTextData: false,

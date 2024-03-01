@@ -26,6 +26,8 @@ class Home extends CI_Controller
 		$this->load->model('like_model');
 		$this->load->model('log_users_model');
 
+		$this->load->model('q_a_model');
+
 		$this->load->model('publicize_ita_model');
 	}
 
@@ -98,6 +100,8 @@ class Home extends CI_Controller
 
 		$data['qTravel'] = $this->travel_model->travel_frontend();
 		$data['qOtop'] = $this->otop_model->otop_frontend();
+
+		$data['qQ_a'] = $this->q_a_model->q_a_frontend();
 
 		$data['qPublicize_ita'] = $this->publicize_ita_model->publicize_ita_frontend();
 

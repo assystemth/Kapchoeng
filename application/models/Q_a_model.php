@@ -153,4 +153,11 @@ class Q_a_model extends CI_Model
         $query = $this->db->get('tbl_q_a');
         return $query->result();
     }
+    public function q_a_frontend()
+    {
+        $this->db->order_by('q_a_id', 'DESC');
+        $this->db->limit(6);
+        $query = $this->db->get('tbl_q_a');
+        return $query->result();
+    }
 }
