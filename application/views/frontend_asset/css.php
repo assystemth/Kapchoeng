@@ -461,10 +461,21 @@
   }
 
   .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    color: #000;
+    font-family: Kanit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .dropdown-item:hover {
+    color: #0D699C;
+    font-family: Kanit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   .no-bullets {
@@ -649,12 +660,44 @@
     background-position: center center;
     width: 1280px;
     height: 727px;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .otop-content {
-    padding-top: 25%;
+    padding-top: 100px;
+    max-width: 1120px;
+  }
+
+  .slick-prev-otop,
+  .slick-next-otop {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    z-index: 1;
+    /* ตั้งค่า z-index เพื่อให้ปุ่มอยู่ข้างบนของเนื้อหา */
+    cursor: pointer;
+  }
+
+  .slick-prev-otop {
+    left: -60px;
+    /* ปรับระยะห่างด้านซ้าย */
+  }
+
+  .slick-next-otop {
+    right: -110px;
+    /* ปรับระยะห่างด้านขวา */
+  }
+
+  .slick-carousel-otop {
+    margin: 20px 0;
+    /* ปรับระยะห่างด้านบนและด้านล่างของเนื้อหา */
+  }
+
+  .slick-carousel-otop img {
+    margin-right: 50px;
+    /* ระยะห่างระหว่างรูปภาพ */
   }
 
   .zoom-otop:hover img {
@@ -665,26 +708,26 @@
   }
 
   .bg-travel {
-    background-image: url('<?php echo base_url("docs/s.bg-travel5.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.bg-travel.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1280px;
-    height: 734px;
+    height: 744px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .travel-content {
-    max-width: 1050px;
-    margin-top: 140px;
+    max-width: 1120px;
+    margin-top: 110px;
     /* ปรับตามความต้องการ */
   }
 
   .slick-prev,
   .slick-next {
     position: absolute;
-    top: 40%;
+    top: 42%;
     transform: translateY(-50%);
     z-index: 1;
     /* ตั้งค่า z-index เพื่อให้ปุ่มอยู่ข้างบนของเนื้อหา */
@@ -697,7 +740,7 @@
   }
 
   .slick-next {
-    right: -85px;
+    right: -110px;
     /* ปรับระยะห่างด้านขวา */
   }
 
@@ -722,11 +765,11 @@
     margin-left: -20px;
   }
 
-
-
   .image-with-shadow-travel {
-    border-radius: 24px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 30.145px;
+    border: 4.433px solid var(--Style, #D39B2C);
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat, url(<path-to-image>), lightgray 50% / cover no-repeat;
+    box-shadow: 3.546px 3.546px 8.866px 0px rgba(0, 0, 0, 0.25);
   }
 
   .up-down {
@@ -2837,5 +2880,16 @@
     margin-top: 35px;
     padding-left: 23px;
     padding-top: 17px;
+  }
+
+  .text-content-travel {
+    color: #FAE370;
+    text-shadow: -1px 0 #014674, 0 2px #014674,
+      2px 0 #014674, 0 -1px #014674;
+    font-family: Kanit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 </style>

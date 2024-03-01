@@ -694,7 +694,6 @@ class Travel_model extends CI_Model
         $this->db->from('tbl_travel');
         $this->db->where('tbl_travel.travel_status', 'show');
         $this->db->order_by('travel_id', 'DESC');
-        $this->db->limit(9);
         $query = $this->db->get();
         return $query->result();
     }

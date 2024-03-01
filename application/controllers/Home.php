@@ -21,6 +21,7 @@ class Home extends CI_Controller
 		$this->load->model('loadform_model');
 
 		$this->load->model('travel_model');
+		$this->load->model('otop_model');
 
 		$this->load->model('like_model');
 		$this->load->model('log_users_model');
@@ -96,6 +97,7 @@ class Home extends CI_Controller
 		$data['qLoadform'] = $this->loadform_model->loadform_frontend();
 
 		$data['qTravel'] = $this->travel_model->travel_frontend();
+		$data['qOtop'] = $this->otop_model->otop_frontend();
 
 		$data['qPublicize_ita'] = $this->publicize_ita_model->publicize_ita_frontend();
 

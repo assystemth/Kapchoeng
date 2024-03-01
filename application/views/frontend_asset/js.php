@@ -42,8 +42,20 @@
             autoplay: true,
             autoplaySpeed: 5000,
             arrows: true,
-            prevArrow: '<img src="docs/s.previous-travel.png" class="slick-prev">',
-            nextArrow: '<img src="docs/s.next-travel.png" class="slick-next">'
+            prevArrow: '<img src="docs/k.pre-travel.png" class="slick-prev">',
+            nextArrow: '<img src="docs/k.next-travel.png" class="slick-next">'
+        });
+    });
+
+    $(document).ready(function() {
+        $(".slick-carousel-otop").slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            arrows: true,
+            prevArrow: '<img src="docs/k.pre-travel.png" class="slick-prev-otop">',
+            nextArrow: '<img src="docs/k.next-travel.png" class="slick-next-otop">'
         });
     });
     // ****************************************************************************

@@ -170,7 +170,7 @@
                     <!-- <li>
                             <div class="dropdown-item mb-3 mt-5"><img class="mx-5" src="docs/s.navmid-head1.png"></div>
                         </li> -->
-                    <li><a class="dropdown-item" href="<?php echo site_url('Pages/history'); ?>" onmouseover="changeImage(`<?php echo base_url('docs/s.item-nav-mid1.0-hover.png'); ?>`)" onmouseout="restoreImage(`<?php echo base_url('docs/s.item-nav-mid1.0.png'); ?>`)"><img class="mar-left-9" src="docs/s.item-nav-mid1.0.png"></a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/history'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;test</a></li>
                     <li><a class="dropdown-item" href="<?php echo site_url('Pages/gci'); ?>" onmouseover="changeImage(`<?php echo base_url('docs/s.item-nav-mid1.1-hover.png'); ?>`)" onmouseout="restoreImage(`<?php echo base_url('docs/s.item-nav-mid1.1.png'); ?>`)"><img class="mar-left-9" src="docs/s.item-nav-mid1.1.png"></a></li>
                     <li><a class="dropdown-item" href="<?php echo site_url('Pages/vision'); ?>" onmouseover="changeImage(`<?php echo base_url('docs/s.item-nav-mid1.2-hover.png'); ?>`)" onmouseout="restoreImage(`<?php echo base_url('docs/s.item-nav-mid1.2.png'); ?>`)"><img class="mar-left-9" src="docs/s.item-nav-mid1.2.png"></a></li>
                     <li><a class="dropdown-item" href="<?php echo site_url('Pages/authority'); ?>" onmouseover="changeImage(`<?php echo base_url('docs/s.item-nav-mid1.3-hover.png'); ?>`)" onmouseout="restoreImage(`<?php echo base_url('docs/s.item-nav-mid1.3.png'); ?>`)"><img class="mar-left-9" src="docs/s.item-nav-mid1.3.png"></a></li>
@@ -460,7 +460,7 @@
                 <?php } ?>
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('pages/news'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -530,7 +530,7 @@
                 <?php } ?>
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('Pages/order'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -563,7 +563,7 @@
                 <?php } ?>
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('Pages/announce'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -615,7 +615,7 @@
                 <?php } ?>
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('Pages/procurement'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -674,7 +674,7 @@
 
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('Pages/e_gp'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -707,7 +707,7 @@
                 <?php } ?>
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('Pages/p_reb'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -740,7 +740,7 @@
                 <?php } ?>
                 <div class="d-flex justify-content-center" style="margin-top: -28px;">
                     <a href="<?php echo site_url('Pages/p_rpo'); ?>">
-                        <img src="docs/s.btn-all.png">
+                        <img src="docs/k.btn-all.png">
                     </a>
                 </div>
             </div>
@@ -754,46 +754,20 @@
             <?php foreach ($qTravel as $travel) { ?>
                 <div class="text-center zoom-otop mt-5">
                     <a href="<?php echo site_url('Pages/travel_detail/' . $travel->travel_id); ?>">
-                        <img src="<?php echo base_url('docs/img/' . $travel->travel_img); ?>" width="234px" height="295px" class="image-with-shadow-travel">
+                        <img src="<?php echo base_url('docs/img/' . $travel->travel_img); ?>" width="270px" height="254px" class="image-with-shadow-travel">
                     </a>
                     <br>
-                    <div class="d-flex justify-content-center" style="margin-left: 25px;">
+                    <div class="d-flex justify-content-center" style="margin-left: -25px; width:270px;">
                         <a class="underline" href="<?php echo site_url('Pages/travel_detail/' . $travel->travel_id); ?>">
-                            <?php
-                            $imageName = '';
-                            switch ($travel->travel_id) {
-                                case 1:
-                                    $imageName = 's.text-travel1.png';
-                                    break;
-                                case 2:
-                                    $imageName = 's.text-travel2.png';
-                                    break;
-                                case 3:
-                                    $imageName = 's.text-travel3.png';
-                                    break;
-                                case 4:
-                                    $imageName = 's.text-travel4.png';
-                                    break;
-                                case 5:
-                                    $imageName = 's.text-travel5.png';
-                                    break;
-                                case 6:
-                                    $imageName = 's.text-travel6.png';
-                                    break;
-                                default:
-                                    $imageName = 'default.jpg';
-                                    break;
-                            }
-                            ?>
-                            <img src="<?php echo base_url('docs/' . $imageName); ?>" alt="Image for ID <?php echo $travel->travel_id; ?>">
+                            <span class="text-content-travel"><?= $travel->travel_name; ?></span>
                         </a>
                     </div>
                 </div>
             <?php } ?>
         </div>
-        <div class="d-flex justify-content-end" style="margin-top: 3%;">
+        <div class="d-flex justify-content-center" style="margin-top: 3%;">
             <a href="<?php echo site_url('pages/travel'); ?>">
-                <img src="docs/s.btn-all.png">
+                <img src="docs/k.btn-all.png">
             </a>
         </div>
     </div>
@@ -801,50 +775,28 @@
 
 <div class="bg-otop">
     <div class="otop-content">
-        <div class="text-center">
-            <div class="row">
-                <div class="col-3" style="margin-top: -50px;">
-                    <a href="<?php echo site_url('pages/otop'); ?>" class="zoom-otop">
-                        <img src="docs\s.item-otop1.png">
+        <div class="slick-carousel-otop">
+            <?php foreach ($qOtop as $otop) { ?>
+                <div class="text-center zoom-otop mt-5">
+                    <a href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
+                        <img src="<?php echo base_url('docs/img/' . $otop->otop_img); ?>" width="270px" height="336px" class="image-with-shadow-travel">
                     </a>
-                </div>
-                <div class="col-3" style="padding-top: 0;">
-                    <a href="<?php echo site_url('pages/otop'); ?>" class="zoom-otop">
-                        <img src="docs\s.item-otop2.png">
-                    </a>
-                </div>
-                <div class="col-3" style="padding-top: 40px;">
-                    <a href="<?php echo site_url('pages/otop'); ?>" class="zoom-otop">
-                        <img src="docs\s.item-otop3.png">
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="<?php echo site_url('pages/otop'); ?>" class="zoom-otop">
-                        <img src="docs\s.item-otop4.png">
-                    </a>
-                    <div class="d-flex justify-content-center" style="margin-top: 8%;">
-                        <a href="<?php echo site_url('pages/otop'); ?>">
-                            <img src="docs/s.btn-all.png">
+                    <br>
+                    <div class="d-flex justify-content-center" style="margin-left: -25px; width:270px;">
+                        <a class="underline" href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
+                            <span class="text-content-travel"><?= $otop->otop_name; ?></span>
                         </a>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
-    </div>
-</div>
-
-
-<!-- <div class="bg-travel">
-    <div class="travel-content text-center">
-        <div class="up-down">
-            <a href="<?php echo site_url('pages/travel'); ?>">
-                <img class="mark-logo mt-5" src="docs\icon-map.png" width="210px" height="342px">
+        <div class="d-flex justify-content-center">
+            <a href="<?php echo site_url('pages/otop'); ?>">
+                <img src="docs/k.btn-all.png">
             </a>
         </div>
     </div>
-</div> -->
-
-
+</div>
 
 <div class="bg-page-bottom">
     <div class="d-flex justify-content-center" style="padding-top: 120px;">
@@ -881,6 +833,13 @@
                 <img src="docs/s.menu-e-service4.png">
                 <br>
                 <span class="font-e-service-25">กระทู้ถาม-ตอบ</span>
+            </a>
+        </div>
+        <div class="col-2 text-center">
+            <a href="<?php echo site_url('Pages/contact'); ?>" class="zoom-otop">
+                <img src="docs/s.menu-e-service5.png">
+                <br>
+                <span class="font-e-service-25">ติดต่อสอบถาม</span>
             </a>
         </div>
         <div class="col-2 text-center">
@@ -1007,14 +966,14 @@
                                     <input class="form-check-input border-like" type="radio" value="พอใช้" id="flexCheckDefault4" name="like_name" onclick="toggleCheckbox('flexCheckDefault4')" />
                                     <label class="form-check-label font-like-label" for="พอใช้">พอใช้</label>
                                 </div>
-                                <button type="button" class="btn" id="confirmButton"><img src="docs/s.btn-sent.png"></button>
+                                <button type="button" class="btn" id="confirmButton"><img src="docs/k.btn-sent.png"></button>
                                 <div id="submitSection" style="display:none;">
                                     <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
                                     <div class="form-group row mt-1">
                                         <div class="col-3">
                                         </div>
                                         <div class="col-9">
-                                            <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/s.btn-sent.png"></button>
+                                            <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/k.btn-sent.png"></button>
                                         </div>
                                     </div>
                                 </div>
@@ -1049,7 +1008,7 @@
                             </div>
                         </div>
                         <div style="margin-top: -45px; margin-left: 170px;">
-                            <a class="btn" onclick="showContentLikeDetail()"><img src="docs/s.btn-score.png"></a>
+                            <a class="btn" onclick="showContentLikeDetail()"><img src="docs/k.btn-score.png"></a>
                         </div>
                     </div>
                 </div>
@@ -1095,7 +1054,7 @@
                             <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableLoginButton"></div>
                         </div>
                         <div class="d-flex justify-content-end mt-3">
-                            <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/s.btn-sent.png"); ?>"></button>
+                            <button type="submit" id="loginBtn" class="btn" disabled><img src="<?php echo base_url("docs/k.btn-sent.png"); ?>"></button>
                         </div>
                     </form>
                 </div>
