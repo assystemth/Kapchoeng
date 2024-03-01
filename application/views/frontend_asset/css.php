@@ -2460,10 +2460,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #888;
   }
-
   /* scroll bar เลื่อนซ้ายขวา เลื่อนบนล่าง ****************************************************** */
-
-
 
   .content-e-service {
     margin-top: 50px;
