@@ -1,3 +1,4 @@
+<!-- --------------------- -->
 <div class="bg-pages">
     <div class="row pad-path">
         <div class="path1-1">
@@ -10,10 +11,11 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
-                <span class="font-pages-head">แผนพัฒนาบุคลากร 3 ปี</span>
+                <span class="font-pages-head">#</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
+        <!-- -------------------- -->
         <?php
         $count = count($query);
         $itemsPerPage = 10; // จำนวนรายการต่อหน้า
