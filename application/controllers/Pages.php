@@ -940,7 +940,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/plan_pdl', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -955,7 +955,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar_other');
+			$this->load->view('frontend_templat/navbar');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -967,7 +967,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/plan_pdl_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1024,7 +1024,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/plan_pds3y', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -1039,7 +1039,7 @@ class Pages extends CI_Controller
 		if (!$data['rsData']) {
 			$this->load->view('frontend_templat/header');
 			$this->load->view('frontend_asset/css');
-			$this->load->view('frontend_templat/navbar_other');
+			$this->load->view('frontend_templat/navbar');
 			$this->load->view('frontend/empty_detail_pages');
 			$this->load->view('frontend_asset/js');
 			$this->load->view('frontend_templat/footer');
@@ -1051,7 +1051,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/plan_pds3y_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
@@ -2822,7 +2822,7 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/all_web');
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');

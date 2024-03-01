@@ -1088,7 +1088,6 @@
     line-height: normal;
   }
 
-
   .map-home {
     border: 6px solid white;
     border-radius: 15px;
@@ -1116,13 +1115,13 @@
   }
 
   .bg-pages {
-    background-image: url('<?php echo base_url("docs/s.bg-other.jpg"); ?>');
+    /* background-image: url('<?php echo base_url("docs/s.bg-other.jpg"); ?>');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100%; */
+    background-color: #fff;
     width: 1280px;
-    height: 2000px;
+    height: 1520px;
     position: relative;
-    margin-top: 230px;
   }
 
   .bg-pages-news {
@@ -1147,16 +1146,16 @@
 
 
   .bg-pages-in {
-    background-color: white;
+    /* background-color: white; */
     margin-top: 40px;
     margin-bottom: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
     border-radius: 22.86px;
-    background: rgba(253, 245, 225, 0.80);
-    box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25);
-    height: 1400px;
-    width: 1069px;
+    /* background: rgba(253, 245, 225, 0.80);
+    box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25); */
+    height: 1420px;
+    width: 1280px;
     padding-top: 45px;
   }
 
@@ -1207,14 +1206,14 @@
   }
 
   .bg-pages-in-web {
-    background-color: white;
+    /* background-color: white; */
     margin-top: 40px;
     margin-bottom: 5%;
     padding-left: 5%;
     padding-right: 2%;
     border-radius: 22.86px;
-    background: rgba(253, 245, 225, 0.80);
-    box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25);
+    /* background: rgba(253, 245, 225, 0.80);
+    box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25); */
     height: 1470px;
     width: 1069px;
     padding-top: 25px;
@@ -1258,12 +1257,17 @@
     width: 1069px;
   }
 
+  .pad-path {
+    margin-left: 60px;
+    margin-top: 30px;
+  }
+
   .path1-1 {
-    background-image: url('<?php echo base_url("docs/s.path1-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.path1-1.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 147px;
-    height: 40px;
+    width: 92px;
+    height: 28px;
     z-index: 3;
     text-align: center;
     display: flex;
@@ -1272,26 +1276,13 @@
   }
 
   .path2-1 {
-    background-image: url('<?php echo base_url("docs/s.path2-1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.path2-1.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 176px;
-    height: 40px;
+    width: 131px;
+    height: 28px;
     z-index: 2;
-    margin-left: -27px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .path1-2 {
-    background-image: url('<?php echo base_url("docs/s.path1-2.png"); ?>');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 154px;
-    height: 40px;
-    z-index: 3;
+    margin-left: -13px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1299,26 +1290,13 @@
   }
 
   .path2-2 {
-    background-image: url('<?php echo base_url("docs/s.path2-2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.path2-2.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 194px;
-    height: 40px;
+    width: 160px;
+    height: 28px;
     z-index: 2;
-    margin-left: -27px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .path1-3 {
-    background-image: url('<?php echo base_url("docs/s.path1-3.png"); ?>');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 164px;
-    height: 40px;
-    z-index: 3;
+    margin-left: -13px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1326,13 +1304,13 @@
   }
 
   .path2-3 {
-    background-image: url('<?php echo base_url("docs/s.path2-3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.path2-3.png"); ?>');
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 214px;
-    height: 40px;
+    width: 200px;
+    height: 28px;
     z-index: 2;
-    margin-left: -27px;
+    margin-left: -13px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1355,24 +1333,20 @@
 
   .font-path-1 {
     color: #FFF;
-    text-align: center;
-    text-shadow: 0.534px 0.534px 0.534px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-left: -15px;
+    margin-left: -10px;
   }
 
   .font-path-2 {
-    color: #693708;
-    text-align: center;
-    text-shadow: 0.534px 0.534px 0.534px rgba(0, 0, 0, 0.25);
+    color: #002D53;
     font-family: Kanit;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     line-height: normal;
     margin-left: -10px;
   }
@@ -1396,12 +1370,11 @@
   }
 
   .head-pages {
-    background-image: url('<?php echo base_url("docs/s.head-pages1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.head-pages.png"); ?>');
     background-size: 100%;
-    width: 403px;
-    height: 85px;
-    margin-top: 35px;
-    margin-bottom: 50px;
+    width: 488px;
+    height: 96px;
+    margin-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1409,12 +1382,11 @@
   }
 
   .head-pages-two {
-    background-image: url('<?php echo base_url("docs/s.head-pages2.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.head-pages2.png"); ?>');
     background-size: 100%;
-    width: 555px;
-    height: 85px;
-    margin-top: 35px;
-    margin-bottom: 50px;
+    width: 570px;
+    height: 96px;
+    margin-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1422,12 +1394,11 @@
   }
 
   .head-pages-three {
-    background-image: url('<?php echo base_url("docs/s.head-pages3.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.head-pages3.png"); ?>');
     background-size: 100%;
-    width: 699px;
-    height: 85px;
-    margin-top: 35px;
-    margin-bottom: 50px;
+    width: 690px;
+    height: 96px;
+    margin-top: 70px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1448,16 +1419,13 @@
   } */
 
   .font-pages-head {
-    color: #FFF;
-    leading-trim: both;
-    text-edge: cap;
-    text-shadow: 0px 2.115px 2.115px rgba(0, 0, 0, 0.25);
+    color: var(--main, #082555);
+    text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
     font-size: 30px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 26.443px;
-    /* 88.143% */
+    font-weight: 500;
+    line-height: 26.494px;
   }
 
   .font-pages-head-long {
@@ -1787,26 +1755,23 @@
   }
 
   .font-page-detail-view-news {
-    color: #693708;
-    text-align: right;
-    leading-trim: both;
-    text-edge: cap;
+    color: #6D758F;
+    text-align: center;
     font-family: Kanit;
-    font-size: 20.053px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 33.421px;
-    /* 166.667% */
+    line-height: normal;
   }
 
   .font-pages-content {
     color: #000;
     font-family: Kanit;
-    font-size: 24px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
     margin-left: -15px;
+    padding-top: 7px;
   }
 
   .font-otop-head {
@@ -1855,14 +1820,12 @@
   }
 
   .font-head-all-web {
-    color: #FFC23B;
-    text-align: center;
+    color: var(--main, #082555);
     font-family: Kanit;
     font-size: 22px;
     font-style: normal;
     font-weight: 500;
-    line-height: 8px;
-    /* 36.364% */
+    line-height: normal;
   }
 
   .font-content-all-web {
@@ -2057,13 +2020,13 @@
   }
 
   .span-time-pages-news {
-    color: #693708;
+    color: #6D758F;
     font-family: Kanit;
     font-size: 20px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: normal;
-    margin-top: 5px;
+    margin-top: 6px;
     margin-left: 15px;
   }
 
@@ -2157,9 +2120,9 @@
   }
 
   .pagination .page-item.active .page-link {
-    background-color: #065F39;
+    background-color: #082555;
     /* สีเขียว */
-    border-color: #065F39;
+    border-color: #082555;
     color: #fff;
   }
 
@@ -2265,9 +2228,8 @@
   }
 
   .pages-select-pdf {
-    border-radius: 100px;
-    border: 0.67px solid var(--02, #ECB23F);
-    background: #FDF5E1;
+    border-radius: 34px;
+    background: var(--PDF, rgba(159, 218, 255, 0.25));
     padding: 15px;
     margin-bottom: 15px;
     width: 100%;
@@ -2416,7 +2378,7 @@
   /* scroll bar เลื่อนซ้ายขวา เลื่อนบนล่าง ****************************************************** */
   .scrollable-container {
     margin-top: 30px;
-    max-height: 700px;
+    max-height: 1000px;
     overflow-y: scroll;
     overflow-x: hidden;
     margin-bottom: 40px;
@@ -2627,7 +2589,7 @@
   }
 
   .container-pages {
-    padding-left: 120px;
+    padding-left: 110px;
     padding-right: 105px;
   }
 
@@ -2655,14 +2617,12 @@
   }
 
   .font-gi-head {
-    color: #000;
-    text-align: center;
-    text-shadow: 0.536px 0.536px 0.536px rgba(0, 0, 0, 0.25);
+    color: #082555;
     font-family: Kanit;
     font-size: 24px;
     font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-weight: 500;
+    line-height: 24px;
   }
 
   .font-gi-content {
@@ -2671,7 +2631,7 @@
     font-size: 22px;
     font-style: normal;
     font-weight: 300;
-    line-height: 40.349px;
+    line-height: 24px;
   }
 
   .font-gi-target {
@@ -2679,9 +2639,8 @@
     font-family: Kanit;
     font-size: 22px;
     font-style: normal;
-    font-weight: 400;
-    line-height: 40.349px;
-    /* 183.406% */
+    font-weight: 300;
+    line-height: 24px;
   }
 
   .pad-left-35 {
