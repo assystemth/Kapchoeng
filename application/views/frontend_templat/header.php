@@ -27,7 +27,7 @@
 
  <!-- Cookie Consent by https://www.cookiewow.com -->
  <script type="text/javascript" src="https://cookiecdn.com/cwc.js"></script>
-    <script id="cookieWow" type="text/javascript" src="https://cookiecdn.com/configs/8FLKNMDqdrFuRXTUXmhCbTLR" data-cwcid="8FLKNMDqdrFuRXTUXmhCbTLR"></script>
+    <script id="cookieWow" type="text/javascript" src="https://cookiecdn.com/configs/6QsrB4Cv2uYE2WoAmghffBjz" data-cwcid="6QsrB4Cv2uYE2WoAmghffBjz"></script>
 
   <!-- สไลด์ Slick Carousel -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />

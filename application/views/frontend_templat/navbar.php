@@ -28,9 +28,8 @@
         }
     }
 </style>
-<nav class="navbar navbar2 navbar-expand-lg navbar-dark navbar-center sticky-top" id="navbar2">
+<!-- <nav class="navbar navbar2 navbar-expand-lg navbar-dark navbar-center sticky-top" id="navbar2">
     <div class="container">
-        <!-- <div class="collapse navbar-collapse d-flex justify-content-center"> -->
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -50,7 +49,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <script>
     window.onscroll = function() {

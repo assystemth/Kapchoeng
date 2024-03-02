@@ -781,7 +781,7 @@
     <div class="travel-content">
         <div class="slick-carousel ">
             <?php foreach ($qTravel as $travel) { ?>
-                <div class="text-center zoom-otop mt-5">
+                <div class="text-center zoom-travel mt-5">
                     <a href="<?php echo site_url('Pages/travel_detail/' . $travel->travel_id); ?>">
                         <img src="<?php echo base_url('docs/img/' . $travel->travel_img); ?>" width="270px" height="254px" class="image-with-shadow-travel">
                     </a>
@@ -806,7 +806,7 @@
     <div class="otop-content">
         <div class="slick-carousel-otop">
             <?php foreach ($qOtop as $otop) { ?>
-                <div class="text-center zoom-otop mt-5">
+                <div class="text-center zoom-travel mt-5">
                     <a href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
                         <img src="<?php echo base_url('docs/img/' . $otop->otop_img); ?>" width="270px" height="336px" class="image-with-shadow-travel">
                     </a>

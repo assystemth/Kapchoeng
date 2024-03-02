@@ -686,6 +686,13 @@
     /* เพิ่มการเปลี่ยนแปลงด้วยการใช้ transition */
   }
 
+  .zoom-travel:hover img {
+    transform: scale(1.07);
+    /* 1.1 คือขนาดที่คุณต้องการขยาย */
+    transition: transform 0.3s ease;
+    /* เพิ่มการเปลี่ยนแปลงด้วยการใช้ transition */
+  }
+
   .bg-travel {
     background-image: url('<?php echo base_url("docs/k.bg-travel.jpg"); ?>');
     background-repeat: no-repeat;
