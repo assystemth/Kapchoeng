@@ -42,7 +42,7 @@
                                <td class="limited-text"><?= $rs->laws_la_name; ?></td>
                                <td class="limited-text"><?= $rs->laws_la_link; ?></td>
                                <td><?= $rs->laws_la_by; ?></td>
-                               <td><?= date('d/m/Y H:i', strtotime($rs->laws_la_date . '+543 years')) ?> น.</td>
+                               <td><?= date('d/m/Y H:i', strtotime($rs->laws_la_datesave . '+543 years')) ?> น.</td>
                                <td>
                                    <a href="<?= site_url('laws_la_backend/editing/' . $rs->laws_la_id); ?>"><i class="bi bi-pencil-square fa-lg "></i></a>
                                    <a href="#" role="button" onclick="confirmDelete('<?= $rs->laws_la_id; ?>');"><i class="bi bi-trash fa-lg "></i></a>
