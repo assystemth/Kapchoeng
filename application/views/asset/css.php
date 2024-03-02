@@ -7,15 +7,15 @@
   }
 
   .bg-gradient-custom {
-    background-color: #FFBA5E;
+    background-color: #006DBC;
   }
 
   .btn-custom {
-    background-color: #FFBA5E;
+    background-color: #006DBC;
   }
 
   .btn-custom:hover {
-    background-color: #FFF1A7;
+    background-color: #C1DEFF;
   }
 
   .white{

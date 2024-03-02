@@ -3,9 +3,9 @@
 
 <head>
     <!-- Design by foolishdeveloper.com -->
-    <link rel="icon" href="<?php echo base_url("docs/logo.png"); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
 
-    <title>องค์การบริหารส่วนตำบลสว่าง</title>
+    <title>เทศบาลตำบลกาบเชิง</title>
     <!-- icon -->
     <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,7 +43,7 @@
 
         .bg {
             /* The image used */
-            background-image: url('<?php echo base_url("docs/s.bg-before-internet1.jpg"); ?>');
+            background-image: url('<?php echo base_url("docs/k.bg-select-login.jpg"); ?>');
             /* Full height */
             height: 100vh;
             /* Center the image horizontally and vertically */
@@ -57,15 +57,15 @@
         .bg-content {
             width: 749px;
             height: 534px;
-            /* background-color: rgba(255, 255, 255, 0.13); */
-            background-color: rgba(255, 255, 255, 0.0);
+            background-color: rgba(255, 255, 255, 0.13);
+            /* background-color: rgba(255, 255, 255, 0.0); */
             position: absolute;
             transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
             border-radius: 24px;
             backdrop-filter: blur(3px);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.13);
             box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
             padding: 20px 10px;
         }
@@ -97,18 +97,18 @@
         <div class="bg">
             <div class="bg-content">
                 <div class="text-center mt-4">
-                    <img src="<?php echo base_url("docs/logo.png"); ?>" width="120" height="120">
+                    <img src="<?php echo base_url("docs/k.logo.png"); ?>" width="120" height="120">
                     <div class="mt-3">
-                        <h2>องค์การบริหารส่วนตำบลสว่าง</h2>
-                        <h3>อ.โพนทอง จ.ร้อยเอ็ด</h3>
+                        <h2>เทศบาลตำบลกาบเชิง</h2>
+                        <h3>อำเภอกาบเชิง จังหวัดสุรินทร์</h3>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between" style="margin-left: 60px; margin-right: 50px; margin-top: 70px;">
                     <a href="<?php echo site_url('Login_intranet'); ?>">
-                        <img src="<?php echo base_url("docs/s.btn-login-intranet.png"); ?>" width="260px" height="78px">
+                        <img src="<?php echo base_url("docs/k.btn-login-intranet.png"); ?>" width="260px" height="78px">
                     </a>
                     <a href="<?php echo site_url('User'); ?>">
-                        <img src="<?php echo base_url("docs/s.btn-login-admin.png"); ?>" width="260px" height="78px">
+                        <img src="<?php echo base_url("docs/k.btn-login-admin.png"); ?>" width="260px" height="78px">
                     </a>
                 </div>
             </div>

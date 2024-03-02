@@ -9,36 +9,36 @@
     </div>
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head">ข้อมูลสภาพทั่วไป</span>
+            <span class="font-pages-head">ตราสัญลักษณ์</span>
         </div>
     </div>
-    <?php foreach ($qGci as $rs) { ?>
+    <?php foreach ($qemblem as $rs) { ?>
         <div class="bg-pages-in ">
             <div class="scrollable-container">
                 <div class="page-center-gi">
                     <div>
-                        <?php if (!empty($rs->gci_img)) : ?>
-                            <img src="<?php echo base_url('docs/img/' . $rs->gci_img); ?>" width="545px" height="352px">
+                        <?php if (!empty($rs->emblem_img)) : ?>
+                            <img src="<?php echo base_url('docs/img/' . $rs->emblem_img); ?>" width="545px" height="352px">
                         <?php else : ?>
                             <img src="<?php echo base_url('docs/logo.png'); ?>" width="545px" height="352px">
                         <?php endif; ?>
                     </div>
                 </div>
                 <div class="pages-content break-word mt-5">
-                    <span class="font-gi-head">1.ลักษณะตำบล</span><br>
-                    <span class="font-gi-content"><?= $rs->gci_location; ?></span>
+                    <span class="font-gi-head">ลักษณะของดวงตราและเครื่องหมาย</span><br>
+                    <span class="font-gi-content"><?= $rs->emblem_text1; ?></span>
                 </div>
                 <div class="pages-content break-word mt-5">
-                    <span class="font-gi-head">2.อาณาเขต</span><br>
-                    <span class="font-gi-content"><?= $rs->gci_territory; ?></span>
+                    <span class="font-gi-head">เหตุผลประกอบ</span><br>
+                    <span class="font-gi-content"><?= $rs->emblem_text2; ?></span>
                 </div>
                 <div class="pages-content break-word mt-5">
-                    <span class="font-gi-head">3.ลักษณะภูมิประเทศ</span><br>
-                    <span class="font-gi-content"><?= $rs->gci_terrain; ?></span>
+                    <span class="font-gi-head">ความหมาย</span><br>
+                    <span class="font-gi-content"><?= $rs->emblem_text3; ?></span>
                 </div>
                 <div class="pages-content break-word mt-5">
-                    <span class="font-gi-head">4.พื้นที่องค์การบริหารส่วนตำบล</span><br>
-                    <span class="font-gi-content"><?= $rs->gci_area; ?></span>
+                    <span class="font-gi-head">ประวัติความเป็นมาตำบลกาบเชิง</span><br>
+                    <span class="font-gi-content"><?= $rs->emblem_text4 ; ?></span>
                 </div>
             </div>
             <div class="margin-top-delete-topic d-flex justify-content-end">

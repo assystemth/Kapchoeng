@@ -417,13 +417,13 @@
   }
 
   .dropdown-content {
-    background-image: url('<?php echo base_url("docs/s.bg-nav-content1.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.bg-nav-content.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     display: none;
     position: absolute;
     width: 1280px;
-    height: 463px;
+    height: 408px;
     z-index: 2;
     margin-left: 3px;
   }
@@ -1433,6 +1433,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 26.494px;
+    margin-top: -5px;
   }
 
   .font-pages-head-long {
@@ -1509,6 +1510,8 @@
   .dropdown-trigger {
     color: #000;
     text-shadow: 0px 2.685px 2.685px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 0.30000001192092896;
+    -webkit-text-stroke-color: #000;
     font-family: Kanit;
     font-size: 22px;
     font-style: normal;
@@ -2467,6 +2470,7 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #888;
   }
+
   /* scroll bar เลื่อนซ้ายขวา เลื่อนบนล่าง ****************************************************** */
 
   .content-e-service {

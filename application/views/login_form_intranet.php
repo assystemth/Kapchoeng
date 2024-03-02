@@ -3,9 +3,9 @@
 
 <head>
     <!-- Design by foolishdeveloper.com -->
-    <link rel="icon" href="<?php echo base_url("docs/logo.png"); ?>" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
 
-    <title>อบต.สว่าง ระบบอินทราเน็ต</title>
+    <title>เทศบาลตำบลกาบเชิง ระบบอินทราเน็ต</title>
     <!-- icon -->
     <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -165,7 +165,7 @@
 
         .bg {
             /* The image used */
-            background-image: url('<?php echo base_url("docs/s.bg-intranet.jpg"); ?>');
+            background-image: url('<?php echo base_url("docs/k.bg-intranet.jpg"); ?>');
             /* Full height */
             height: 100vh;
             /* Center the image horizontally and vertically */
@@ -355,7 +355,7 @@
                 $remember_id = '';
                 $remember_password = '';
             } ?>
-            <img src="docs/logo.png" alt="" height="20%">
+            <img src="docs/k.logo.png" alt="" height="20%">
             <!-- <span>ยินดีต้อนรับสู่ระบบ</span> -->
             <h4>ยินดีต้อนรับสู่ระบบอินทราเน็ต</h4>
 
