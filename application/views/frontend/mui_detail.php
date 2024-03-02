@@ -1,20 +1,19 @@
-<div class="bg-pages">
-    <div class="container-pages-detail">
-        <div class="page-center">
-            <div class="head-pages">
-                <span class="font-pages-head">มาตราการภายในหน่วย</span>
-            </div>
+<div class="bg-pages ">
+    <div class="row pad-path">
+        <div class="path1-1">
+            <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
-        <div class="row">
-            <div class="path1-1">
-                <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
-            </div>
-            <div class="path2-4">
-                <span class="font-path-2 underline"><a href="#">มาตราการภายใน</a></span>
-            </div>
+        <div class="path2-2">
+            <span class="font-path-2 underline"><a href="#">มาตรการภายใน</a></span>
         </div>
-        <div class="bg-pages-in">
-            <div class="scrollable-container-news">
+    </div>
+    <div class="page-center">
+        <div class="head-pages">
+            <span class="font-pages-head">มาตราการภายในหน่วย</span>
+        </div>
+    </div>
+    <div class="bg-pages-in ">
+        <div class="scrollable-container">
                 <div class="font-pages-content-head"><?= $rsData->mui_name; ?></div>
                 <div class="pages-content break-word mt-2">
                     <span class="font-pages-content-detail"><?= $rsData->mui_detail; ?></span>
@@ -65,7 +64,7 @@
                 </div>
                 <div class="col-6">
                     <div class="margin-top-delete-topic d-flex justify-content-end">
-                        <a href="<?php echo site_url('Pages/news'); ?>"><img src="<?php echo base_url("docs/s.btn-back.png"); ?>"></a>
+                        <a href="<?php echo site_url('Pages/news'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
                     </div>
                 </div>
             </div>

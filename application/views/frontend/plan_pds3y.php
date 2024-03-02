@@ -11,7 +11,7 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
-                <span class="font-pages-head">#</span>
+                <span class="font-pages-head">แผนพัฒนาบุคลากร 3 ปี</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
@@ -43,7 +43,7 @@
                             <?php if (!empty($rs->plan_pds3y_img)) : ?>
                                 <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->plan_pds3y_img); ?>" width="94px" height="63px">
                             <?php else : ?>
-                                <img class="border-radius24" src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
+                                <img class="border-radius24"  src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
                             <?php endif; ?>
                         </a>
                     </div>

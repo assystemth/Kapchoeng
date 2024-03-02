@@ -11,7 +11,7 @@
 
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head">#</span>
+            <span class="font-pages-head">แผนพัฒนาบุคลากร 3 ปี</span>
         </div>
     </div>
     <div class="bg-pages-in ">
