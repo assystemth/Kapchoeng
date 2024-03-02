@@ -1444,6 +1444,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 26.494px;
+    margin-top: -5px;
   }
 
   .font-pages-content-head {
