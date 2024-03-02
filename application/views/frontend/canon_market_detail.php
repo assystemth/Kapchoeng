@@ -1,20 +1,19 @@
 <div class="bg-pages ">
-    <div class="container-pages-detail">
-        <div class="page-center">
-            <div class="head-pages">
-                <span class="font-pages-head">ข้อบัญญัติตลาด</span>
-            </div>
+    <div class="row pad-path">
+        <div class="path1-1">
+            <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
-        <div class="row">
-            <div class="path1-1">
-                <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
-            </div>
-            <div class="path2-1">
-                <span class="font-path-2 underline"><a href="#">ข้อบัญญัติ</a></span>
-            </div>
+        <div class="path2-2">
+            <span class="font-path-2 underline"><a href="#">ข้อบัญญัติ</a></span>
         </div>
-        <div class="bg-pages-in">
-            <div class="scrollable-container-news">
+    </div>
+    <div class="page-center">
+        <div class="head-pages">
+            <span class="font-pages-head">ข้อบัญญัติตลาด</span>
+        </div>
+    </div>
+    <div class="bg-pages-in ">
+        <div class="scrollable-container">
                 <div class="font-pages-content-head">เรื่อง <?= $rsData->canon_market_name; ?></div>
                 <div class="pages-content break-word mt-2">
                     <span class="font-pages-content-detail"><?= $rsData->canon_market_detail; ?></span>
@@ -35,7 +34,7 @@
                         <div class="col-6">
                             <div class="d-flex justify-content-end">
                                 <a onclick="downloadFile(event, <?= $file->canon_market_file_id; ?>)" href="<?= base_url('docs/file/' . $file->canon_market_file_pdf); ?>" download>
-                                    <img src="<?php echo base_url("docs/s.btn-download.png"); ?>">
+                                    <img src="<?php echo base_url("docs/k.btn-download.png"); ?>">
                                 </a>
                                 <script>
                                     function downloadFile(event, canon_market_file_id) {
@@ -65,7 +64,7 @@
                 </div>
                 <div class="col-6">
                     <div class="margin-top-delete-topic d-flex justify-content-end">
-                        <a href="<?php echo site_url('Pages/canon_market'); ?>"><img src="<?php echo base_url("docs/s.btn-back.png"); ?>"></a>
+                        <a href="<?php echo site_url('Pages/canon_market'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
                     </div>
                 </div>
             </div>
