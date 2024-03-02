@@ -1437,16 +1437,13 @@
   }
 
   .font-pages-head-long {
-    color: #FFF;
-    leading-trim: both;
-    text-edge: cap;
-    text-shadow: 0px 2.115px 2.115px rgba(0, 0, 0, 0.25);
+    color: var(--main, #082555);
+    text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
     font-family: Kanit;
-    font-size: 30px;
+    font-size: 26px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 26.443px;
-    /* 88.143% */
+    font-weight: 500;
+    line-height: 26.494px;
   }
 
   .font-pages-content-head {

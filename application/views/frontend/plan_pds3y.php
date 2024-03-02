@@ -1,3 +1,4 @@
+<!-- --------------------- -->
 <div class="bg-pages">
     <div class="row pad-path">
         <div class="path1-1">
@@ -14,6 +15,7 @@
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
+        <!-- -------------------- -->
         <?php
         $count = count($query);
         $itemsPerPage = 10; // จำนวนรายการต่อหน้า
@@ -41,7 +43,7 @@
                             <?php if (!empty($rs->plan_pds3y_img)) : ?>
                                 <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->plan_pds3y_img); ?>" width="94px" height="63px">
                             <?php else : ?>
-                                <img class="border-radius24" src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
+                                <img class="border-radius24"  src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
                             <?php endif; ?>
                         </a>
                     </div>
