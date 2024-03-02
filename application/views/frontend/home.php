@@ -96,7 +96,7 @@
             </div>
             <div class="d-flex justify-content-center mt-4">
                 <a href="#" class="zoom-otop">
-                    <img class="mark-logo" src="docs/k.menu-eservice-top2v2.png">
+                    <img class="mark-logo" src="docs/k.menu-eservice-top6v2.png">
                 </a>
             </div>
         </div>
@@ -353,9 +353,9 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_oppr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานอาสาสมัครป้องกันภัยฝ่ายพลเรือน (อปพร.)</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ems'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานกู้ชีพ / การบริการการแพทย์ฉุกเฉิน (EMS)</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;เบี้ยผู้สูงอายุ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ae'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;เบี้ยผู้สูงอายุ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม E-Book</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลการชำระภาษี</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_tax'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลการชำระภาษี</a></li>
                 </div>
             </ul>
         </div>
@@ -461,7 +461,7 @@
                     <a href="<?php echo site_url('Pages/news/' . $news->news_id); ?>">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;<?= strip_tags($news->news_name); ?></span>
+                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($news->news_name); ?></span>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex justify-content-end ">
@@ -491,37 +491,37 @@
         <div id="tabtwo2" class="tab-content-two">
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_bgps'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;ข้อบัญญัติงบประมาณ</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติงบประมาณ</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_chh'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;การควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;การควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_ritw'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;ข้อบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_market'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;ข้อบัญญัติตลาด</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติตลาด</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_rmwp'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;ข้อบัญญัติการจัดการสิ่งปฏิกูลและมูลฝอย</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติการจัดการสิ่งปฏิกูลและมูลฝอย</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_rcsp'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;ข้อบัญญัติหลักเกณฑ์การคัดมูลฝอย</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติหลักเกณฑ์การคัดมูลฝอย</span>
                 </a>
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_rcp'); ?>">
-                    <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;ข้อบัญญัติการควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติการควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</span>
                 </a>
             </div>
         </div>
@@ -531,7 +531,7 @@
                     <a href="<?php echo site_url('Pages/announce_detail/' . $gw->announce_id); ?>">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;<?= strip_tags($gw->announce_name); ?></span>
+                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($gw->announce_name); ?></span>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex justify-content-end ">
@@ -564,7 +564,7 @@
                     <a href="<?php echo site_url('Pages/order_detail/' . $gw->order_id); ?>">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;<?= strip_tags($gw->order_name); ?></span>
+                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($gw->order_name); ?></span>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex justify-content-end ">
@@ -616,7 +616,7 @@
                     <a href="<?php echo site_url('Pages/procurement_detail/' . $pcm->procurement_id); ?>">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;<?= strip_tags($pcm->procurement_name); ?></span>
+                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($pcm->procurement_name); ?></span>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex justify-content-end ">
@@ -708,7 +708,7 @@
                     <a href="<?php echo site_url('Pages/p_reb/' . $anou->p_reb_id); ?>">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;<?= strip_tags($anou->p_reb_name); ?></span>
+                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_reb_name); ?></span>
                             </div>
                             <div class="col-2">
                                 <div class="d-flex justify-content-end ">
@@ -741,24 +741,24 @@
                     <a href="<?php echo site_url('Pages/p_rpo/' . $anou->p_rpo_id); ?>">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/s.icon-news.png">&nbsp;&nbsp;<?= strip_tags($anou->p_rpo_name); ?></span>
-                            </div>
-                            <div class="col-2">
-                                <div class="d-flex justify-content-end ">
-                                    <span class="text-news-time">
-                                        <?php
-                                        // ในการใช้งาน setThaiMonth
-                                        $date = new DateTime($anou->p_rpo_datesave);
-                                        $day_th = $date->format('d');
-                                        $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
-                                        $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
-                                        $formattedDate = "$day_th $month_th $year_th"; // วันที่และเดือนเป็นภาษาไทย
-                                        echo $formattedDate;
-                                        ?>
-                                    </span>
+                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_rpo_name); ?></span>
+
+                                <div class="col-2">
+                                    <div class="d-flex justify-content-end ">
+                                        <span class="text-news-time">
+                                            <?php
+                                            // ในการใช้งาน setThaiMonth
+                                            $date = new DateTime($anou->p_rpo_datesave);
+                                            $day_th = $date->format('d');
+                                            $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
+                                            $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
+                                            $formattedDate = "$day_th $month_th $year_th"; // วันที่และเดือนเป็นภาษาไทย
+                                            echo $formattedDate;
+                                            ?>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </a>
                 </div>
             <?php } ?>

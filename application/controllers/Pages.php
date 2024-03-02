@@ -65,8 +65,10 @@ class Pages extends CI_Controller
 		$this->load->model('pbsv_ahs_model');
 		$this->load->model('pbsv_oppr_model');
 		$this->load->model('pbsv_ems_model');
+		$this->load->model('pbsv_ae_model');
 		$this->load->model('pbsv_gup_model');
 		$this->load->model('pbsv_e_book_model');
+		$this->load->model('pbsv_tax_model');
 
 		$this->load->model('operation_reauf_model');
 		$this->load->model('p_rpo_model');
@@ -568,6 +570,17 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/css');
 		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/gci', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function pbsv_tax()
+	{
+		$data['query'] = $this->pbsv_tax_model->pbsv_tax_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_tax', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
@@ -1721,6 +1734,48 @@ class Pages extends CI_Controller
 	public function increment_download_pbsv_ems($pbsv_ems_file_id)
 	{
 		$this->pbsv_ems_model->increment_download_pbsv_ems($pbsv_ems_file_id);
+	}
+	public function pbsv_ae()
+	{
+		$data['query'] = $this->pbsv_ae_model->pbsv_ae_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_ae', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function pbsv_ae_detail($pbsv_ae_id)
+	{
+		$this->pbsv_ae_model->increment_view($pbsv_ae_id);
+
+		$data['rsData'] = $this->pbsv_ae_model->read($pbsv_ae_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->pbsv_ae_model->read_file($pbsv_ae_id);
+		$data['rsImg'] = $this->pbsv_ae_model->read_img($pbsv_ae_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_ae_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_pbsv_ae($pbsv_ae_file_id)
+	{
+		$this->pbsv_ae_model->increment_download_pbsv_ae($pbsv_ae_file_id);
 	}
 	public function pbsv_gup()
 	{

@@ -592,14 +592,14 @@
   }
 
   .content-news-detail {
-    background-color: #FFF2BE;
+    border-radius: 34px;
+    background: #FFF;
+    box-shadow: 0px 0px 6.712px 0px rgba(0, 109, 188, 0.25);
     height: 54px;
     flex-shrink: 0;
-    padding: 20px 45px;
-    font-size: 26px;
+    padding: 20px 20px;
+    font-size: 19px;
     font-weight: bold;
-    border-radius: 15px;
-    border: 2px solid #ECB23F;
     margin-bottom: 40px;
     margin-top: -25px;
   }
@@ -1701,11 +1701,11 @@
   }
 
   .font-pages-heads-img {
-    color: #523003;
+    color: #000;
     font-family: Kanit;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 24.863px;
     /* 155.394% */
   }
@@ -1733,7 +1733,7 @@
   }
 
   .font-page-detail-time-img {
-    color: #693708;
+    color: #6D758F;
     font-family: Kanit;
     font-size: 20px;
     font-style: normal;
@@ -1753,13 +1753,13 @@
   }
 
   .font-page-detail-view-img {
-    color: #693708;
+    color: #6D758F;
+    text-align: center;
     font-family: Kanit;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 33.495px;
-    /* 167.473% */
+    font-weight: 400;
+    line-height: normal;
   }
 
   .font-page-detail-view-news {
@@ -1801,30 +1801,32 @@
   }
 
   .font-p-name {
-    color: #693708;
+    color: #000;
     text-align: center;
-    leading-trim: both;
-    text-edge: cap;
-    font-feature-settings: 'clig' off, 'liga' off;
     font-family: Kanit;
-    font-size: 26.796px;
+    font-size: 22px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 31.756px;
-    /* 118.512% */
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .font-p-rank {
+    color: #082555;
+    font-family: Kanit;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   .font-p-detail {
     color: #000;
-    leading-trim: both;
-    text-edge: cap;
-    font-feature-settings: 'clig' off, 'liga' off;
+    text-align: center;
     font-family: Kanit;
-    font-size: 24.116px;
+    font-size: 22px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 37.049px;
-    /* 153.627% */
+    font-weight: 300;
+    line-height: normal;
   }
 
   .font-head-all-web {
@@ -2001,18 +2003,16 @@
   }
 
   .span-time-pages-img {
-    color: #693708;
+    color: #6D758F;
     font-family: Kanit;
-    font-size: 13px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 21.267px;
-    /* 163.592% */
     margin-top: -40px;
   }
 
   .span-time-pages-img-detail {
-    color: #693708;
+    color: #062AAA;
     text-align: center;
     leading-trim: both;
     text-edge: cap;
@@ -2169,8 +2169,9 @@
 
 
   .page-border-travel {
-    border: 1px solid #EABA48;
-    border-radius: 15px;
+    border-radius: 34px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 30px;
     width: 221.881px;
     height: 282.394px;
@@ -2178,8 +2179,9 @@
   }
 
   .page-border-activity {
-    border: 1px solid #EABA48;
-    border-radius: 15px;
+    border-radius: 34px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 30px;
     width: 221.064px;
     height: 281.354px;
@@ -2188,8 +2190,8 @@
 
   /* รูปภาพโค้ง border-radius-img ******************************************************8* */
   .rounded-top-left-right {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 34px;
+    border-top-right-radius: 34px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -2477,18 +2479,18 @@
 
   /* ให้ทุุกอย่างที่อยู่ใน bg background มันอยู่ตรงกลาง ******************************************** */
   .bg-personnel-s {
-    background-image: url('<?php echo base_url("docs/s.bg-personnel.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k.bg-personnel.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 215px;
-    height: 256px;
+    width: 198px;
+    height: 238px;
     display: grid;
     place-items: center;
   }
 
   .rounded-image-s {
     width: 188px;
-    height: 228px;
+    height: 229px;
   }
 
   /* รูปบุคลากรแบบวงกลม personnel */
