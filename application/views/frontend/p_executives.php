@@ -118,7 +118,7 @@
             <br>
         </div>
         <div class="margin-top-delete-topic d-flex justify-content-end">
-            <a href="<?php echo site_url('Pages/news'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
+            <a href="<?php echo site_url('home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
         </div>
     </div>
 </div>
