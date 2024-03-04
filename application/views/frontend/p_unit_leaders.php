@@ -12,8 +12,8 @@
             <span class="font-pages-head-long">หัวหน้าส่วนราชาการ</span>
         </div>
     </div>
-    <div class="bg-pages-in">
-        <div class="scrollable-container-gi">
+    <div class="bg-pages">
+        <div class="scrollable-container">
             <div class="page-center">
                 <?php foreach ($rsOne as $rs) { ?>
                     <div class="bg-personnel-s">

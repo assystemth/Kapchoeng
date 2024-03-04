@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="bg-pages-in">
-        <div class="scrollable-container-gi">
+        <div class="scrollable-container">
             <div class="page-center">
                 <?php foreach ($rsOne as $rs) { ?>
                     <div class="bg-personnel-s">

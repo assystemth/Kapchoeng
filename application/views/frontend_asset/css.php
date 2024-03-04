@@ -1231,7 +1231,7 @@
     margin-top: 40px;
     margin-bottom: 5%;
     border-radius: 22.86px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.724px 0px rgba(0, 0, 0, 0.25);
     height: 1500px;
     width: 1069px;
@@ -1640,7 +1640,7 @@
   }
 
   .font-q-a-chat-color {
-    color: #005930;
+    color: #082555;
     leading-trim: both;
     text-edge: cap;
     font-feature-settings: 'clig' off, 'liga' off;
@@ -1666,26 +1666,23 @@
   }
 
   .font-contact-1 {
-    color: #000;
-    font-feature-settings: 'clig' off, 'liga' off;
+    color: #002D53;
+    text-align: center;
     font-family: Kanit;
-    font-size: 26.895px;
+    font-size: 24px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 13.447px;
-    /* 50% */
+    font-weight: 500;
+    line-height: 33.559px;
+    /* 139.829% */
   }
 
   .font-contact-2 {
     color: #000;
-    text-align: center;
-    font-feature-settings: 'clig' off, 'liga' off;
     font-family: Kanit;
-    font-size: 24.205px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 300;
-    line-height: 13.447px;
-    /* 55.556% */
+    line-height: 33.559px;
   }
 
   .font-contact-map {
@@ -2045,7 +2042,7 @@
   }
 
   .span-time-q-a {
-    color: #693708;
+    color: #082555;
     font-family: Kanit;
     font-size: 16.078px;
     font-style: normal;
@@ -2264,7 +2261,7 @@
     gap: 6.699px;
     flex-shrink: 0;
     border-radius: 22.777px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.699px 0px rgba(0, 0, 0, 0.25);
   }
 
@@ -2286,7 +2283,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 260px;
     width: 914px;
@@ -2298,7 +2295,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 600px;
     width: 914px;
@@ -2310,7 +2307,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 350px;
     width: 914px;
@@ -2322,7 +2319,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 515px;
     width: 914px;
@@ -2334,7 +2331,7 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 320px;
     width: 667px;
@@ -2365,14 +2362,13 @@
     padding-left: 5%;
     padding-right: 5%;
     border-radius: 17.085px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.701px 0px rgba(0, 0, 0, 0.25);
     height: 600px;
     width: 914px;
   }
 
   .detail-q-a {
-    display: flex;
     width: 914px;
     height: auto;
     padding: 21.438px;
@@ -2381,7 +2377,7 @@
     gap: 13.398px;
     flex-shrink: 0;
     border-radius: 22.777px;
-    background: rgba(253, 245, 225, 0.80);
+    background: #C6E7FF;
     box-shadow: 0px 0px 6.699px 0px rgba(0, 0, 0, 0.25);
   }
 
@@ -2565,7 +2561,7 @@
   }
 
   select.custom-select {
-    color: #693708;
+    color: #082555;
     font-family: Kanit;
     font-size: 20.102px;
     font-style: normal;

@@ -66,12 +66,12 @@
     <div class="row mt-5">
         <div class="col-4">
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="<?php echo site_url('Pages/ita'); ?>" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-eservice-top1v2.png">
                 </a>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="https://www.oic.go.th/INFOCENTER25/2518/" class="zoom-otop" target="_blank" >
                     <img class="mark-logo" src="docs/k.menu-eservice-top2v2.png">
                 </a>
             </div>
@@ -83,19 +83,19 @@
                 </a>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="<?php echo site_url('Pages/km'); ?>" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-eservice-top4v2.png">
                 </a>
             </div>
         </div>
         <div class="col-4">
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="https://dbdregcom.dbd.go.th/mainsite/index.php?id=28" class="zoom-otop" target="_blank" >
                     <img class="mark-logo" src="docs/k.menu-eservice-top5v2.png">
                 </a>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="<?php echo site_url('Pages/laws_all'); ?>" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-eservice-top6v2.png">
                 </a>
             </div>
@@ -186,7 +186,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/msg_pres'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;สารจากนายก</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/msg_prem'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;สารจากปลัด</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/emblem'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ตราสัญลักษณ์</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ติดต่อเทศบาล</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/contact'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ติดต่อเทศบาล</a></li>
 
 
 
@@ -218,15 +218,15 @@
                         </li> -->
 
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_maintenance'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองช่าง</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองการศึกษา</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองยุทธศาสตร์และงบประมาณ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านบักจรัง</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_education'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองการศึกษา</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_dsab'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองยุทธศาสตร์และงบประมาณ</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_brkm'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_bpsb'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_bbj'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านบักจรัง</a></li>
                 </div>
                 <div class="dropdown-right">
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านน้อยร่มเย็น</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านกาบเชิง</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_bnry'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านน้อยร่มเย็น</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_bkc'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านกาบเชิง</a></li>
                 </div>
 
             </ul>
@@ -334,10 +334,10 @@
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กิจการสภา</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การมีส่วนร่วมของผู้บริหาร</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aditn'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หน่วยตรวจสอบภายใน</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpo'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_reb'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_eg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_ameg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a></li>
                 </div>
             </ul>
         </div>

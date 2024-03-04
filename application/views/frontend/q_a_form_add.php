@@ -1,19 +1,17 @@
 <div class="bg-pages ">
+    <div class="row pad-path">
+        <div class="path1-1">
+            <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
+        </div>
+        <div class="path2-1">
+            <span class="font-path-2 underline"><a href="#">E-service</a></span>
+        </div>
+
+    </div>
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
                 <span class="font-pages-head">กระทู้ถาม - ตอบ</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="path1-2">
-                <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
-            </div>
-            <div class="path2-1">
-                <span class="font-path-2 underline"><a href="#">E-service</a></span>
-            </div>
-            <div class="margin-top-delete d-flex justify-content-end">
-                <a href="<?php echo site_url('Pages/q_a'); ?>"><img src="<?php echo base_url("docs/s.btn-back.png"); ?>"></a>
             </div>
         </div>
         <div class="bg-pages-in-e-service ">
@@ -67,6 +65,9 @@
                 </div>
             </div>
             </form>
+            <div class="margin-top-delete d-flex justify-content-end">
+            <a href="<?php echo site_url('Pages/q_a'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
+        </div>
         </div>
     </div>
 </div>

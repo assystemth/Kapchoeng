@@ -101,8 +101,14 @@
                         <a class="collapse-item" href="<?php echo site_url('P_deputy_backend'); ?>">สำนักปลัด อบต.</a>
                         <a class="collapse-item" href="<?php echo site_url('P_treasury_backend'); ?>">กองคลัง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_maintenance_backend'); ?>">กองช่าง</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_education_backend'); ?>">กองสวัสดิการ</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_audit_backend'); ?>">หน่วยตรวจสอบภายใน</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_education_backend'); ?>">กองการศึกษา</a>
+                        <!-- <a class="collapse-item" href="<?php echo site_url('P_audit_backend'); ?>">หน่วยตรวจสอบภายใน</a> -->
+                        <a class="collapse-item" href="<?php echo site_url('P_dsab_backend'); ?>">กองยุทธศาสตร์และงบประมาณ</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_brkm_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bpsb_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bbj_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านบักจรัง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bnry_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านน้อยร่มเย็น</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bkc_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านกาบเชิง</a>
                     </div>
                 </div>
             </li>
@@ -196,6 +202,8 @@
                         <a class="collapse-item" href="<?php echo site_url('Ita_year_backend'); ?>">ITA ประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aa_backend'); ?>">กิจการสภา</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aditn_backend'); ?>">ตรวจสอบภายใน</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
                     </div>
                 </div>
             </li>

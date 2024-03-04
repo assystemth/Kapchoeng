@@ -38,6 +38,12 @@ class Pages extends CI_Controller
 		$this->load->model('p_maintenance_model');
 		$this->load->model('p_education_model');
 		$this->load->model('p_audit_model');
+		$this->load->model('p_dsab_model');
+		$this->load->model('p_cdc_brkm_model');
+		$this->load->model('p_cdc_bpsb_model');
+		$this->load->model('p_cdc_bbj_model');
+		$this->load->model('p_cdc_bnry_model');
+		$this->load->model('p_cdc_bkc_model');
 
 		$this->load->model('plan_pdl_model');
 		$this->load->model('plan_pc3y_model');
@@ -89,6 +95,8 @@ class Pages extends CI_Controller
 		$this->load->model('operation_procurement_model');
 		$this->load->model('operation_aa_model');
 		$this->load->model('operation_aditn_model');
+		$this->load->model('operation_eg_model');
+		$this->load->model('operation_ameg_model');
 
 		$this->load->model('newsletter_model');
 		$this->load->model('q_a_model');
@@ -2611,6 +2619,90 @@ class Pages extends CI_Controller
 	{
 		$this->operation_aditn_model->increment_download_operation_aditn($operation_aditn_file_id);
 	}
+	public function operation_eg()
+	{
+		$data['query'] = $this->operation_eg_model->operation_eg_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_eg', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function operation_eg_detail($operation_eg_id)
+	{
+		$this->operation_eg_model->increment_view($operation_eg_id);
+
+		$data['rsData'] = $this->operation_eg_model->read($operation_eg_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->operation_eg_model->read_file($operation_eg_id);
+		$data['rsImg'] = $this->operation_eg_model->read_img($operation_eg_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_eg_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_operation_eg($operation_eg_file_id)
+	{
+		$this->operation_eg_model->increment_download_operation_eg($operation_eg_file_id);
+	}
+	public function operation_ameg()
+	{
+		$data['query'] = $this->operation_ameg_model->operation_ameg_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_ameg', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function operation_ameg_detail($operation_ameg_id)
+	{
+		$this->operation_ameg_model->increment_view($operation_ameg_id);
+
+		$data['rsData'] = $this->operation_ameg_model->read($operation_ameg_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->operation_ameg_model->read_file($operation_ameg_id);
+		$data['rsImg'] = $this->operation_ameg_model->read_img($operation_ameg_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_ameg_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_operation_ameg($operation_ameg_file_id)
+	{
+		$this->operation_ameg_model->increment_download_operation_ameg($operation_ameg_file_id);
+	}
 	public function operation_procurement()
 	{
 		$data['query'] = $this->operation_procurement_model->operation_procurement_frontend();
@@ -3094,6 +3186,108 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/css');
 		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/p_audit', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_dsab()
+	{
+		$data['rsOne'] = $this->p_dsab_model->p_dsab_frontend_one();
+		// $data['rsData'] = $this->p_dsab_model->p_dsab_frontend_list();
+		$data['rsrow1'] = $this->p_dsab_model->p_dsab_row_1();
+		$data['rsrow2'] = $this->p_dsab_model->p_dsab_row_2();
+		$data['rsrow3'] = $this->p_dsab_model->p_dsab_row_3();
+		$data['rsrow4'] = $this->p_dsab_model->p_dsab_row_4();
+		$data['rsrow5'] = $this->p_dsab_model->p_dsab_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_dsab', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_cdc_brkm()
+	{
+		$data['rsOne'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_one();
+		// $data['rsData'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_list();
+		$data['rsrow1'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_1();
+		$data['rsrow2'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_2();
+		$data['rsrow3'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_3();
+		$data['rsrow4'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_4();
+		$data['rsrow5'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_cdc_brkm', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_cdc_bpsb()
+	{
+		$data['rsOne'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_one();
+		// $data['rsData'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_list();
+		$data['rsrow1'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_1();
+		$data['rsrow2'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_2();
+		$data['rsrow3'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_3();
+		$data['rsrow4'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_4();
+		$data['rsrow5'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_cdc_bpsb', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_cdc_bbj()
+	{
+		$data['rsOne'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_one();
+		// $data['rsData'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_list();
+		$data['rsrow1'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_1();
+		$data['rsrow2'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_2();
+		$data['rsrow3'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_3();
+		$data['rsrow4'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_4();
+		$data['rsrow5'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_cdc_bbj', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_cdc_bnry()
+	{
+		$data['rsOne'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_one();
+		// $data['rsData'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_list();
+		$data['rsrow1'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_1();
+		$data['rsrow2'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_2();
+		$data['rsrow3'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_3();
+		$data['rsrow4'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_4();
+		$data['rsrow5'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_cdc_bnry', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_cdc_bkc()
+	{
+		$data['rsOne'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_one();
+		// $data['rsData'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_list();
+		$data['rsrow1'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_1();
+		$data['rsrow2'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_2();
+		$data['rsrow3'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_3();
+		$data['rsrow4'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_4();
+		$data['rsrow5'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_5();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_cdc_bkc', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}

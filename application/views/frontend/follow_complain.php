@@ -1,32 +1,32 @@
 <div class="bg-pages">
+    <div class="row pad-path">
+        <div class="path1-1">
+            <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
+        </div>
+        <div class="path2-1">
+            <span class="font-path-2 underline"><a href="#">E-Service</a></span>
+        </div>
+        <div class="col">
+            <div class="d-flex justify-content-end">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <select class="form-select custom-select" id="ChangPagesComplain">
+                            <option value="" disabled selected>ติดตามสถานะเรื่องร้องเรียน</option>
+                            <option value="complain">ร้องเรียน/ร้องทุกข์</option>
+                            <option value="esv_ods">ยื่นเอกสารออนไลน์</option>
+                            <option value="suggestions">รับฟังความคิดเห็น</option>
+                            <option value="corruption">แจ้งเรื่องทุจริตหน่วยงานภาครัฐ</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
                 <span class="font-pages-head">ติดตามสถานะเรื่องร้องเรียน</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="path1-2">
-                <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
-            </div>
-            <div class="path2-1">
-                <span class="font-path-2 underline"><a href="#">E-Service</a></span>
-            </div>
-            <div class="col">
-                <div class="d-flex justify-content-end">
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <select class="form-select custom-select" id="ChangPagesComplain">
-                                <option value="" disabled selected>ติดตามสถานะเรื่องร้องเรียน</option>
-                                <option value="complain">ร้องเรียน/ร้องทุกข์</option>
-                                <option value="esv_ods">ยื่นเอกสารออนไลน์</option>
-                                <option value="suggestions">รับฟังความคิดเห็น</option>
-                                <option value="corruption">แจ้งเรื่องทุจริตหน่วยงานภาครัฐ</option>
-
-                            </select>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="bg-pages-in-e-service-flcp ">
@@ -40,7 +40,7 @@
                                 <?php if (!empty($complain_data)) : ?>
                                     <input type="text" name="complain_id" class="form-control font-label-e-service-complain input-radius " required value="<?php echo $complain_data['complain_id']; ?>" placeholder="6600001">
                                 <?php else : ?>
-                                    <input type="text" name="complain_id" class="form-control font-label-e-service-complain input-radius " required placeholder="6600001">
+                                    <input type="text" name="complain_id" class="form-control font-label-e-service-complain input-radius " required placeholder="6700001">
                                 <?php endif; ?>
                             </div>
                             <div class="col-sm-4 mb-3" style="margin-left: -100px;">
