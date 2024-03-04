@@ -18,7 +18,7 @@
             <img src="<?php echo base_url("docs\logo.png"); ?>" width="132px" height="133px">
             <br>
             <div class="mt-4">
-                <span class="font-contact-1">องค์การบริหารส่วนตำบลสว่าง </span><br><br>
+                <span class="font-contact-1">เทศบาลตำบลกาบเชิง</span><br><br>
                 <span class="font-contact-2">ที่อยู่ : เลขที่ 39 หมู่ที่ 17 ตำบลกาบเชิง อำเภอกาบเชิง จังหวัดสุรินทร์ 32210 <br>
                     โทรศัพท์ : 0-4455-9143 <br>
                     โทรสาร : 0-4455-9253 <br>
