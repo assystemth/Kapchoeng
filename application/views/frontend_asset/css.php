@@ -2101,10 +2101,10 @@
   }
 
   .page-border-otop {
-    border-radius: 16.077px;
-    border: 0.335px solid var(--line, #EABA48);
-    background: rgba(253, 245, 225, 0.80);
-    box-shadow: 0px 0px 6.699px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 34px;
+    border: 1px solid #6D758F;
+    background: var(--PDF, rgba(159, 218, 255, 0.25));
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.15);
     padding-left: 50px;
     padding-top: 30px;
     padding-bottom: 30px;

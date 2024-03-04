@@ -1,19 +1,19 @@
-<div class="bg-pages ">
+<div class="bg-pages">
+    <div class="row pad-path">
+        <div class="path1-1">
+            <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
+        </div>
+        <div class="path2-2">
+            <span class="font-path-2 underline"><a href="#">ผลิตภัณฑ์ชุมชน</a></span>
+        </div>
+    </div>
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
                 <span class="font-pages-head">ผลิตภัณฑ์ชุมชน</span>
             </div>
         </div>
-        <div class="row">
-            <div class="path1-1">
-                <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
-            </div>
-            <div class="path2-3">
-                <span class="font-path-2 underline"><a href="#">ผลิตภัณฑ์ชุมชน</a></span>
-            </div>
-        </div>
-        <div style="padding-top: 40px;"></div>
+        <div style="padding-top: 80px;"></div>
         <div class="pages-content break-word">
             <?php
             $count = count($qOtop);
@@ -82,42 +82,33 @@
                 </div>
                 <div style="margin-top: 50px;"></div>
             <?php } ?>
-            <!-- แสดงปุ่ม Next และ Previous -->
             <nav aria-label="Page navigation example">
-                <div class="pagination-container d-flex justify-content-between">
-                    <div class="pagination-pages">
-                        <ul class="pagination">
-                            <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-                                <li class="page-item pagination-item <?php echo ($i == $currentPage) ? 'active' : ''; ?>">
-                                    <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
-                                </li>
-                            <?php endfor; ?>
-                        </ul>
-                    </div>
-                    <div class="pagination-next-prev row" style="list-style-type: none;">
-                        <div class="col-5">
-                            <?php if ($currentPage > 1) : ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="?page=<?php echo $currentPage - 1; ?>" aria-label="Previous">
-                                        <img src="<?php echo base_url('docs/s.pages-pre2.png'); ?>" alt="Previous" class="pagination-icon">
-                                        <span aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                        </div>
-                        <div class="col-5">
-                            <?php if ($currentPage < $totalPages) : ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="?page=<?php echo $currentPage + 1; ?>" aria-label="Next">
-                                        <img src="<?php echo base_url('docs/s.pages-next2.png'); ?>" alt="Next" class="pagination-icon">
-                                        <span aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <ul class="pagination">
+                <?php if ($currentPage > 1) : ?>
+                    <li class="page-item">
+                        <a class="page-link-next-pre underline" href="?page=<?php echo $currentPage - 1; ?>" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                    <li class="page-item <?php echo ($i == $currentPage) ? 'active' : ''; ?>">
+                        <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                    </li>
+                <?php endfor; ?>
+
+                <?php if ($currentPage < $totalPages) : ?>
+                    <li class="page-item">
+                        <a class="page-link-next-pre underline" href="?page=<?php echo $currentPage + 1; ?>" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+        <div class="margin-top-delete-topic d-flex justify-content-end">
+            <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
         </div>
     </div>
 </div>
