@@ -1,18 +1,19 @@
-<div class="bg-pages ">
-    <div class="container-pages-detail">
+<div class="bg-pages">
+    <div class="row pad-path">
+        <div class="path1-1">
+            <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
+        </div>
+        <div class="path2-2">
+            <span class="font-path-2 underline"><a href="#">ข้อมูลทั่วไป</a></span>
+        </div>
+    </div>
+    <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
                 <span class="font-pages-head">ภารกิจและความรับผิดชอบ</span>
             </div>
         </div>
-        <div class="row">
-            <div class="path1-1">
-                <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
-            </div>
-            <div class="path2-1">
-                <span class="font-path-2 underline"><a href="#">ข้อมูลทั่วไป</a></span>
-            </div>
-        </div>
+        <div style="padding-top: 80px;"></div>
         <?php foreach ($qMission as $rs) { ?>
             <div class="bg-pages-in ">
                 <div class="page-center-gi">
@@ -31,7 +32,7 @@
                     </div>
                 </div>
                 <div class="margin-top-delete-topic d-flex justify-content-end">
-                    <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/s.btn-back.png"); ?>"></a>
+                    <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
                 </div>
             </div>
         <?php } ?>
