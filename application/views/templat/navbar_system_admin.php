@@ -137,13 +137,13 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" aria-expanded="true" href="javascript:void(0);" onclick="toggleCollapse('collapsefive')">
                     <img src="<?= base_url('docs/btn-bend7.png'); ?>">
-                    <span>ข้อมูลบัญญัติ</span>
+                    <span>ข้อมูลข้อบัญญัติ</span>
                 </a>
                 <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Canon_bgps_backend'); ?>">ข้อบัญญัติงบประมาณ</a>
-                        <a class="collapse-item" href="<?php echo site_url('Canon_chh_backend'); ?>">การควบคุมกิจการที่<br>เป็นอันตรายต่อสุขภาพ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Canon_chh_backend'); ?>">ข้อบัญญัติการควบคุมกิจการ<br>ที่เป็นอันตรายต่อสุขภาพ</a>
                         <a class="collapse-item" href="<?php echo site_url('Canon_ritw_backend'); ?>">ข้อบัญญัติการติดตั้ง<br>ระบบบำบัดน้ำเสียในอาคาร</a>
                         <a class="collapse-item" href="<?php echo site_url('Canon_market_backend'); ?>">ข้อบัญญัติตลาด</a>
                         <a class="collapse-item" href="<?php echo site_url('Canon_rmwp_backend'); ?>">ข้อบัญญัติการจัดการ<br>สิ่งปฏิกูลและมูลฝอย</a>

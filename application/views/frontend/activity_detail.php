@@ -1,10 +1,10 @@
-<div class="bg-pages">
+<div class="bg-pages ">
     <div class="row pad-path">
         <div class="path1-1">
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
-        <div class="path2-4">
-            <span class="font-path-2 underline"><a href="#">ภาพกิจกรรม</a></span>
+        <div class="path2-2">
+            <span class="font-path-2 underline"><a href="#">ข้อมูลทั่วไป</a></span>
         </div>
     </div>
     <div class="page-center">

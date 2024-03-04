@@ -1447,6 +1447,17 @@
     margin-top: -5px;
   }
 
+  .font-pages-head-long2 {
+    color: var(--main, #082555);
+    text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
+    font-family: Kanit;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.494px;
+    margin-top: -5px;
+  }
+
   .font-pages-content-head {
     color: #000;
     leading-trim: both;
@@ -1934,14 +1945,15 @@
   .font-24 {
     font-size: 24px;
   }
+  
 
   .font-24b {
     font-size: 24px;
     font-weight: bold;
   }
 
-  .font-24 {
-    font-size: 24px;
+  .font-egp {
+    font-size: 18px;
   }
 
   .font-26 {
@@ -2246,8 +2258,8 @@
 
   .pages-select-e-gp {
     border-radius: 16.042px;
-    border: 0.668px solid var(--02, #ECB23F);
-    background: #FDF5E1;
+    /* border: 0.668px solid var(--02, #ECB23F); */
+    background: #C6E7FF;
     padding: 15px;
     margin-bottom: 15px;
     flex-shrink: 0;

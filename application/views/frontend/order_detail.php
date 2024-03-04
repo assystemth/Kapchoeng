@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head">คำสั่ง</span>
+            <span class="font-pages-head">คำสั่งเทศบาล</span>
         </div>
     </div>
     <div class="bg-pages-in ">
