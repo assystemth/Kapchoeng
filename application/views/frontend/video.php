@@ -37,7 +37,7 @@
             <div class="pages-select-pdf underline">
                 <div class="row">
                     <div class="col-1 style-col-img">
-                        <a href="#">
+                        <a href="<?= $rs->video_link; ?>" target="_blank">
                             <?php if (!empty($rs->video_img)) : ?>
                                 <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->video_img); ?>" width="94px" height="63px">
                             <?php else : ?>
@@ -46,12 +46,12 @@
                         </a>
                     </div>
                     <div class="col-9 font-pages-content">
-                        <a href="#">
+                        <a href="<?= $rs->video_link; ?>" target="_blank">
                             <span class="one-line-ellipsis"><?= $rs->video_name; ?></span>
                         </a>
                     </div>
                     <div class="col-2 span-time-pages-news">
-                        <a href="#">
+                        <a href="<?= $rs->video_link; ?>" target="_blank">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" fill="currentColor" class="bi bi-calendar-minus-fill" viewBox="0 0 16 16">
                                     <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z" />
                                 </svg>

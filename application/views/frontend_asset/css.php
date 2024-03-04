@@ -2220,7 +2220,7 @@
   }
 
   .margin-top-delete-topic {
-    margin-top: -10px;
+    margin-top: -30px;
   }
 
   .margin-top-delete-q-a {

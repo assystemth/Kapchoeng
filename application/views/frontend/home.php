@@ -71,7 +71,7 @@
                 </a>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="https://www.oic.go.th/INFOCENTER25/2518/" class="zoom-otop" target="_blank" >
+                <a href="https://www.oic.go.th/INFOCENTER25/2518/" class="zoom-otop" target="_blank">
                     <img class="mark-logo" src="docs/k.menu-eservice-top2v2.png">
                 </a>
             </div>
@@ -90,7 +90,7 @@
         </div>
         <div class="col-4">
             <div class="d-flex justify-content-center mt-4">
-                <a href="https://dbdregcom.dbd.go.th/mainsite/index.php?id=28" class="zoom-otop" target="_blank" >
+                <a href="https://dbdregcom.dbd.go.th/mainsite/index.php?id=28" class="zoom-otop" target="_blank">
                     <img class="mark-logo" src="docs/k.menu-eservice-top5v2.png">
                 </a>
             </div>
@@ -315,7 +315,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_po'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การเปิดโอกาสให้มีส่วนร่วม</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_eco'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การเสริมสร้างวัฒนธรรมองค์กร</a></li>
 
-                    
+
                     <!-- <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li> -->
                 </div>
@@ -361,12 +361,12 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/km'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;Knowledge Management : KM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; การจัดการความรู้ของท้องถิ่น</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/loadform'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/newsletter'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;จดหมายข่าว</a></li>
-                
+
                 </div>
             </ul>
         </div>
 
-        
+
 
 
     </div>
@@ -441,7 +441,7 @@
         <?php endif; ?>
     </div>
     <div class="d-flex justify-content-center mt-3">
-        <a href="<?php echo site_url('pages/activity'); ?>">
+        <a href="<?php echo site_url('pages/video'); ?>">
             <img src="docs/k.btn-all.png">
         </a>
     </div>
@@ -456,10 +456,10 @@
                 <img src="docs/k.news-head2.png" alt="Tab 2">
             </div>
             <div class="tab-link-two" onclick="openTabTwo('tabtwo3')">
-                <img src="docs/k.news-head3.png" alt="Tab 3">
+                <img src="docs/k.news-head3v2.png" alt="Tab 3">
             </div>
             <div class="tab-link-two" onclick="openTabTwo('tabtwo4')">
-                <img src="docs/k.news-head4.png" alt="Tab 4">
+                <img src="docs/k.news-head4v2.png" alt="Tab 4">
             </div>
         </div>
         <br>
@@ -750,23 +750,23 @@
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_rpo_name); ?></span>
-
-                                <div class="col-2">
-                                    <div class="d-flex justify-content-end ">
-                                        <span class="text-news-time">
-                                            <?php
-                                            // ในการใช้งาน setThaiMonth
-                                            $date = new DateTime($anou->p_rpo_datesave);
-                                            $day_th = $date->format('d');
-                                            $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
-                                            $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
-                                            $formattedDate = "$day_th $month_th $year_th"; // วันที่และเดือนเป็นภาษาไทย
-                                            echo $formattedDate;
-                                            ?>
-                                        </span>
-                                    </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="d-flex justify-content-end ">
+                                    <span class="text-news-time">
+                                        <?php
+                                        // ในการใช้งาน setThaiMonth
+                                        $date = new DateTime($anou->p_rpo_datesave);
+                                        $day_th = $date->format('d');
+                                        $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
+                                        $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
+                                        $formattedDate = "$day_th $month_th $year_th"; // วันที่และเดือนเป็นภาษาไทย
+                                        echo $formattedDate;
+                                        ?>
+                                    </span>
                                 </div>
                             </div>
+                        </div>
                     </a>
                 </div>
             <?php } ?>
@@ -1076,9 +1076,9 @@
         </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="https://www2.surin.go.th/frontpage" target="_blank"><img src="docs/k.link-link1.png"></a></div>
-                <div class="swiper-slide"><a href="https://surinpao.go.th/" target="_blank"><img src="docs/k.link-link2.png"></a></div>
-                <div class="swiper-slide"><a href="https://surin.moph.go.th/SPHO/" target="_blank"><img src="docs/k.link-link3.png"></a></div>
+                <div class="swiper-slide"><a href="https://www2.surin.go.th/frontpage" target="_blank"><img src="docs/k.link-link1v2.png"></a></div>
+                <div class="swiper-slide"><a href="https://surinpao.go.th/" target="_blank"><img src="docs/k.link-link2v2.png"></a></div>
+                <div class="swiper-slide"><a href="https://surin.moph.go.th/SPHO/" target="_blank"><img src="docs/k.link-link3v2.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.cgd.go.th/cs/internet/internet/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%812.html?page_locale=th_TH" target="_blank"><img src="docs/s.link-link4.png"></a></div>
                 <div class="swiper-slide"><a href="https://moi.go.th/moi/" target="_blank"><img src="docs/s.link-link5.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.doe.go.th/" target="_blank"><img src="docs/s.link-link6.png"></a></div>
