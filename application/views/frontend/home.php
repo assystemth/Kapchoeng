@@ -182,7 +182,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/award'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รางวัลแห่งความภูมิใจ</a></li>
                 </div>
                 <div class="dropdown-right">
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ยุทธศาสตร์การพัฒนา</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/si'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ยุทธศาสตร์การพัฒนา</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/msg_pres'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;สารจากนายก</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/msg_prem'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;สารจากปลัด</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/emblem'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ตราสัญลักษณ์</a></li>
