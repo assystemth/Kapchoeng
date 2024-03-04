@@ -28,7 +28,7 @@
                             <div class="d-flex justify-content-end">
                                 <div class="d-flex justify-content-end">
                                     <a onclick="downloadFile(event)" href="<?= base_url('docs/file/' . $rs->msg_pres_pdf); ?>" download>
-                                        <img src="<?php echo base_url("docs/s.btn-download.png"); ?>">
+                                        <img src="<?php echo base_url("docs/k.btn-download.png"); ?>">
                                     </a>
                                     <script>
                                         function downloadFile(event) {
@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-6">
                     <div class="margin-top-delete-topic d-flex justify-content-end">
-                        <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/s.btn-back.png"); ?>"></a>
+                        <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
                     </div>
                 </div>
             </div>

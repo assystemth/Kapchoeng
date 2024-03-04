@@ -121,8 +121,8 @@ class Video_model extends CI_Model
         $this->db->from('tbl_video');
         $this->db->where('tbl_video.video_status', 'show');
         $this->db->order_by('video_id', 'DESC');
-        $this->db->limit(1);
         $query = $this->db->get();
-        return $query->row(); // ใช้ row() แทน result()
+        return $query->result();
     }
+    
 }

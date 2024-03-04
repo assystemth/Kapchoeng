@@ -82,6 +82,7 @@ class Pages extends CI_Controller
 		$this->load->model('operation_sap_model');
 		$this->load->model('operation_pm_model');
 		$this->load->model('operation_policy_hr_model');
+		$this->load->model('video_model');
 		$this->load->model('operation_am_hr_model');
 		$this->load->model('operation_rdam_hr_model');
 		$this->load->model('operation_cdm_model');
@@ -2121,6 +2122,26 @@ class Pages extends CI_Controller
 	{
 		$this->operation_policy_hr_model->increment_download_operation_policy_hr($operation_policy_hr_file_id);
 	}
+
+	// --------------------------
+
+	public function video()
+	{
+		$data['query'] = $this->video_model->video_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/video', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	
+
+
+
+
+
 	public function operation_am_hr()
 	{
 		$data['query'] = $this->operation_am_hr_model->operation_am_hr_frontend();
