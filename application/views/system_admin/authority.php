@@ -28,7 +28,7 @@
                                    <?php if (!empty($rs->authority_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->authority_img); ?>" width="180px" height="120px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="180px" height="120px">
+                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="180px" height="120px">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->authority_detail; ?></td>

@@ -2425,8 +2425,15 @@
     margin-bottom: 40px;
   }
 
+  .scrollable-container-550 {
+    max-height: 550px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 40px;
+  }
+
   .scrollable-container-otop {
-    max-height: 450px;
+    max-height: 350px;
     overflow-y: scroll;
     overflow-x: hidden;
     margin-bottom: 40px;
@@ -2843,6 +2850,17 @@
     color: #FAE370;
     text-shadow: -1px 0 #014674, 0 2px #014674,
       2px 0 #014674, 0 -1px #014674;
+    font-family: Kanit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .text-content-otop {
+    color: #FAE370;
+    /* text-shadow: -1px 0 #014674, 0 2px #014674,
+      2px 0 #014674, 0 -1px #014674; */
     font-family: Kanit;
     font-size: 32px;
     font-style: normal;

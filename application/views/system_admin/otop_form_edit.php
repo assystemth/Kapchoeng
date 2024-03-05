@@ -122,7 +122,7 @@
                         <?php if (!empty($rsedit->otop_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->otop_img); ?>" width="250px" height="210">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/coverphoto.jpg'); ?>" width="250px" height="210">
+                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="250px" height="210">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่

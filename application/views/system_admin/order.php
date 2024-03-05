@@ -43,7 +43,7 @@
                                 <?php if (!empty($rs->order_img)) : ?>
                                     <img src="<?php echo base_url('docs/img/' . $rs->order_img); ?>" width="120px" height="80px">
                                 <?php else : ?>
-                                    <img src="<?php echo base_url('docs/logo.png'); ?>" width="120px" height="80px">
+                                    <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
                                 <?php endif; ?>
                             </td>
                             <td>

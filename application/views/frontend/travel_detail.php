@@ -12,7 +12,7 @@
             <span class="font-pages-head">สถานที่ท่องเที่ยว</span>
         </div>
     </div>
-    <div class="bg-pages-in " style="padding-top:80px;">
+    <div class="bg-pages-in">
         <div>
             <img class="border-radius-travel" src="<?php echo base_url('docs/img/' . $rsTravel->travel_img); ?>" width="100%" height="467px">
             <?php if (!empty($rsTravel->travel_youtube)) : ?>
@@ -25,7 +25,7 @@
                 </div>
             <?php endif; ?>
         </div>
-        <div class="scrollable-container">
+        <div class="scrollable-container-550">
             <div class="page-content-travel">
                 <span class="font-head-travel"><?= $rsTravel->travel_name; ?></span>
                 <div class="border-gray-332"></div>

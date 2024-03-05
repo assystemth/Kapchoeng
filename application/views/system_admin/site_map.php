@@ -40,7 +40,7 @@
                                     <?php if (!empty($rs->site_map_img)) : ?>
                                         <img src="<?php echo base_url('docs/img/' . $rs->site_map_img); ?>" width="100%" height="50%">
                                     <?php else : ?>
-                                        <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="100%" height="50%">
+                                        <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="100%" height="50%">
                                     <?php endif; ?>
                                 </td>
                                <td><?= $rs->site_map_by; ?></td>

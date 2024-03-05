@@ -128,7 +128,7 @@
                         <?php if (!empty($rsedit->gci_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->gci_img); ?>" width="220px" height="180">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/coverphoto.jpg'); ?>" width="250px" height="210">
+                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="250px" height="210">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่

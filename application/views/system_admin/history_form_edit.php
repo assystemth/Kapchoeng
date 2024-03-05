@@ -41,7 +41,7 @@
                         <?php if (!empty($rsedit->history_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->history_img); ?>" width="220px" height="180">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/coverphoto.jpg'); ?>" width="220px" height="180">
+                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="220px" height="180">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่

@@ -43,7 +43,7 @@
                                     <?php if (!empty($rs->health_img)) : ?>
                                         <img src="<?php echo base_url('docs/img/' . $rs->health_img); ?>" width="120px" height="80px">
                                     <?php else : ?>
-                                        <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="120px" height="80px">
+                                        <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
                                     <?php endif; ?>
                                 <?php if (!empty($rs->health_file)) : ?>
                                     <a class="btn btn-info btn-sm mt-1" href="<?php echo base_url('docs/file/' . $rs->health_file); ?>" target="_blank">ดูไฟล์เดิม!</a>

@@ -29,7 +29,7 @@
                                    <?php if (!empty($rs->vision_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->vision_img); ?>" width="100%" height="20%">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="100%" height="20%">
+                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="100%" height="20%">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->vision_vision; ?></td>

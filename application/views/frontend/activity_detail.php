@@ -16,7 +16,7 @@
         <div>
             <img src="<?php echo base_url('docs/img/' . $rsActivity->activity_img); ?>" width="100%" height="460">
         </div>
-        <div class="scrollable-container">
+        <div class="scrollable-container-550">
             <div class="page-content-travel mt-4">
                 <span class="font-page-detail-head"><?= $rsActivity->activity_name; ?></span>
                 <div class="border-gray-332"></div>

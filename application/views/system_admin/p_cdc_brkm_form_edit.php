@@ -65,7 +65,7 @@
                         <?php if (!empty($rsedit->p_cdc_brkm_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->p_cdc_brkm_img); ?>" width="180px" height="220px">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/coverphoto.jpg'); ?>" width="180px" height="220px">
+                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="180px" height="220px">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่

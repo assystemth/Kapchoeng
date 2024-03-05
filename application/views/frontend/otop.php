@@ -3,8 +3,8 @@
         <div class="path1-1">
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
-        <div class="path2-2">
-            <span class="font-path-2 underline"><a href="#">ผลิตภัณฑ์ชุมชน</a></span>
+        <div class="path2-1">
+            <span class="font-path-2 underline"><a href="#">ข้อมูลทั่วไป</a></span>
         </div>
     </div>
     <div class="container-pages-news">
@@ -82,7 +82,8 @@
                 </div>
                 <div style="margin-top: 50px;"></div>
             <?php } ?>
-            <nav aria-label="Page navigation example">
+            <!-- แสดงปุ่ม Next และ Previous -->
+        <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <?php if ($currentPage > 1) : ?>
                     <li class="page-item">

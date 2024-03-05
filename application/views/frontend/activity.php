@@ -3,7 +3,7 @@
         <div class="path1-1">
             <span class="font-path-1 underline"><a href="<?php echo site_url('Home'); ?>">หน้าแรก</a></span>
         </div>
-        <div class="path2-2">
+        <div class="path2-1">
             <span class="font-path-2  underline"><a href="#">ข้อมูลทั่วไป</a></span>
         </div>
     </div>

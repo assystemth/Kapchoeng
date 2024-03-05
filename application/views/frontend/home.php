@@ -78,7 +78,7 @@
         </div>
         <div class="col-4">
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="#oss" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-eservice-top3v2.png">
                 </a>
             </div>
@@ -244,7 +244,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cjc'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ยุติธรรมชุมชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_sags'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือและมาตรฐานการให้บริการ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือการจดทะเบียนพาณิชย์</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
                 </div>
                 <div class="dropdown-center">
                     <!-- <li>
@@ -253,7 +253,6 @@
 
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_oppr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานอาสาสมัครป้องกันภัยฝ่ายพลเรือน (อปพร.)</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ems'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานกู้ชีพ / การบริการการแพทย์ฉุกเฉิน (EMS)</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ae'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;เบี้ยผู้สูงอายุ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม E-Book</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_tax'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลการชำระภาษี</a></li>
@@ -473,7 +472,7 @@
                                     <span class="text-news-time">
                                         <?php
                                         // ในการใช้งาน setThaiMonth
-                                        $date = new DateTime($news->news_datesave);
+                                        $date = new DateTime($news->news_date);
                                         $day_th = $date->format('d');
                                         $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                         $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
@@ -753,7 +752,7 @@
                                     <span class="text-news-time">
                                         <?php
                                         // ในการใช้งาน setThaiMonth
-                                        $date = new DateTime($anou->p_rpo_datesave);
+                                        $date = new DateTime($anou->p_rpo_date);
                                         $day_th = $date->format('d');
                                         $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                         $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
@@ -812,7 +811,7 @@
                     <br>
                     <div class="d-flex justify-content-center" style="margin-left: -25px; width:270px;">
                         <a class="underline" href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
-                            <span class="text-content-travel"><?= $otop->otop_name; ?></span>
+                            <span class="text-content-otop"><?= $otop->otop_name; ?></span>
                         </a>
                     </div>
                 </div>
@@ -827,7 +826,7 @@
 </div>
 
 <div class="bg-page-bottom">
-    <div class="d-flex justify-content-center" style="padding-top: 70px;">
+    <div class="d-flex justify-content-center" style="padding-top: 70px;" id="oss">
         <img src="docs/k.head-e-service.png">
     </div>
     <br>
@@ -995,12 +994,9 @@
                                             <input class="form-check-input border-like" type="radio" value="พอใช้" id="flexCheckDefault4" name="like_name" onclick="toggleCheckbox('flexCheckDefault4')" />
                                             <label class="form-check-label font-like-label" for="พอใช้">พอใช้</label>
                                         </div>
-                                        <button type="button" class="btn mt-4" id="confirmButton"><img src="docs/k.btn-sent-esv.png"></button>
-                                        <div id="submitSection" style="display:none;">
+                                        <div id="submitSection">
                                             <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
                                             <div class="form-group row mt-2">
-                                                <div class="col-3">
-                                                </div>
                                                 <div class="col-9">
                                                     <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/k.btn-sent-esv.png"></button>
                                                 </div>
