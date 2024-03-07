@@ -1,3 +1,9 @@
+<div class="image-slide-stick-mid">
+    <a href="https://itas.nacc.go.th/go/eit/qu7msc" target="_blank">
+        <img src="docs/eit-slide-mid.png"> 
+    </a>
+    <img src="docs/eit-slide-close.png" class="close-button-slide-mid" onclick="closeImageSlideMid()">
+</div>
 <div class="welcome">
 
     <!-- <div class="tab-container">
@@ -275,6 +281,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pc3y'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนอัตรากำลัง 3 ปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pds3y'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนพัฒนาบุคลากร 3 ปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pdpa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนพัฒนาบุคคลากรประจำปี</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_dpy'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนการบริหารและพัฒนาทรัพยากร<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; บุคคลประจำปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_poa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนการดำเนินงานประจำปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pcra'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนการจัดเก็บรายได้ประจำปี</a></li>
                 </div>
@@ -449,7 +456,7 @@
                 <img src="docs/k.news-head1.png" alt="Tab 1">
             </div>
             <div class="tab-link-two" onclick="openTabTwo('tabtwo2')">
-                <img src="docs/k.news-head2.png" alt="Tab 2">
+                <img src="docs/k.news-head2v2.png" alt="Tab 2">
             </div>
             <div class="tab-link-two" onclick="openTabTwo('tabtwo3')">
                 <img src="docs/k.news-head3v2.png" alt="Tab 3">
@@ -995,7 +1002,7 @@
                                             <label class="form-check-label font-like-label" for="พอใช้">พอใช้</label>
                                         </div>
                                         <div id="submitSection">
-                                            <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
+                                            <div class="g-recaptcha" style="margin-left: -15px;" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
                                             <div class="form-group row mt-2">
                                                 <div class="col-9">
                                                     <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/k.btn-sent-esv.png"></button>

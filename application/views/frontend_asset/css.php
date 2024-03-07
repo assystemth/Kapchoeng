@@ -2911,4 +2911,24 @@
     font-style: normal;
     font-weight: 300;
   }
+
+  .image-slide-stick-mid {
+    position: fixed;
+    top: 35%;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 9999;
+    /* ตั้งค่า z-index ที่มากกว่าปุ่มปิด */
+    width: 410px;
+  }
+
+  .close-button-slide-mid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* สีปุ่มปิด */
+    border: none;
+    cursor: pointer;
+  }
 </style>

@@ -377,4 +377,8 @@
             })
         <?php } ?>
     });
+
+    function closeImageSlideMid() {
+        document.querySelector('.image-slide-stick-mid').style.display = 'none';
+    }
 </script>

@@ -36,7 +36,7 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="MXdATBI7"></script>
 
-  <link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url("docs/k.logo.png"); ?>" type="image/x-icon">
   <title>เทศบาลตำบลกาบเชิง</title>
 </head>
 
