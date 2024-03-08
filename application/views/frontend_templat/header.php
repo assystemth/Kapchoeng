@@ -45,10 +45,6 @@
     nonce="MXdATBI7"></script>
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d2a833b643b88b640e4134527d7d6b2278eddc41
 </head>
 
 <!-- Messenger ปลั๊กอินแชท Code -->
