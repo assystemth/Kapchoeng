@@ -78,6 +78,7 @@ class Pages extends CI_Controller
 		$this->load->model('pbsv_tax_model');
 
 		$this->load->model('operation_reauf_model');
+		$this->load->model('p_rpobuy_model');
 		$this->load->model('p_rpo_model');
 		$this->load->model('p_reb_model');
 		$this->load->model('operation_sap_model');
@@ -1955,6 +1956,48 @@ class Pages extends CI_Controller
 	{
 		$this->operation_reauf_model->increment_download_operation_reauf($operation_reauf_file_id);
 	}
+	public function p_rpobuy()
+	{
+		$data['query'] = $this->p_rpobuy_model->p_rpobuy_frontend_list();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_rpobuy', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function p_rpobuy_detail($p_rpobuy_id)
+	{
+		$this->p_rpobuy_model->increment_view($p_rpobuy_id);
+
+		$data['rsData'] = $this->p_rpobuy_model->read($p_rpobuy_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->p_rpobuy_model->read_file($p_rpobuy_id);
+		$data['rsImg'] = $this->p_rpobuy_model->read_img($p_rpobuy_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/p_rpobuy_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_p_rpobuy($p_rpobuy_file_id)
+	{
+		$this->p_rpobuy_model->increment_download_p_rpobuy($p_rpobuy_file_id);
+	}
 	public function p_rpo()
 	{
 		$data['query'] = $this->p_rpo_model->p_rpo_frontend_list();
@@ -2179,7 +2222,7 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
-	
+
 
 
 
@@ -3519,7 +3562,7 @@ class Pages extends CI_Controller
 			$this->load->view('frontend_templat/footer');
 			return; // ให้จบการทำงานที่นี่
 		}
-		
+
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
 		$this->load->view('frontend_templat/navbar');
