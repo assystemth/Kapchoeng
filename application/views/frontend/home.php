@@ -785,7 +785,7 @@
                         <img src="<?php echo base_url('docs/img/' . $travel->travel_img); ?>" width="270px" height="254px" class="image-with-shadow-travel">
                     </a>
                     <br>
-                    <div class="d-flex justify-content-center" style="margin-left: -25px; width:270px;">
+                    <div class="d-flex justify-content-center" style="margin-left: 0px; width:270px;">
                         <a class="underline" href="<?php echo site_url('Pages/travel_detail/' . $travel->travel_id); ?>">
                             <span class="text-content-travel"><?= $travel->travel_name; ?></span>
                         </a>
@@ -810,7 +810,7 @@
                         <img src="<?php echo base_url('docs/img/' . $otop->otop_img); ?>" width="270px" height="336px" class="image-with-shadow-travel">
                     </a>
                     <br>
-                    <div class="d-flex justify-content-center" style="margin-left: -25px; width:270px;">
+                    <div class="d-flex justify-content-center" style="margin-left: 0px; width:270px;">
                         <a class="underline" href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
                             <span class="text-content-travel"><?= $otop->otop_name; ?></span>
                         </a>

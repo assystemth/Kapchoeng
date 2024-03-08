@@ -16,11 +16,9 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-
                     <?php
                     $Index = 1;
                     ?>
-
                     <table id="newdataTables" class="table">
                         <thead>
                             <tr>
@@ -35,7 +33,9 @@
                         </thead>
                         <tbody>
                             <?php
-                            foreach ($query as $rs) { ?>
+                            $Index = 1;
+                            foreach ($query as $rs) {
+                            ?>
                                 <tr role="row">
                                     <td align="center"><?= $Index; ?></td>
                                     <td><?= $rs->video_name; ?></td>
@@ -103,7 +103,9 @@
                                     </td>
                                 </tr>
                             <?php
-                            } ?>
+                                $Index++; // เพิ่มค่า Index ทีละ 1 ทุกรอบของลูป
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>
