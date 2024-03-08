@@ -1200,6 +1200,9 @@ class Pages extends CI_Controller
 	{
 		$this->plan_pdpa_model->increment_download_plan_pdpa($plan_pdpa_file_id);
 	}
+
+
+	// --------------------------------------
 	public function plan_dpy()
 	{
 		$data['query'] = $this->plan_dpy_model->plan_dpy_frontend();
@@ -1242,6 +1245,8 @@ class Pages extends CI_Controller
 	{
 		$this->plan_dpy_model->increment_download_plan_dpy($plan_dpy_file_id);
 	}
+
+	// -----------------------------------
 	public function plan_poa()
 	{
 		$data['query'] = $this->plan_poa_model->plan_poa_frontend();

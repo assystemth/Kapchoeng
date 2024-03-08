@@ -113,7 +113,13 @@
                     </div>
                 </div>
                 <br>
-                <div id="map"></div>
+                <div class="form-group">
+                    <div class="col-sm-3 control-label">Link Google map</div>
+                    <div class="col-sm-10">
+                        <input type="text" name="travel_map" class="form-control" value="<?= $rsedit->travel_map; ?>">
+                    </div>
+                </div>
+                <!-- <div id="map"></div>
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">ละติจูด</div>
@@ -127,7 +133,7 @@
                     <div class="col-sm-6">
                         <input type="text" name="travel_long" id="travel_long" class="form-control" required value="<?php echo $rsedit->travel_long; ?>">
                     </div>
-                </div>
+                </div> -->
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">รูปภาพหน้าปก</div>

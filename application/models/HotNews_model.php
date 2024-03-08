@@ -84,7 +84,7 @@ class HotNews_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_hotnews');
         $this->db->where('tbl_hotnews.hotNews_status', 'show');
-        $this->db->order_by('tbl_hotnews.hotNews_id', 'DESC');
+        $this->db->order_by('tbl_hotnews.hotNews_id', 'ASC');
         $query = $this->db->get();
         return $query->result();
     }
