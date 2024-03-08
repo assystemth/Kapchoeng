@@ -13,8 +13,8 @@
                 <span class="font-path-2 underline"><a href="#">ข้อมูลทั่วไป</a></span>
             </div>
         </div>
-        <div class="bg-pages-in-gi">
-            <div class="scrollable-container-gi">
+        <div class="bg-pages-in">
+            <div class="scrollable-container">
                 <div class="pages-content break-word text-center">
                     <span class="font-pages-content-head">ตารางแสดงจำนวนประชากรในเขตองค์การบริหารส่วนตำบลกาเกาะ</span><br>
                     <table class="table table-bordered mt-5">

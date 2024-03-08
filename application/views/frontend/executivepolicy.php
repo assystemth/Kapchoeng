@@ -14,8 +14,8 @@
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
-        <div class="bg-pages-in-gi ">
-            <div class="scrollable-container-p">
+        <div class="bg-pages-in">
+            <div class="scrollable-container">
                 <?php foreach ($qExecutivepolicy as $rs) { ?>
                     <div class="pages-content break-word">
                         <span class="font-gi-head">เรื่อง <?= $rs->executivepolicy_name; ?></span>
