@@ -339,7 +339,7 @@
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aditn'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หน่วยตรวจสอบภายใน</a></li>
                     <!-- <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpo'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงาน</a></li> -->
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpobuy'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_reb'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li>
+                    <!-- <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_reb'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li> -->
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_eg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_ameg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a></li>
                 </div>
@@ -718,7 +718,7 @@
         <div id="tab3" class="tab-content">
             <?php foreach ($qP_reb as $anou) { ?>
                 <div class="content-news-detail">
-                    <a href="<?php echo site_url('Pages/p_reb/' . $anou->p_reb_id); ?>">
+                    <a href="<?php echo site_url('Pages/p_reb_detail/' . $anou->p_reb_id); ?>">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_reb_name); ?></span>
@@ -751,7 +751,7 @@
         <div id="tab4" class="tab-content">
             <?php foreach ($qP_rpo as $anou) { ?>
                 <div class="content-news-detail">
-                    <a href="<?php echo site_url('Pages/p_rpo/' . $anou->p_rpo_id); ?>">
+                    <a href="<?php echo site_url('Pages/p_rpo_detail/' . $anou->p_rpo_id); ?>">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($anou->p_rpo_name); ?></span>
