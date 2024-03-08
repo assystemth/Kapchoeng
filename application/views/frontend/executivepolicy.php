@@ -14,8 +14,6 @@
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
-<<<<<<< HEAD
-        <div class="bg-pages-in">
             <div class="scrollable-container">
                 <?php foreach ($qExecutivepolicy as $rs) { ?>
                     <div class="pages-content break-word">
@@ -24,20 +22,6 @@
                         <span class="font-pages-content"><?= $rs->executivepolicy_detail; ?></span>
                     </div>
                     <!-- <div class="row">
-=======
-        <div class="scrollable-container">
-            <?php foreach ($qExecutivepolicy as $rs) { ?>
-                <div class="pages-content break-word">
-                    <span class="font-gi-head">เรื่อง
-                        <?= $rs->executivepolicy_name; ?>
-                    </span>
-                    <br>
-                    <span class="font-pages-content">
-                        <?= $rs->executivepolicy_detail; ?>
-                    </span>
-                </div>
-                <!-- <div class="row">
->>>>>>> cc033531c62f788690aff6d4f648b8093f7d4cf9
                         <div class="col-6 mt-3">
                             <div class="d-flex justify-content-start">
                                 <span class="font-page-detail-view-news">ดาวโหลดแล้ว <?= $rs->executivepolicy_download; ?> ครั้ง</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -67,22 +51,19 @@
                     <div class="blog-text mt-5">
                         <object data="<?= base_url('docs/file/' . $rs->executivepolicy_pdf); ?>" type="application/pdf" width="100%" height="1500px"></object>
                     </div> -->
-            <?php } ?>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="d-flex justify-content-start">
-                    <span class="font-page-detail-view-news">จำนวนผู้เข้าชม
-                        <?= $rs->executivepolicy_view; ?> ครั้ง
-                    </span>
-                </div>
+                <?php } ?>
             </div>
-            <div class="col-6">
-                <div class="margin-top-delete-topic d-flex justify-content-end">
-                    <a href="<?php echo site_url('Home'); ?>"><img
-                            src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex justify-content-start">
+                        <span class="font-page-detail-view-news">จำนวนผู้เข้าชม <?= $rs->executivepolicy_view; ?> ครั้ง</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="margin-top-delete-topic d-flex justify-content-end">
+                        <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>

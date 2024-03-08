@@ -2869,7 +2869,7 @@
   }
 
   .bg-qa-list {
-    background-image: url('<?php echo base_url("docs/k-bg-qa-list.png"); ?>');
+    background-image: url('<?php echo base_url("docs/k-bg-qa-listv2.png"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     height: 513px;

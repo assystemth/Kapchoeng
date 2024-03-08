@@ -54,7 +54,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Q_a_backend'); ?>">กระทู้ถาม-ตอบ</a>
                         <a class="collapse-item" href="<?php echo site_url('Questions_backend'); ?>">คำถามที่พบบ่อย</a>
                         <a class="collapse-item" href="<?php echo site_url('Publicize_ita_backend'); ?>">ประชาสัมพันธ์ ITA</a>
-                        <a class="collapse-item" href="<?php echo site_url('Form_esv_backend'); ?>">แบบฟอร์ม E-service</a>
+                        <!-- <a class="collapse-item" href="<?php echo site_url('Form_esv_backend'); ?>">แบบฟอร์ม E-service</a> -->
                     </div>
                 </div>
             </li>
@@ -217,8 +217,8 @@
                 <div id="collapseeleven" class="collapse" aria-labelledby="headingeleven" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
-                        <a class="collapse-item" href="<?php echo site_url('Announce_backend'); ?>">ประกาศ</a>
-                        <a class="collapse-item" href="<?php echo site_url('Order_backend'); ?>">คำสั่ง</a>
+                        <a class="collapse-item" href="<?php echo site_url('Announce_backend'); ?>">ประกาศเทศบาล</a>
+                        <a class="collapse-item" href="<?php echo site_url('Order_backend'); ?>">คำสั่งเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('Mui_backend'); ?>">มาตราการภายในหน่วยงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('Guide_work_backend'); ?>">คู่มือการปฏิบัติงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('Km_backend'); ?>">การจัดการความรู้ท้องถิ่น KM</a>
