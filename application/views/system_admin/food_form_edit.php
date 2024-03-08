@@ -123,7 +123,7 @@
                         <?php if (!empty($rsedit->food_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->food_img); ?>" width="250px" height="210">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/coverphoto.jpg'); ?>" width="250px" height="210">
+                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="250px" height="210">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่

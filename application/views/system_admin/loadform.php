@@ -43,7 +43,7 @@
                                     <?php if (!empty($rs->loadform_img)) : ?>
                                         <img src="<?php echo base_url('docs/img/' . $rs->loadform_img); ?>" width="150px" height="100px">
                                     <?php else : ?>
-                                        <img src="<?php echo base_url('docs/coverphoto.png'); ?>" width="150px" height="100px">
+                                        <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="150px" height="100px">
                                     <?php endif; ?>
                                     <br>
                                     <?php foreach ($rs->file as $pdf) : ?>

@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages-three">
-            <span class="font-pages-head-long">การควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
+            <span class="font-pages-head-long2">ข้อบัญญัติการควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
         </div>
     </div>
     <div class="bg-pages-in ">

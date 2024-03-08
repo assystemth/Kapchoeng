@@ -43,7 +43,7 @@
                                 <?php if (!empty($rs->plan_pmda_img)) : ?>
                                     <img src="<?php echo base_url('docs/img/' . $rs->plan_pmda_img); ?>" width="120px" height="80px">
                                 <?php else : ?>
-                                    <img src="<?php echo base_url('docs/coverphoto.png'); ?>" width="120px" height="80px">
+                                    <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
                                 <?php endif; ?>
                             </td>
                             <td>

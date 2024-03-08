@@ -1447,6 +1447,17 @@
     margin-top: -5px;
   }
 
+  .font-pages-head-long2 {
+    color: var(--main, #082555);
+    text-shadow: 0px 2.685px 6.712px rgba(0, 0, 0, 0.25);
+    font-family: Kanit;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.494px;
+    margin-top: -5px;
+  }
+
   .font-pages-content-head {
     color: #000;
     leading-trim: both;
@@ -1934,14 +1945,15 @@
   .font-24 {
     font-size: 24px;
   }
+  
 
   .font-24b {
     font-size: 24px;
     font-weight: bold;
   }
 
-  .font-24 {
-    font-size: 24px;
+  .font-egp {
+    font-size: 18px;
   }
 
   .font-26 {
@@ -2246,8 +2258,8 @@
 
   .pages-select-e-gp {
     border-radius: 16.042px;
-    border: 0.668px solid var(--02, #ECB23F);
-    background: #FDF5E1;
+    /* border: 0.668px solid var(--02, #ECB23F); */
+    background: #C6E7FF;
     padding: 15px;
     margin-bottom: 15px;
     flex-shrink: 0;
@@ -2413,8 +2425,15 @@
     margin-bottom: 40px;
   }
 
+  .scrollable-container-550 {
+    max-height: 550px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 40px;
+  }
+
   .scrollable-container-otop {
-    max-height: 450px;
+    max-height: 350px;
     overflow-y: scroll;
     overflow-x: hidden;
     margin-bottom: 40px;
@@ -2838,6 +2857,17 @@
     line-height: normal;
   }
 
+  .text-content-otop {
+    color: #FAE370;
+    /* text-shadow: -1px 0 #014674, 0 2px #014674,
+      2px 0 #014674, 0 -1px #014674; */
+    font-family: Kanit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
   .bg-qa-list {
     background-image: url('<?php echo base_url("docs/k-bg-qa-list.png"); ?>');
     background-repeat: no-repeat;
@@ -2880,5 +2910,25 @@
     font-size: 13.224px;
     font-style: normal;
     font-weight: 300;
+  }
+
+  .image-slide-stick-mid {
+    position: fixed;
+    top: 35%;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 9999;
+    /* ตั้งค่า z-index ที่มากกว่าปุ่มปิด */
+    width: 410px;
+  }
+
+  .close-button-slide-mid {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* สีปุ่มปิด */
+    border: none;
+    cursor: pointer;
   }
 </style>

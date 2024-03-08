@@ -28,7 +28,7 @@
                                    <?php if (!empty($rs->mission_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->mission_img); ?>" width="180px" height="120px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="180px" height="120px">
+                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="180px" height="120px">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->mission_detail; ?></td>

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-7">
-            <h4>แก้ไขข้อมูลการควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</h4>
+            <h4>แก้ไขข้อมูลข้อบัญญัติการควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</h4>
             <form action=" <?php echo site_url('canon_chh_backend/edit/' . $rsedit->canon_chh_id); ?> " method="post" class="form-horizontal" enctype="multipart/form-data">
                 <br>
                 <div class="form-group row">
@@ -62,7 +62,7 @@
                         <?php if (!empty($rsedit->canon_chh_img)) : ?>
                             <img src="<?= base_url('docs/img/' . $rsedit->canon_chh_img); ?>" width="250px" height="210">
                         <?php else : ?>
-                            <img src="<?= base_url('docs/coverphoto.jpg'); ?>" width="250px" height="210">
+                            <img src="<?= base_url('docs/k.logo.png'); ?>" width="250px" height="210">
                         <?php endif; ?>
                         <br>
                         เลือกใหม่

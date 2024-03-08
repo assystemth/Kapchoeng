@@ -26,9 +26,9 @@
                                <td align="center"><?= $Index; ?></td>
                                <td>
                                    <?php if (!empty($rs->history_img)) : ?>
-                                       <img src="<?php echo base_url('docs/img/' . $rs->history_img); ?>" width="400px" height="220px">
+                                       <img src="<?php echo base_url('docs/img/' . $rs->history_img); ?>" width="160px" height="100px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="400px" height="220px">
+                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="160px" height="100px">
                                    <?php endif; ?>
                                </td>
                                <td class="limited-text"><?= $rs->history_name; ?></td>

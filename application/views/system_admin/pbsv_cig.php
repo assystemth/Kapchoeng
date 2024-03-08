@@ -43,7 +43,7 @@
                                 <?php if (!empty($rs->pbsv_cig_img)) : ?>
                                     <img src="<?php echo base_url('docs/img/' . $rs->pbsv_cig_img); ?>" width="120px" height="80px">
                                 <?php else : ?>
-                                    <img src="<?php echo base_url('docs/coverphoto.jpg'); ?>" width="120px" height="80px">
+                                    <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="120px" height="80px">
                                 <?php endif; ?>
                             </td>
                             <td>

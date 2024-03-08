@@ -124,6 +124,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Plan_pc3y_backend'); ?>">แผนอัตรากำลัง 3 ปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pds3y_backend'); ?>">แผนพัฒนาบุคลากร 3 ปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pdpa_backend'); ?>">แผนพัฒนาบุคลากรประจำปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Plan_dpy_backend'); ?>">แผนการบริหารและพัฒนา<br>ทรัพยากรบุคคลประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_poa_backend'); ?>">แผนการดำเนินงานประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pcra_backend'); ?>">แผนเก็บรายได้ประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pop_backend'); ?>">แผนปฏิบัติการจัดซื้อจัดจ้าง</a>
@@ -137,13 +138,13 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" aria-expanded="true" href="javascript:void(0);" onclick="toggleCollapse('collapsefive')">
                     <img src="<?= base_url('docs/btn-bend7.png'); ?>">
-                    <span>ข้อมูลบัญญัติ</span>
+                    <span>ข้อมูลข้อบัญญัติ</span>
                 </a>
                 <div id="collapsefive" class="collapse" aria-labelledby="headingfive" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Canon_bgps_backend'); ?>">ข้อบัญญัติงบประมาณ</a>
-                        <a class="collapse-item" href="<?php echo site_url('Canon_chh_backend'); ?>">การควบคุมกิจการที่<br>เป็นอันตรายต่อสุขภาพ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Canon_chh_backend'); ?>">ข้อบัญญัติการควบคุมกิจการ<br>ที่เป็นอันตรายต่อสุขภาพ</a>
                         <a class="collapse-item" href="<?php echo site_url('Canon_ritw_backend'); ?>">ข้อบัญญัติการติดตั้ง<br>ระบบบำบัดน้ำเสียในอาคาร</a>
                         <a class="collapse-item" href="<?php echo site_url('Canon_market_backend'); ?>">ข้อบัญญัติตลาด</a>
                         <a class="collapse-item" href="<?php echo site_url('Canon_rmwp_backend'); ?>">ข้อบัญญัติการจัดการ<br>สิ่งปฏิกูลและมูลฝอย</a>
@@ -270,8 +271,13 @@
                         <a class="collapse-item" href="<?php echo site_url('report/report_date_backend'); ?>">แยกตามวัน/เดือน/ปี</a>
                     </div>
                 </div>
+<<<<<<< HEAD
             </li> -->
 
+=======
+            </li>
+            
+>>>>>>> cc033531c62f788690aff6d4f648b8093f7d4cf9
             <!-- Nav Item - Utilities Collapse Menu -->
             <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">

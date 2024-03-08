@@ -1,3 +1,9 @@
+<div class="image-slide-stick-mid">
+    <a href="https://itas.nacc.go.th/go/eit/qu7msc" target="_blank">
+        <img src="docs/eit-slide-mid.png"> 
+    </a>
+    <img src="docs/eit-slide-close.png" class="close-button-slide-mid" onclick="closeImageSlideMid()">
+</div>
 <div class="welcome">
 
     <!-- <div class="tab-container">
@@ -78,7 +84,7 @@
         </div>
         <div class="col-4">
             <div class="d-flex justify-content-center mt-4">
-                <a href="#" class="zoom-otop">
+                <a href="#oss" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-eservice-top3v2.png">
                 </a>
             </div>
@@ -244,7 +250,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_cjc'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์ยุติธรรมชุมชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_sags'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือและมาตรฐานการให้บริการ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือการจดทะเบียนพาณิชย์</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
                 </div>
                 <div class="dropdown-center">
                     <!-- <li>
@@ -253,7 +259,6 @@
 
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_oppr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานอาสาสมัครป้องกันภัยฝ่ายพลเรือน (อปพร.)</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ems'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;งานกู้ชีพ / การบริการการแพทย์ฉุกเฉิน (EMS)</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ae'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;เบี้ยผู้สูงอายุ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_e_book'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม E-Book</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_tax'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลการชำระภาษี</a></li>
@@ -276,6 +281,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pc3y'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนอัตรากำลัง 3 ปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pds3y'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนพัฒนาบุคลากร 3 ปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pdpa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนพัฒนาบุคคลากรประจำปี</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_dpy'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนการบริหารและพัฒนาทรัพยากร<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; บุคคลประจำปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_poa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนการดำเนินงานประจำปี</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pcra'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนการจัดเก็บรายได้ประจำปี</a></li>
                 </div>
@@ -450,7 +456,7 @@
                 <img src="docs/k.news-head1.png" alt="Tab 1">
             </div>
             <div class="tab-link-two" onclick="openTabTwo('tabtwo2')">
-                <img src="docs/k.news-head2.png" alt="Tab 2">
+                <img src="docs/k.news-head2v2.png" alt="Tab 2">
             </div>
             <div class="tab-link-two" onclick="openTabTwo('tabtwo3')">
                 <img src="docs/k.news-head3v2.png" alt="Tab 3">
@@ -473,7 +479,7 @@
                                     <span class="text-news-time">
                                         <?php
                                         // ในการใช้งาน setThaiMonth
-                                        $date = new DateTime($news->news_datesave);
+                                        $date = new DateTime($news->news_date);
                                         $day_th = $date->format('d');
                                         $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                         $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
@@ -501,7 +507,7 @@
             </div>
             <div class="content-news-detail">
                 <a href="<?php echo site_url('Pages/canon_chh'); ?>">
-                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;การควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
+                    <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;ข้อบัญญัติการควบคุมกิจการที่เป็นอันตรายต่อสุขภาพ</span>
                 </a>
             </div>
             <div class="content-news-detail">
@@ -608,7 +614,7 @@
                 <img src="docs/k.news-head6.png" alt="Tab 2">
             </div>
             <div class="tab-link" onclick="openTab('tab3')">
-                <img src="docs/k.news-head7.png" alt="Tab 3">
+                <img src="docs/k.news-head7v2.png" alt="Tab 3">
             </div>
             <div class="tab-link" onclick="openTab('tab4')">
                 <img src="docs/k.news-head8.png" alt="Tab 4">
@@ -753,7 +759,7 @@
                                     <span class="text-news-time">
                                         <?php
                                         // ในการใช้งาน setThaiMonth
-                                        $date = new DateTime($anou->p_rpo_datesave);
+                                        $date = new DateTime($anou->p_rpo_date);
                                         $day_th = $date->format('d');
                                         $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                         $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
@@ -812,7 +818,7 @@
                     <br>
                     <div class="d-flex justify-content-center" style="margin-left: 0px; width:270px;">
                         <a class="underline" href="<?php echo site_url('Pages/otop_detail/' . $otop->otop_id); ?>">
-                            <span class="text-content-travel"><?= $otop->otop_name; ?></span>
+                            <span class="text-content-otop"><?= $otop->otop_name; ?></span>
                         </a>
                     </div>
                 </div>
@@ -827,7 +833,7 @@
 </div>
 
 <div class="bg-page-bottom">
-    <div class="d-flex justify-content-center" style="padding-top: 70px;">
+    <div class="d-flex justify-content-center" style="padding-top: 70px;" id="oss">
         <img src="docs/k.head-e-service.png">
     </div>
     <br>
@@ -995,12 +1001,9 @@
                                             <input class="form-check-input border-like" type="radio" value="พอใช้" id="flexCheckDefault4" name="like_name" onclick="toggleCheckbox('flexCheckDefault4')" />
                                             <label class="form-check-label font-like-label" for="พอใช้">พอใช้</label>
                                         </div>
-                                        <button type="button" class="btn mt-4" id="confirmButton"><img src="docs/k.btn-sent-esv.png"></button>
-                                        <div id="submitSection" style="display:none;">
-                                            <div class="g-recaptcha" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
+                                        <div id="submitSection">
+                                            <div class="g-recaptcha" style="margin-left: -15px;" data-sitekey="6LcKoPcnAAAAAKGgUMRtkBs6chDKzC8XOoVnaZg_" data-callback="enableSubmit"></div>
                                             <div class="form-group row mt-2">
-                                                <div class="col-3">
-                                                </div>
                                                 <div class="col-9">
                                                     <button type="submit" class="btn" id="SubmitLike" disabled><img src="docs/k.btn-sent-esv.png"></button>
                                                 </div>
@@ -1080,12 +1083,12 @@
                 <div class="swiper-slide"><a href="https://moi.go.th/moi/" target="_blank"><img src="docs/s.link-link5.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.doe.go.th/" target="_blank"><img src="docs/s.link-link6.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.nhso.go.th/" target="_blank"><img src="docs/s.link-link7.png"></a></div>
-                <div class="swiper-slide"><a href="https://www.roiet.go.th/dumrong/" target="_blank"><img src="docs/s.link-link8v2.png"></a></div>
+                <div class="swiper-slide"><a href="https://www2.surin.go.th/damrongdhama/frontpage" target="_blank"><img src="docs/s.link-link8v3.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.admincourt.go.th/admincourt/site/09illustration.html" target="_blank"><img src="docs/s.link-link9.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.dla.go.th/index.jsp" target="_blank"><img src="docs/s.link-link10.png"></a></div>
                 <div class="swiper-slide"><a href="https://info.go.th/" target="_blank"><img src="docs/s.link-link11.png"></a></div>
                 <div class="swiper-slide"><a href="https://moi.go.th/moi/about-us/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%97%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%81/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%8A%E0%B8%A7%E0%B8%99%E0%B8%A3%E0%B8%B9%E0%B9%89/" target="_blank"><img src="docs/s.link-link12.png"></a></div>
-                <div class="swiper-slide"><a href="n" target="_blank"><img src="docs/s.link-link13.png"></a></div>
+                <div class="swiper-slide"><a href="https://odloc.go.th/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%84%E0%B8%B3%E0%B8%AA%E0%B8%B1%E0%B9%88%E0%B8%87/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B8%81%E0%B8%8F%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%87/%E0%B8%81%E0%B8%8E%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9B%E0%B8%81%E0%B8%84%E0%B8%A3/" target="_blank"><img src="docs/s.link-link13.png"></a></div>
                 <div class="swiper-slide"><a href="https://www.oic.go.th/web2017/km/index.html" target="_blank"><img src="docs/s.link-link15.png"></a></div>
             </div>
             <!-- <div class="swiper-pagination"></div> -->

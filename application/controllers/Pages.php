@@ -49,6 +49,7 @@ class Pages extends CI_Controller
 		$this->load->model('plan_pc3y_model');
 		$this->load->model('plan_pds3y_model');
 		$this->load->model('plan_pdpa_model');
+		$this->load->model('plan_dpy_model');
 		$this->load->model('plan_poa_model');
 		$this->load->model('plan_pcra_model');
 		$this->load->model('plan_pop_model');
@@ -1197,6 +1198,48 @@ class Pages extends CI_Controller
 	public function increment_download_plan_pdpa($plan_pdpa_file_id)
 	{
 		$this->plan_pdpa_model->increment_download_plan_pdpa($plan_pdpa_file_id);
+	}
+	public function plan_dpy()
+	{
+		$data['query'] = $this->plan_dpy_model->plan_dpy_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_dpy', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function plan_dpy_detail($plan_dpy_id)
+	{
+		$this->plan_dpy_model->increment_view($plan_dpy_id);
+
+		$data['rsData'] = $this->plan_dpy_model->read($plan_dpy_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->plan_dpy_model->read_file($plan_dpy_id);
+		$data['rsImg'] = $this->plan_dpy_model->read_img($plan_dpy_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_dpy_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_plan_dpy($plan_dpy_file_id)
+	{
+		$this->plan_dpy_model->increment_download_plan_dpy($plan_dpy_file_id);
 	}
 	public function plan_poa()
 	{
