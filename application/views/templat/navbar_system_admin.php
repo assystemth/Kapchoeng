@@ -11,7 +11,7 @@
                     <img src="<?= base_url('docs/k.logo.png'); ?>" alt="" width="64px" height="64px">
                 </div>
 
-                <div class="sidebar-brand-text mx-3">เทศบาลตำบลกาบเชิง</div>
+                <div class="sidebar-brand-text mx-3">กาบเชิง</div>
             </a>
 
             <!-- Divider -->
@@ -103,12 +103,12 @@
                         <a class="collapse-item" href="<?php echo site_url('P_maintenance_backend'); ?>">กองช่าง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_education_backend'); ?>">กองการศึกษา</a>
                         <!-- <a class="collapse-item" href="<?php echo site_url('P_audit_backend'); ?>">หน่วยตรวจสอบภายใน</a> -->
-                        <a class="collapse-item" href="<?php echo site_url('P_dsab_backend'); ?>">กองยุทธศาสตร์และงบประมาณ</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_brkm_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bpsb_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bbj_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านบักจรัง</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bnry_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านน้อยร่มเย็น</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bkc_backend'); ?>">ศูนย์พัฒนาเด็กเล็กบ้านกาบเชิง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_dsab_backend'); ?>">กองยุทธศาสตร์<br>และงบประมาณ</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_brkm_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านตาเกาว์ใหม</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bpsb_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านปราสาทเบง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bbj_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านบักจรัง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bnry_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านน้อยร่มเย็น</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_cdc_bkc_backend'); ?>">ศูนย์พัฒนาเด็กเล็ก<br>บ้านกาบเชิง</a>
                     </div>
                 </div>
             </li>
@@ -187,9 +187,9 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_reauf_backend'); ?>">รายงานติดตาม<br>และประเมินผลแผน</a>
                         <a class="collapse-item" href="<?php echo site_url('P_rpo_backend'); ?>">รายงานผลการดำเนินงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('P_reb_backend'); ?>">รายงานใช้จ่ายงบประมาณ</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_sap_backend'); ?>">การปฏิบัติงานและการให้บริการ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_sap_backend'); ?>">การปฏิบัติงาน<br>และการให้บริการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_pm_backend'); ?>">การมีส่วนร่วมของผู้บริหาร</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_policy_hr_backend'); ?>">นโยบายบริหารทรัพยากรบุคคล</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_policy_hr_backend'); ?>">นโยบายบริหาร<br>ทรัพยากรบุคคล</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_am_hr_backend'); ?>">การดำเนินการบริหาร<br>ทรัพยากรบุคคล</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_rdam_hr_backend'); ?>">รายงานผลการบริหาร<br>และพัฒนาทรัพยากรบุคคล</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_cdm_backend'); ?>">หลักเกณฑ์การบริหาร<br>และพัฒนา</a>
@@ -203,8 +203,8 @@
                         <a class="collapse-item" href="<?php echo site_url('Ita_year_backend'); ?>">ITA ประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aa_backend'); ?>">กิจการสภา</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aditn_backend'); ?>">ตรวจสอบภายใน</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับ<br>เจ้าหน้าที่ของรัฐ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">การประเมินจริยธรรม<br>เจ้าหน้าที่ของรัฐ</a>
                     </div>
                 </div>
             </li>
@@ -259,21 +259,25 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" aria-expanded="true" href="javascript:void(0);" onclick="toggleCollapse('collapsenine')">
                     <img src="<?= base_url('docs/btn-bend11.png'); ?>">
                     <span>รายงาน</span>
                 </a>
                 <div id="collapsenine" class="collapse" aria-labelledby="headingnine" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('report_backend'); ?>">รายงานภาพรวม</a>
                         <a class="collapse-item" href="<?php echo site_url('report/report_user_backend'); ?>">แยกตามผู้ใช้งาน</a>
                         <a class="collapse-item" href="<?php echo site_url('report/report_date_backend'); ?>">แยกตามวัน/เดือน/ปี</a>
                     </div>
                 </div>
+<<<<<<< HEAD
+            </li> -->
+
+=======
             </li>
             
+>>>>>>> cc033531c62f788690aff6d4f648b8093f7d4cf9
             <!-- Nav Item - Utilities Collapse Menu -->
             <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">

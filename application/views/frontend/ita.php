@@ -98,7 +98,7 @@
                                     </svg>
                                     <?php
                                     // ในการใช้งาน setThaiMonth
-                                    $date = new DateTime($currentRs->ita_year_datesave);
+                                    $date = new DateTime($currentRs->ita_year_dates);
                                     $day_th = $date->format('d');
                                     $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                     $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
