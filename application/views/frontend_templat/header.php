@@ -11,8 +11,7 @@
 
 
   <!-- boostrap  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!-- w3schools -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- awesome  -->
@@ -33,18 +32,14 @@
 
   <!-- Cookie Consent by https://www.cookiewow.com -->
   <script type="text/javascript" src="https://cookiecdn.com/cwc.js"></script>
-  <script id="cookieWow" type="text/javascript" src="https://cookiecdn.com/configs/6QsrB4Cv2uYE2WoAmghffBjz"
-    data-cwcid="6QsrB4Cv2uYE2WoAmghffBjz"></script>
+  <script id="cookieWow" type="text/javascript" src="https://cookiecdn.com/configs/6QsrB4Cv2uYE2WoAmghffBjz" data-cwcid="6QsrB4Cv2uYE2WoAmghffBjz"></script>
 
   <!-- สไลด์ Slick Carousel -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
   <!-- facebook -->
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0"
-    nonce="MXdATBI7"></script>
-
-
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="MXdATBI7"></script>
 </head>
 
 <!-- Messenger ปลั๊กอินแชท Code -->
@@ -62,14 +57,14 @@
 
 <!-- Your SDK code -->
 <script>
-  window.fbAsyncInit = function () {
+  window.fbAsyncInit = function() {
     FB.init({
       xfbml: true,
       version: 'v19.0'
     });
   };
 
-  (function (d, s, id) {
+  (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s);
