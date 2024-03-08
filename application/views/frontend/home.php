@@ -1,6 +1,6 @@
 <div class="image-slide-stick-mid">
     <a href="https://itas.nacc.go.th/go/eit/qu7msc" target="_blank">
-        <img src="docs/eit-slide-mid.png"> 
+        <img src="docs/eit-slide-mid.png">
     </a>
     <img src="docs/eit-slide-close.png" class="close-button-slide-mid" onclick="closeImageSlideMid()">
 </div>
@@ -427,14 +427,14 @@
         <img src="docs/k.head-video.png">
     </div>
     <div class="bg-content-video">
-        <?php if (!empty($video_data) && !empty($video_data->video_link)) : ?>
+        <!-- <?php if (!empty($video_data) && !empty($video_data->video_link)) : ?>
             <?php
-            $youtube_url = $video_data->video_link;
-            $video_id = get_youtube_video_id($youtube_url);
+                    $youtube_url = $video_data->video_link;
+                    $video_id = get_youtube_video_id($youtube_url);
             ?>
             <?php if (!empty($video_id)) : ?>
                 <?php
-                $embed_url = "https://www.youtube.com/embed/$video_id";
+                        $embed_url = "https://www.youtube.com/embed/$video_id";
                 ?>
                 <iframe width="482" height="295" src="<?php echo $embed_url; ?>" frameborder="0" allowfullscreen></iframe>
             <?php else : ?>
@@ -442,7 +442,8 @@
             <?php endif; ?>
         <?php else : ?>
             <p>No video available</p>
-        <?php endif; ?>
+        <?php endif; ?> -->
+        <iframe width="482" height="295" src="https://www.youtube.com/embed/NhFwG6Dz_sg?si=KU6Vwv23GbhXPp8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div class="d-flex justify-content-center mt-3">
         <a href="<?php echo site_url('pages/video'); ?>">
