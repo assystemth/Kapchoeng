@@ -471,7 +471,7 @@
         <div id="tabtwo1" class="tab-content-two">
             <?php foreach ($qNews as $news) { ?>
                 <div class="content-news-detail">
-                    <a href="<?php echo site_url('Pages/news/' . $news->news_id); ?>">
+                    <a href="<?php echo site_url('Pages/news_detail/' . $news->news_id); ?>">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;<?= strip_tags($news->news_name); ?></span>
