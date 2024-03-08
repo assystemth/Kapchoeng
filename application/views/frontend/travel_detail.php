@@ -55,7 +55,7 @@
                 <br>
                 <span class="font-page-detail-content-img break-word"><?= $rsTravel->travel_detail; ?></span>
                 <br>
-                <span class="font-page-detail-content-img">ตำแหน่งที่ตั้ง</span> : <span class="font-page-detail-content-img underline"><?= $rsTravel->travel_location; ?> <a class="btn btn-success" target="_blank" href="https://www.google.com/maps?q=<?= $rsTravel->travel_lat; ?>,<?= $rsTravel->travel_long; ?>">Google Map</a></span>
+                <span class="font-page-detail-content-img">ตำแหน่งที่ตั้ง</span> : <span class="font-page-detail-content-img underline"><?= $rsTravel->travel_location; ?> <a class="btn btn-success" target="_blank" href="<?= $rsTravel->travel_map; ?>">Google Map</a></span>
                 <br>
                 <span class="font-page-detail-content-img">เวลาทำการ</span> : <span class="font-page-detail-content-img"><?= $rsTravel->travel_date; ?>&nbsp;<?= $rsTravel->travel_timeopen; ?> - <?= $rsTravel->travel_timeclose; ?> น.</span>
                 <br>

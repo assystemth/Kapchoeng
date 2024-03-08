@@ -124,7 +124,13 @@
                     </div>
                 </div>
                 <br>
-                <div id="map"></div>
+                <div class="form-group row">
+                    <div class="col-sm-3 control-label">link Google map</div>
+                    <div class="col-sm-9">
+                        <input type="text" name="travel_map" class="form-control">
+                    </div>
+                </div>
+                <!-- <div id="map"></div>
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">ละติจูด</div>
@@ -138,7 +144,7 @@
                     <div class="col-sm-6">
                         <input type="text" name="travel_long" id="travel_long" class="form-control" required>
                     </div>
-                </div>
+                </div> -->
                 <br>
                 <div class="form-group row">
                     <div class="col-sm-3 control-label">รูปภาพหน้าปก</div>
