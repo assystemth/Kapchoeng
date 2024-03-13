@@ -57,7 +57,7 @@
         </div>
         <div class="col-4">
             <div class="d-flex justify-content-center">
-                <img class="mark-logo" src="docs/k.item-vision-right1.png">
+                <img class="mark-logo" src="docs/k.item-vision-right1v4.png">
             </div>
             <div class="d-flex justify-content-center">
                 <img class="mark-logo" src="docs/k.item-vision-right2v2.png">
