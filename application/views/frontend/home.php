@@ -5,6 +5,9 @@
     <img src="docs/eit-slide-close.png" class="close-button-slide-mid" onclick="closeImageSlideMid()">
 </div>
 <div class="welcome">
+<video width="1280" height="690" autoplay muted loop>
+  <source src="<?php echo base_url("docs/video.mp4"); ?>" type="video/mp4">
+</video>
 
     <!-- <div class="tab-container">
         <img src="docs/item-news-top.png" width="324" height="100" style="position: absolute; z-index: 2;">

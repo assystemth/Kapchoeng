@@ -249,15 +249,17 @@
   }
 
   .welcome {
-    background-image: url('<?php echo base_url("docs/k.welcome.gif"); ?>');
+    /* background-image: url('<?php echo base_url("docs/video.mp4"); ?>');
     background-repeat: no-repeat;
-    background-size: 100%;
-    margin-top: -182px;
+    background-size: 100%; */
+    margin-top: -125px;
     z-index: 1;
     width: 1280px;
     height: 690px;
   }
-
+video {
+  z-index: 1; /* กำหนด z-index สำหรับ video element */
+}
 
   .tab-container {
     background-image: url('<?php echo base_url("docs/k.run-text4.png"); ?>');
