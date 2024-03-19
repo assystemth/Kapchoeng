@@ -249,17 +249,16 @@
   }
 
   .welcome {
-    /* background-image: url('<?php echo base_url("docs/video.mp4"); ?>');
-    background-repeat: no-repeat;
-    background-size: 100%; */
-    margin-top: -125px;
+    margin-top: -113px;
     z-index: 1;
     width: 1280px;
     height: 690px;
   }
-video {
-  z-index: 1; /* กำหนด z-index สำหรับ video element */
-}
+
+  video {
+    z-index: 1;
+    /* กำหนด z-index สำหรับ video element */
+  }
 
   .tab-container {
     background-image: url('<?php echo base_url("docs/k.run-text4.png"); ?>');
@@ -318,10 +317,11 @@ video {
     height: 881px;
     width: 1280px;
     z-index: 2;
-    margin-top: -71px;
+    margin-top: -72px;
     padding-top: 120px;
     padding-left: 40px;
     padding-right: 40px;
+    position: relative;
   }
 
   .head-activity {
@@ -1947,7 +1947,7 @@ video {
   .font-24 {
     font-size: 24px;
   }
-  
+
 
   .font-24b {
     font-size: 24px;
