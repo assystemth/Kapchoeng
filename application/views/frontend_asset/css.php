@@ -317,7 +317,7 @@
     height: 881px;
     width: 1280px;
     z-index: 2;
-    margin-top: -72px;
+    margin-top: -70px;
     padding-top: 120px;
     padding-left: 40px;
     padding-right: 40px;

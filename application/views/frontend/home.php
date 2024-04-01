@@ -6,7 +6,7 @@
 </div>
 <div class="welcome">
     <video width="1280" height="690" autoplay muted loop>
-        <source src="<?php echo base_url("docs/video.mp4"); ?>" type="video/mp4">
+        <source src="<?php echo base_url("docs/welcome.mp4"); ?>" type="video/mp4">
     </video>
 </div>
 
