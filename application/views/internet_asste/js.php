@@ -6,6 +6,9 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<!-- chart พาย  -->
+<script src="<?= base_url('asset/'); ?>rpie.js"></script>
+
 <!-- sb-admin-2 -->
 <!-- Bootstrap core JavaScript-->
 <script src="<?= base_url(); ?>vendor/jquery/jquery.min.js"></script>
@@ -31,32 +34,10 @@
 <!-- Page level custom scripts -->
 <script src="<?= base_url('asset/'); ?>js/demo/datatables-demo.js"></script>
 
+<!-- Bootstrap core JavaScript-->
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-
 <script>
-  $(document).ready(function() {
-    $('.btn-navbar').on('click', function() {
-      // ลบคลาสทั้งหมดที่มีชื่อ active
-      $('.btn-navbar').removeClass('active');
-
-      // เพิ่มคลาส active ให้กับองค์ประกอบที่ถูกคลิก
-      $(this).addClass('active');
-    });
-  });
-
-
-  // เวลาพิม แล้ว ให้ลบคำว่า ค้นหา ****************************
-  $(document).ready(function() {
-    $(".searchTerm").focus(function() {
-      $(this).attr("placeholder", "");
-    });
-    $(".searchTerm").blur(function() {
-      $(this).attr("placeholder", "         ค้นหา");
-    });
-  });
-  // ***************************************************
-
   // คำหยาบ vulgar **********************************
   $(document).ready(function() {
     // เมื่อคลิกปุ่ม "จัดการ"
@@ -109,7 +90,7 @@
   $(document).ready(function() {
     <?php if ($this->session->flashdata('save_success')) { ?>
       Swal.fire({
-        position: 'top-end',
+        // position: 'top-end',
         icon: 'success',
         title: 'บันทึกข้อมูลสำเร็จ',
         showConfirmButton: false,
@@ -143,7 +124,7 @@
   $(document).ready(function() {
     <?php if ($this->session->flashdata('del_success')) { ?>
       Swal.fire({
-        position: 'top-end',
+        // position: 'top-end',
         icon: 'success',
         title: 'ลบข้อมูลสำเร็จ',
         showConfirmButton: false,
