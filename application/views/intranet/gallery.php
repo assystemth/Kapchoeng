@@ -99,8 +99,20 @@
     </div>
 
     <div class="d-flex justify-content-end mb-4" style="margin-top: 2%;">
+    <div class="search">
+                <form id="searchForm" action="<?= site_url('Intra_announce/search'); ?>" method="post">
+                    <div class="input-group">
+                        <input type="text" name="search_term" class="searchTerm form-control" placeholder="ค้นหา">
+                        <div class="input-group-append">
+                            <button type="submit" class="searchButton btn btn-outline">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         <a href="#" class="popup-insert" data-target="#popupInsert">
-            <img src="<?php echo base_url("docs/btn-intra-add-storage-img-video.png"); ?>" width="auto" style="max-width: 100%;">
+            <img src="<?php echo base_url("docs/intranet/btn-intra-add-storage-img-video.png"); ?>" width="auto" style="max-width: 100%;">
         </a>
     </div>
 
@@ -120,7 +132,7 @@
         <div class="file-pdf">
             <div class="row">
                 <div class="col-sm-1">
-                    <img src="<?php echo base_url("docs/folder.png"); ?>" width="100%">
+                    <img src="<?php echo base_url("docs/intranet/folder.png"); ?>" width="100%">
                 </div>
                 <div class="col-sm-5">
                     <span>ชื่อ</span><br>
@@ -154,12 +166,12 @@
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <li>
                                 <a class="dropdown-item" href="<?= site_url('Intra_gallery/detail/' . $rs->intra_gallery_id); ?>">
-                                    <img src="<?php echo base_url("docs/icon-open-intra.png"); ?>" width="20">
+                                    <img src="<?php echo base_url("docs/intranet/icon-open-intra.png"); ?>" width="20">
                                     &nbsp; เปิด</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="<?php echo site_url('Intra_gallery/download_all_images/' . $rs->intra_gallery_id); ?>">
-                                    <img src="<?php echo base_url("docs/icon-download-intra.png"); ?>" width="20">
+                                    <img src="<?php echo base_url("docs/intranet/icon-download-intra.png"); ?>" width="20">
                                     &nbsp; ดาวน์โหลดทั้งหมด
                                 </a>
                             </li>
@@ -167,7 +179,7 @@
                             <?php if ($_SESSION['m_level'] == 1 || $_SESSION['m_level'] == 2 || $_SESSION['m_fname'] == $rs->intra_gallery_by) : ?>
                                 <li>
                                     <a class="dropdown-item" href="#" ole="button" onclick="confirmDelete(<?= $rs->intra_gallery_id; ?>);">
-                                        <img src="<?php echo base_url("docs/icon-del-intra.png"); ?>" width="20">
+                                        <img src="<?php echo base_url("docs/intranet/icon-del-intra.png"); ?>" width="20">
                                         &nbsp; ลบ</a>
                                     <script>
                                         function confirmDelete(intra_gallery_id) {

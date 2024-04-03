@@ -178,11 +178,11 @@
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_executives'); ?>" class="font-content-all-web">คณะผู้บริหาร</a><br>
                             <div class="mt-1"></div>
-                            <a href="<?php echo site_url('Pages/p_council'); ?>" class="font-content-all-web">สมาชิกสภาตำบล</a><br>
+                            <a href="<?php echo site_url('Pages/p_council'); ?>" class="font-content-all-web">สมาชิกสภาเทศบาล</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_unit_leaders'); ?>" class="font-content-all-web">หัวหน้าส่วนราชการ</a><br>
                             <div class="mt-1"></div>
-                            <a href="<?php echo site_url('Pages/p_deputy'); ?>" class="font-content-all-web">สำนักปลัดองค์การบริหารส่วนตำบล</a><br>
+                            <a href="<?php echo site_url('Pages/p_deputy'); ?>" class="font-content-all-web">สำนักปลัดเทศบาล</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_treasury'); ?>" class="font-content-all-web">กองคลัง</a><br>
                             <div class="mt-1"></div>

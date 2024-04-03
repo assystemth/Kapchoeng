@@ -58,10 +58,6 @@
                     <div class="col-sm-4">
                         <select class="form-control" name="ref_pid" required>
                             <option value="<?php echo $rsedit->ref_pid; ?>"><?php echo $rsedit->pname; ?></option>
-                            <option value="" disabled>เลือกข้อมูล
-                                <?php foreach ($rspo as $rs) { ?>
-                            <option value="<?php echo $rs->pid; ?>"><?php echo $rs->pname; ?>
-                            <?php } ?>
                         </select>
                     </div>
                 </div>
@@ -81,6 +77,14 @@
                         <input type="text" name="m_lname" class="form-control" required value="<?php echo $rsedit->m_lname; ?>">
 
                         <input type="hidden" name="m_id" class="form-control" required value="<?php echo $rsedit->m_id; ?>">
+                    </div>
+                </div>
+                <br>
+
+                <div class="form-group row">
+                    <div class="col-sm-2 control-label">E-mail</div>
+                    <div class="col-sm-5">
+                        <input type="email" name="m_email" class="form-control" required value="<?php echo $rsedit->m_email; ?>">
                     </div>
                 </div>
                 <br>

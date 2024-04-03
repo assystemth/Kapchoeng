@@ -7,14 +7,14 @@ class Intra_gallery extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if (
-            $this->session->userdata('m_level') != 1 &&
-            $this->session->userdata('m_level') != 2 &&
-            $this->session->userdata('m_level') != 3 &&
-            $this->session->userdata('m_level') != 4
-        ) {
-            redirect('user', 'refresh');
-        }
+        // if (
+        //     $this->session->userdata('m_level') != 1 &&
+        //     $this->session->userdata('m_level') != 2 &&
+        //     $this->session->userdata('m_level') != 3 &&
+        //     $this->session->userdata('m_level') != 4
+        // ) {
+        //     redirect('user', 'refresh');
+        // }
         $this->load->model('space_model');
         $this->load->model('Intra_gallery_model');
     }
@@ -23,7 +23,8 @@ class Intra_gallery extends CI_Controller
         $data['storage'] = $this->space_model->list_all();
         $data['query'] = $this->Intra_gallery_model->list_all();
 
-        $this->load->view('intranet_templat/header_gallery');
+        $this->load->view('intranet_templat/header');
+                $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/gallery', $data);
@@ -45,7 +46,8 @@ class Intra_gallery extends CI_Controller
             $data['query'] = $this->Intra_gallery_model->list_all();
         }
 
-        $this->load->view('intranet_templat/header_gallery');
+        $this->load->view('intranet_templat/header');
+                $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/gallery', $data);
@@ -103,7 +105,8 @@ class Intra_gallery extends CI_Controller
         $data['rsimg'] = $this->Intra_gallery_model->read_img($intra_gallery_id);
         $data['rsvideo'] = $this->Intra_gallery_model->read_video($intra_gallery_id);
 
-        $this->load->view('intranet_templat/header_gallery');
+        $this->load->view('intranet_templat/header');
+                $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/gallery_detail', $data);

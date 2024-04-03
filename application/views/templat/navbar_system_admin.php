@@ -96,9 +96,9 @@
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Site_map_backend'); ?>">แผนผังโครงสร้างภาพรวม</a>
                         <a class="collapse-item" href="<?php echo site_url('P_executives_backend'); ?>">คณะผู้บริหาร</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_council_backend'); ?>">สมาชิกสภา</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_council_backend'); ?>">สมาชิกสภาเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('P_unit_leaders_backend'); ?>">หัวหน้าส่วนราชการ</a>
-                        <a class="collapse-item" href="<?php echo site_url('P_deputy_backend'); ?>">สำนักปลัด อบต.</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_deputy_backend'); ?>">สำนักปลัดเทศบาล</a>
                         <a class="collapse-item" href="<?php echo site_url('P_treasury_backend'); ?>">กองคลัง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_maintenance_backend'); ?>">กองช่าง</a>
                         <a class="collapse-item" href="<?php echo site_url('P_education_backend'); ?>">กองการศึกษา</a>

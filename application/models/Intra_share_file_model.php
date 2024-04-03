@@ -729,4 +729,486 @@ class Intra_share_file_model extends CI_Model
         return $query->result();
     }
     // ****************************************************************************************
+
+    // กองยุท ************************************************************************
+    public function add_sf_p_dsab()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_sf_p_dsab_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_sf_p_dsab');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_sf_p_dsab_name' => $this->input->post('intra_sf_p_dsab_name'),
+            'intra_sf_p_dsab_by' => $this->session->userdata('m_fname'),
+            'intra_sf_p_dsab_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_sf_p_dsab', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_sf_p_dsab()
+    {
+        $this->db->order_by('intra_sf_p_dsab_id', 'DESC');
+        $query = $this->db->get('tbl_intra_sf_p_dsab');
+        return $query->result();
+    }
+
+    public function del_sf_p_dsab($intra_sf_p_dsab_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_sf_p_dsab', array('intra_sf_p_dsab_id' => $intra_sf_p_dsab_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_sf_p_dsab_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_sf_p_dsab', array('intra_sf_p_dsab_id' => $intra_sf_p_dsab_id));
+    }
+    public function search_sf_p_dsab($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_sf_p_dsab_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_sf_p_dsab');
+        return $query->result();
+    }
+    // ****************************************************************************************
+
+    // ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง ************************************************************************
+    public function add_sf_p_cdc_brkm()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_sf_p_cdc_brkm_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_sf_p_cdc_brkm');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_sf_p_cdc_brkm_name' => $this->input->post('intra_sf_p_cdc_brkm_name'),
+            'intra_sf_p_cdc_brkm_by' => $this->session->userdata('m_fname'),
+            'intra_sf_p_cdc_brkm_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_sf_p_cdc_brkm', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_sf_p_cdc_brkm()
+    {
+        $this->db->order_by('intra_sf_p_cdc_brkm_id', 'DESC');
+        $query = $this->db->get('tbl_intra_sf_p_cdc_brkm');
+        return $query->result();
+    }
+
+    public function del_sf_p_cdc_brkm($intra_sf_p_cdc_brkm_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_sf_p_cdc_brkm', array('intra_sf_p_cdc_brkm_id' => $intra_sf_p_cdc_brkm_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_sf_p_cdc_brkm_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_sf_p_cdc_brkm', array('intra_sf_p_cdc_brkm_id' => $intra_sf_p_cdc_brkm_id));
+    }
+    public function search_sf_p_cdc_brkm($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_sf_p_cdc_brkm_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_sf_p_cdc_brkm');
+        return $query->result();
+    }
+    // ****************************************************************************************
+
+    // ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง ************************************************************************
+    public function add_sf_p_cdc_bpsb()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_sf_p_cdc_bpsb_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_sf_p_cdc_bpsb');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_sf_p_cdc_bpsb_name' => $this->input->post('intra_sf_p_cdc_bpsb_name'),
+            'intra_sf_p_cdc_bpsb_by' => $this->session->userdata('m_fname'),
+            'intra_sf_p_cdc_bpsb_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_sf_p_cdc_bpsb', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_sf_p_cdc_bpsb()
+    {
+        $this->db->order_by('intra_sf_p_cdc_bpsb_id', 'DESC');
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bpsb');
+        return $query->result();
+    }
+
+    public function del_sf_p_cdc_bpsb($intra_sf_p_cdc_bpsb_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_sf_p_cdc_bpsb', array('intra_sf_p_cdc_bpsb_id' => $intra_sf_p_cdc_bpsb_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_sf_p_cdc_bpsb_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_sf_p_cdc_bpsb', array('intra_sf_p_cdc_bpsb_id' => $intra_sf_p_cdc_bpsb_id));
+    }
+    public function search_sf_p_cdc_bpsb($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_sf_p_cdc_bpsb_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bpsb');
+        return $query->result();
+    }
+    // ****************************************************************************************
+
+    // ศูนย์พัฒนาเด็กเล็กบ้านบักจรัง ************************************************************************
+    public function add_sf_p_cdc_bbj()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_sf_p_cdc_bbj_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_sf_p_cdc_bbj');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_sf_p_cdc_bbj_name' => $this->input->post('intra_sf_p_cdc_bbj_name'),
+            'intra_sf_p_cdc_bbj_by' => $this->session->userdata('m_fname'),
+            'intra_sf_p_cdc_bbj_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_sf_p_cdc_bbj', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_sf_p_cdc_bbj()
+    {
+        $this->db->order_by('intra_sf_p_cdc_bbj_id', 'DESC');
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bbj');
+        return $query->result();
+    }
+
+    public function del_sf_p_cdc_bbj($intra_sf_p_cdc_bbj_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_sf_p_cdc_bbj', array('intra_sf_p_cdc_bbj_id' => $intra_sf_p_cdc_bbj_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_sf_p_cdc_bbj_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_sf_p_cdc_bbj', array('intra_sf_p_cdc_bbj_id' => $intra_sf_p_cdc_bbj_id));
+    }
+    public function search_sf_p_cdc_bbj($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_sf_p_cdc_bbj_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bbj');
+        return $query->result();
+    }
+    // ****************************************************************************************
+
+    // ศูนย์พัฒนาเด็กเล็กบ้านน้อยร่มเย็น ************************************************************************
+    public function add_sf_p_cdc_bnry()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_sf_p_cdc_bnry_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_sf_p_cdc_bnry');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_sf_p_cdc_bnry_name' => $this->input->post('intra_sf_p_cdc_bnry_name'),
+            'intra_sf_p_cdc_bnry_by' => $this->session->userdata('m_fname'),
+            'intra_sf_p_cdc_bnry_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_sf_p_cdc_bnry', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_sf_p_cdc_bnry()
+    {
+        $this->db->order_by('intra_sf_p_cdc_bnry_id', 'DESC');
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bnry');
+        return $query->result();
+    }
+
+    public function del_sf_p_cdc_bnry($intra_sf_p_cdc_bnry_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_sf_p_cdc_bnry', array('intra_sf_p_cdc_bnry_id' => $intra_sf_p_cdc_bnry_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_sf_p_cdc_bnry_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_sf_p_cdc_bnry', array('intra_sf_p_cdc_bnry_id' => $intra_sf_p_cdc_bnry_id));
+    }
+    public function search_sf_p_cdc_bnry($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_sf_p_cdc_bnry_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bnry');
+        return $query->result();
+    }
+    // ****************************************************************************************
+
+    // ศูนย์พัฒนาเด็กเล็กบ้านกาบเชิง ************************************************************************
+    public function add_sf_p_cdc_bkc()
+    {
+        $config['upload_path'] = './docs/intranet/file';
+        $config['allowed_types'] = 'pdf|doc|docx|xls|';
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('intra_sf_p_cdc_bkc_pdf')) {
+            // ไม่สามารถอัปโหลดไฟล์ได้
+            $error = array('error' => $this->upload->display_errors());
+            print_r($error);
+            exit;
+        }
+
+        // สำเร็จในการอัปโหลดไฟล์
+        $data = $this->upload->data();
+        $filename = $data['file_name'];
+
+        // ตรวจสอบพื้นที่ในการบันทึก
+        $used_space_mb = $this->space_model->get_used_space();
+        $upload_limit_mb = $this->space_model->get_limit_storage();
+        $total_space_required = $data['file_size'];
+
+        if ($used_space_mb + ($total_space_required / (1024 * 1024)) >= $upload_limit_mb) {
+            $this->session->set_flashdata('save_error', TRUE);
+            redirect('Intra_sf_p_cdc_bkc');
+            return;
+        }
+
+        // ข้อมูลสำหรับบันทึกลงในฐานข้อมูล
+        $insert_data = array(
+            'intra_sf_p_cdc_bkc_name' => $this->input->post('intra_sf_p_cdc_bkc_name'),
+            'intra_sf_p_cdc_bkc_by' => $this->session->userdata('m_fname'),
+            'intra_sf_p_cdc_bkc_pdf' => $filename
+        );
+
+        // บันทึกลงในฐานข้อมูล
+        $query = $this->db->insert('tbl_intra_sf_p_cdc_bkc', $insert_data);
+
+        // อัพเดตข้อมูลพื้นที่ในการใช้งาน
+        $this->space_model->update_server_current();
+
+        // ตรวจสอบความสำเร็จของการบันทึก
+        if ($query) {
+            $this->session->set_flashdata('save_success', TRUE);
+        } else {
+            $this->session->set_flashdata('save_error', TRUE);
+        }
+    }
+
+    public function list_sf_p_cdc_bkc()
+    {
+        $this->db->order_by('intra_sf_p_cdc_bkc_id', 'DESC');
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bkc');
+        return $query->result();
+    }
+
+    public function del_sf_p_cdc_bkc($intra_sf_p_cdc_bkc_id)
+    {
+        // ดึงข้อมูลรูปเก่า
+        $old_document = $this->db->get_where('tbl_intra_sf_p_cdc_bkc', array('intra_sf_p_cdc_bkc_id' => $intra_sf_p_cdc_bkc_id))->row();
+
+        $old_file_path = './docs/intranet/file/' . $old_document->intra_sf_p_cdc_bkc_pdf;
+        if (file_exists($old_file_path)) {
+            unlink($old_file_path);
+        }
+
+        $this->db->delete('tbl_intra_sf_p_cdc_bkc', array('intra_sf_p_cdc_bkc_id' => $intra_sf_p_cdc_bkc_id));
+    }
+    public function search_sf_p_cdc_bkc($search_term)
+    {
+        // ปรับแต่ง query ตามความต้องการ
+        $this->db->like('intra_sf_p_cdc_bkc_name', $search_term);
+        // เพิ่มเงื่อนไขค้นหาเพิ่มเติมตามความต้องการ
+
+        $query = $this->db->get('tbl_intra_sf_p_cdc_bkc');
+        return $query->result();
+    }
+    // ****************************************************************************************
+
+    
 }
