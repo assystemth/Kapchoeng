@@ -203,7 +203,35 @@ class P_dsab_model extends CI_Model
             unlink($old_file_path);
         }
 
-        $this->db->delete('tbl_p_dsab', array('p_dsab_id' => $p_dsab_id));
+        // อัพเดทข้อมูลในฐานข้อมูลให้ค่าว่างหรือ null
+        $data = array(
+            'p_dsab_name' => null,
+            'p_dsab_rank' => null,
+            'p_dsab_phone' => null,
+            'p_dsab_img' => null,
+            'p_dsab_by' => $this->session->userdata('m_fname'), // เพิ่มชื่อคนที่เพิ่มข้อมูล
+            // เพิ่มคอลัมน์อื่นๆ ที่ต้องการลบข้อมูล ให้ใส่ค่า null ด้วย
+        );
+        $this->db->where('p_dsab_id', $p_dsab_id);
+        $this->db->update('tbl_p_dsab', $data);
+    }
+
+    public function p_dsab_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_dsab');
+        $this->db->where('tbl_p_dsab.p_dsab_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_dsab_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_dsab');
+        $this->db->where('tbl_p_dsab.p_dsab_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
     }
 
     public function p_dsab_frontend_one()

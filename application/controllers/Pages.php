@@ -3175,22 +3175,24 @@ class Pages extends CI_Controller
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar_other');
+		$this->load->view('frontend_templat/navbar');
 		$this->load->view('frontend/p_executives', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
 	public function p_council()
 	{
-		$data['rsOne'] = $this->p_council_model->p_council_frontend_one();
-		// $data['rsLeft'] = $this->p_council_model->p_council_frontend_one_left();
-		// $data['rsRight'] = $this->p_council_model->p_council_frontend_one_right();
-		// $data['rsData'] = $this->p_council_model->p_council_frontend_list();
-		$data['rsrow1'] = $this->p_council_model->p_council_row_1();
-		$data['rsrow2'] = $this->p_council_model->p_council_row_2();
-		$data['rsrow3'] = $this->p_council_model->p_council_row_3();
-		$data['rsrow4'] = $this->p_council_model->p_council_row_4();
-		$data['rsrow5'] = $this->p_council_model->p_council_row_5();
+		$data['query_one'] = $this->p_council_model->p_council_one();
+		$data['query_under_one'] = $this->p_council_model->p_council_under_one();
+		// $data['rsOne'] = $this->p_council_model->p_council_frontend_one();
+		// // $data['rsLeft'] = $this->p_council_model->p_council_frontend_one_left();
+		// // $data['rsRight'] = $this->p_council_model->p_council_frontend_one_right();
+		// // $data['rsData'] = $this->p_council_model->p_council_frontend_list();
+		// $data['rsrow1'] = $this->p_council_model->p_council_row_1();
+		// $data['rsrow2'] = $this->p_council_model->p_council_row_2();
+		// $data['rsrow3'] = $this->p_council_model->p_council_row_3();
+		// $data['rsrow4'] = $this->p_council_model->p_council_row_4();
+		// $data['rsrow5'] = $this->p_council_model->p_council_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3201,13 +3203,15 @@ class Pages extends CI_Controller
 	}
 	public function p_unit_leaders()
 	{
-		$data['rsOne'] = $this->p_unit_leaders_model->p_unit_leaders_frontend_one();
-		// $data['rsData'] = $this->p_unit_leaders_model->p_unit_leaders_frontend_list();
-		$data['rsrow1'] = $this->p_unit_leaders_model->p_unit_leaders_row_1();
-		$data['rsrow2'] = $this->p_unit_leaders_model->p_unit_leaders_row_2();
-		$data['rsrow3'] = $this->p_unit_leaders_model->p_unit_leaders_row_3();
-		$data['rsrow4'] = $this->p_unit_leaders_model->p_unit_leaders_row_4();
-		$data['rsrow5'] = $this->p_unit_leaders_model->p_unit_leaders_row_5();
+		$data['query_one'] = $this->p_unit_leaders_model->p_unit_leaders_one();
+		$data['query_under_one'] = $this->p_unit_leaders_model->p_unit_leaders_under_one();
+		// $data['rsOne'] = $this->p_unit_leaders_model->p_unit_leaders_frontend_one();
+		// // $data['rsData'] = $this->p_unit_leaders_model->p_unit_leaders_frontend_list();
+		// $data['rsrow1'] = $this->p_unit_leaders_model->p_unit_leaders_row_1();
+		// $data['rsrow2'] = $this->p_unit_leaders_model->p_unit_leaders_row_2();
+		// $data['rsrow3'] = $this->p_unit_leaders_model->p_unit_leaders_row_3();
+		// $data['rsrow4'] = $this->p_unit_leaders_model->p_unit_leaders_row_4();
+		// $data['rsrow5'] = $this->p_unit_leaders_model->p_unit_leaders_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3218,14 +3222,16 @@ class Pages extends CI_Controller
 	}
 	public function p_deputy()
 	{
-		$data['rsOne'] = $this->p_deputy_model->p_deputy_frontend_one();
-		// $data['rsTwo'] = $this->p_deputy_model->p_deputy_frontend_two();
-		// $data['rsData'] = $this->p_deputy_model->p_deputy_frontend_list();
-		$data['rsrow1'] = $this->p_deputy_model->p_deputy_row_1();
-		$data['rsrow2'] = $this->p_deputy_model->p_deputy_row_2();
-		$data['rsrow3'] = $this->p_deputy_model->p_deputy_row_3();
-		$data['rsrow4'] = $this->p_deputy_model->p_deputy_row_4();
-		$data['rsrow5'] = $this->p_deputy_model->p_deputy_row_5();
+		$data['query_one'] = $this->p_deputy_model->p_deputy_one();
+		$data['query_under_one'] = $this->p_deputy_model->p_deputy_under_one();
+		// $data['rsOne'] = $this->p_deputy_model->p_deputy_frontend_one();
+		// // $data['rsTwo'] = $this->p_deputy_model->p_deputy_frontend_two();
+		// // $data['rsData'] = $this->p_deputy_model->p_deputy_frontend_list();
+		// $data['rsrow1'] = $this->p_deputy_model->p_deputy_row_1();
+		// $data['rsrow2'] = $this->p_deputy_model->p_deputy_row_2();
+		// $data['rsrow3'] = $this->p_deputy_model->p_deputy_row_3();
+		// $data['rsrow4'] = $this->p_deputy_model->p_deputy_row_4();
+		// $data['rsrow5'] = $this->p_deputy_model->p_deputy_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3236,14 +3242,16 @@ class Pages extends CI_Controller
 	}
 	public function p_treasury()
 	{
-		$data['rsOne'] = $this->p_treasury_model->p_treasury_frontend_one();
-		// $data['rsTwo'] = $this->p_treasury_model->p_treasury_frontend_two();
-		// $data['rsData'] = $this->p_treasury_model->p_treasury_frontend_list();
-		$data['rsrow1'] = $this->p_treasury_model->p_treasury_row_1();
-		$data['rsrow2'] = $this->p_treasury_model->p_treasury_row_2();
-		$data['rsrow3'] = $this->p_treasury_model->p_treasury_row_3();
-		$data['rsrow4'] = $this->p_treasury_model->p_treasury_row_4();
-		$data['rsrow5'] = $this->p_treasury_model->p_treasury_row_5();
+		$data['query_one'] = $this->p_treasury_model->p_treasury_one();
+		$data['query_under_one'] = $this->p_treasury_model->p_treasury_under_one();
+		// $data['rsOne'] = $this->p_treasury_model->p_treasury_frontend_one();
+		// // $data['rsTwo'] = $this->p_treasury_model->p_treasury_frontend_two();
+		// // $data['rsData'] = $this->p_treasury_model->p_treasury_frontend_list();
+		// $data['rsrow1'] = $this->p_treasury_model->p_treasury_row_1();
+		// $data['rsrow2'] = $this->p_treasury_model->p_treasury_row_2();
+		// $data['rsrow3'] = $this->p_treasury_model->p_treasury_row_3();
+		// $data['rsrow4'] = $this->p_treasury_model->p_treasury_row_4();
+		// $data['rsrow5'] = $this->p_treasury_model->p_treasury_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3252,15 +3260,18 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
+
 	public function p_maintenance()
 	{
-		$data['rsOne'] = $this->p_maintenance_model->p_maintenance_frontend_one();
-		// $data['rsData'] = $this->p_maintenance_model->p_maintenance_frontend_list();
-		$data['rsrow1'] = $this->p_maintenance_model->p_maintenance_row_1();
-		$data['rsrow2'] = $this->p_maintenance_model->p_maintenance_row_2();
-		$data['rsrow3'] = $this->p_maintenance_model->p_maintenance_row_3();
-		$data['rsrow4'] = $this->p_maintenance_model->p_maintenance_row_4();
-		$data['rsrow5'] = $this->p_maintenance_model->p_maintenance_row_5();
+		$data['query_one'] = $this->p_maintenance_model->p_maintenance_one();
+		$data['query_under_one'] = $this->p_maintenance_model->p_maintenance_under_one();
+		// $data['rsOne'] = $this->p_maintenance_model->p_maintenance_frontend_one();
+		// // $data['rsData'] = $this->p_maintenance_model->p_maintenance_frontend_list();
+		// $data['rsrow1'] = $this->p_maintenance_model->p_maintenance_row_1();
+		// $data['rsrow2'] = $this->p_maintenance_model->p_maintenance_row_2();
+		// $data['rsrow3'] = $this->p_maintenance_model->p_maintenance_row_3();
+		// $data['rsrow4'] = $this->p_maintenance_model->p_maintenance_row_4();
+		// $data['rsrow5'] = $this->p_maintenance_model->p_maintenance_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3271,13 +3282,15 @@ class Pages extends CI_Controller
 	}
 	public function p_education()
 	{
-		$data['rsOne'] = $this->p_education_model->p_education_frontend_one();
-		// $data['rsData'] = $this->p_education_model->p_education_frontend_list();
-		$data['rsrow1'] = $this->p_education_model->p_education_row_1();
-		$data['rsrow2'] = $this->p_education_model->p_education_row_2();
-		$data['rsrow3'] = $this->p_education_model->p_education_row_3();
-		$data['rsrow4'] = $this->p_education_model->p_education_row_4();
-		$data['rsrow5'] = $this->p_education_model->p_education_row_5();
+		$data['query_one'] = $this->p_education_model->p_education_one();
+		$data['query_under_one'] = $this->p_education_model->p_education_under_one();
+		// $data['rsOne'] = $this->p_education_model->p_education_frontend_one();
+		// // $data['rsData'] = $this->p_education_model->p_education_frontend_list();
+		// $data['rsrow1'] = $this->p_education_model->p_education_row_1();
+		// $data['rsrow2'] = $this->p_education_model->p_education_row_2();
+		// $data['rsrow3'] = $this->p_education_model->p_education_row_3();
+		// $data['rsrow4'] = $this->p_education_model->p_education_row_4();
+		// $data['rsrow5'] = $this->p_education_model->p_education_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3305,13 +3318,15 @@ class Pages extends CI_Controller
 	}
 	public function p_dsab()
 	{
-		$data['rsOne'] = $this->p_dsab_model->p_dsab_frontend_one();
-		// $data['rsData'] = $this->p_dsab_model->p_dsab_frontend_list();
-		$data['rsrow1'] = $this->p_dsab_model->p_dsab_row_1();
-		$data['rsrow2'] = $this->p_dsab_model->p_dsab_row_2();
-		$data['rsrow3'] = $this->p_dsab_model->p_dsab_row_3();
-		$data['rsrow4'] = $this->p_dsab_model->p_dsab_row_4();
-		$data['rsrow5'] = $this->p_dsab_model->p_dsab_row_5();
+		$data['query_one'] = $this->p_dsab_model->p_dsab_one();
+		$data['query_under_one'] = $this->p_dsab_model->p_dsab_under_one();
+		// $data['rsOne'] = $this->p_dsab_model->p_dsab_frontend_one();
+		// // $data['rsData'] = $this->p_dsab_model->p_dsab_frontend_list();
+		// $data['rsrow1'] = $this->p_dsab_model->p_dsab_row_1();
+		// $data['rsrow2'] = $this->p_dsab_model->p_dsab_row_2();
+		// $data['rsrow3'] = $this->p_dsab_model->p_dsab_row_3();
+		// $data['rsrow4'] = $this->p_dsab_model->p_dsab_row_4();
+		// $data['rsrow5'] = $this->p_dsab_model->p_dsab_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3322,13 +3337,15 @@ class Pages extends CI_Controller
 	}
 	public function p_cdc_brkm()
 	{
-		$data['rsOne'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_one();
-		// $data['rsData'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_1();
-		$data['rsrow2'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_2();
-		$data['rsrow3'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_3();
-		$data['rsrow4'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_4();
-		$data['rsrow5'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_5();
+		$data['query_one'] = $this->p_cdc_brkm_model->p_cdc_brkm_one();
+		$data['query_under_one'] = $this->p_cdc_brkm_model->p_cdc_brkm_under_one();
+		// $data['rsOne'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_one();
+		// // $data['rsData'] = $this->p_cdc_brkm_model->p_cdc_brkm_frontend_list();
+		// $data['rsrow1'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_1();
+		// $data['rsrow2'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_2();
+		// $data['rsrow3'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_3();
+		// $data['rsrow4'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_4();
+		// $data['rsrow5'] = $this->p_cdc_brkm_model->p_cdc_brkm_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3339,13 +3356,15 @@ class Pages extends CI_Controller
 	}
 	public function p_cdc_bpsb()
 	{
-		$data['rsOne'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_1();
-		$data['rsrow2'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_2();
-		$data['rsrow3'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_3();
-		$data['rsrow4'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_4();
-		$data['rsrow5'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_5();
+		$data['query_one'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_one();
+		$data['query_under_one'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_under_one();
+		// $data['rsOne'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_one();
+		// // $data['rsData'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_frontend_list();
+		// $data['rsrow1'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_1();
+		// $data['rsrow2'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_2();
+		// $data['rsrow3'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_3();
+		// $data['rsrow4'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_4();
+		// $data['rsrow5'] = $this->p_cdc_bpsb_model->p_cdc_bpsb_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3356,13 +3375,15 @@ class Pages extends CI_Controller
 	}
 	public function p_cdc_bbj()
 	{
-		$data['rsOne'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_1();
-		$data['rsrow2'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_2();
-		$data['rsrow3'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_3();
-		$data['rsrow4'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_4();
-		$data['rsrow5'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_5();
+		$data['query_one'] = $this->p_cdc_bbj_model->p_cdc_bbj_one();
+		$data['query_under_one'] = $this->p_cdc_bbj_model->p_cdc_bbj_under_one();
+		// $data['rsOne'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_one();
+		// // $data['rsData'] = $this->p_cdc_bbj_model->p_cdc_bbj_frontend_list();
+		// $data['rsrow1'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_1();
+		// $data['rsrow2'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_2();
+		// $data['rsrow3'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_3();
+		// $data['rsrow4'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_4();
+		// $data['rsrow5'] = $this->p_cdc_bbj_model->p_cdc_bbj_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3373,13 +3394,15 @@ class Pages extends CI_Controller
 	}
 	public function p_cdc_bnry()
 	{
-		$data['rsOne'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_1();
-		$data['rsrow2'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_2();
-		$data['rsrow3'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_3();
-		$data['rsrow4'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_4();
-		$data['rsrow5'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_5();
+		$data['query_one'] = $this->p_cdc_bnry_model->p_cdc_bnry_one();
+		$data['query_under_one'] = $this->p_cdc_bnry_model->p_cdc_bnry_under_one();
+		// $data['rsOne'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_one();
+		// // $data['rsData'] = $this->p_cdc_bnry_model->p_cdc_bnry_frontend_list();
+		// $data['rsrow1'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_1();
+		// $data['rsrow2'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_2();
+		// $data['rsrow3'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_3();
+		// $data['rsrow4'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_4();
+		// $data['rsrow5'] = $this->p_cdc_bnry_model->p_cdc_bnry_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
@@ -3390,13 +3413,15 @@ class Pages extends CI_Controller
 	}
 	public function p_cdc_bkc()
 	{
-		$data['rsOne'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_one();
-		// $data['rsData'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_list();
-		$data['rsrow1'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_1();
-		$data['rsrow2'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_2();
-		$data['rsrow3'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_3();
-		$data['rsrow4'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_4();
-		$data['rsrow5'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_5();
+		$data['query_one'] = $this->p_cdc_bkc_model->p_cdc_bkc_one();
+		$data['query_under_one'] = $this->p_cdc_bkc_model->p_cdc_bkc_under_one();
+		// $data['rsOne'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_one();
+		// // $data['rsData'] = $this->p_cdc_bkc_model->p_cdc_bkc_frontend_list();
+		// $data['rsrow1'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_1();
+		// $data['rsrow2'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_2();
+		// $data['rsrow3'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_3();
+		// $data['rsrow4'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_4();
+		// $data['rsrow5'] = $this->p_cdc_bkc_model->p_cdc_bkc_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');

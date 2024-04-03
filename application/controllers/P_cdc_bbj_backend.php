@@ -22,8 +22,9 @@ class P_cdc_bbj_backend extends CI_Controller
 
     public function index()
     {
-
-        $data['query'] = $this->p_cdc_bbj_model->list_all();
+        $data['query_one'] = $this->p_cdc_bbj_model->p_cdc_bbj_one();
+        $data['query_under_one'] = $this->p_cdc_bbj_model->p_cdc_bbj_under_one();
+        // $data['query'] = $this->p_cdc_bbj_model->list_all();
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');

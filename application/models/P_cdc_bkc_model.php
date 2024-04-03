@@ -203,7 +203,35 @@ class P_cdc_bkc_model extends CI_Model
             unlink($old_file_path);
         }
 
-        $this->db->delete('tbl_p_cdc_bkc', array('p_cdc_bkc_id' => $p_cdc_bkc_id));
+        // อัพเดทข้อมูลในฐานข้อมูลให้ค่าว่างหรือ null
+        $data = array(
+            'p_cdc_bkc_name' => null,
+            'p_cdc_bkc_rank' => null,
+            'p_cdc_bkc_phone' => null,
+            'p_cdc_bkc_img' => null,
+            'p_cdc_bkc_by' => $this->session->userdata('m_fname'), // เพิ่มชื่อคนที่เพิ่มข้อมูล
+            // เพิ่มคอลัมน์อื่นๆ ที่ต้องการลบข้อมูล ให้ใส่ค่า null ด้วย
+        );
+        $this->db->where('p_cdc_bkc_id', $p_cdc_bkc_id);
+        $this->db->update('tbl_p_cdc_bkc', $data);
+    }
+
+    public function p_cdc_bkc_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_cdc_bkc');
+        $this->db->where('tbl_p_cdc_bkc.p_cdc_bkc_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_cdc_bkc_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_cdc_bkc');
+        $this->db->where('tbl_p_cdc_bkc.p_cdc_bkc_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
     }
 
     public function p_cdc_bkc_frontend_one()

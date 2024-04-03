@@ -818,11 +818,11 @@
   }
 
   .bg-page-bottom {
-    background-image: url('<?php echo base_url("docs/k.bg-page-btm2.jpg"); ?>');
+    background-image: url('<?php echo base_url("docs/k.bg-page-btm3.jpg"); ?>');
     background-repeat: no-repeat;
     background-size: 100%;
     width: 1280px;
-    height: 2000px;
+    height: 2400px;
     z-index: 1;
   }
 
@@ -1116,7 +1116,7 @@
     position: relative;
     z-index: 2;
     /* เพิ่มบรรทัดนี้ */
-    margin-top: -135px;
+    margin-top: -50px;
   }
 
   .credit {
@@ -1157,6 +1157,18 @@
     padding: 21.516px;
     gap: 6.724px;
     flex-shrink: 0;
+  }
+
+  .map-contact-home {
+    border-radius: 22.86px;
+    background: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    width: 1280px;
+    height: 638.748px;
+    padding: 21.516px;
+    gap: 6.724px;
+    flex-shrink: 0;
+    margin-top: -150px;
   }
 
   .bg-pages-all-web {

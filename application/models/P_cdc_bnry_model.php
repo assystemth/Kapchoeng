@@ -203,7 +203,35 @@ class P_cdc_bnry_model extends CI_Model
             unlink($old_file_path);
         }
 
-        $this->db->delete('tbl_p_cdc_bnry', array('p_cdc_bnry_id' => $p_cdc_bnry_id));
+        // อัพเดทข้อมูลในฐานข้อมูลให้ค่าว่างหรือ null
+        $data = array(
+            'p_cdc_bnry_name' => null,
+            'p_cdc_bnry_rank' => null,
+            'p_cdc_bnry_phone' => null,
+            'p_cdc_bnry_img' => null,
+            'p_cdc_bnry_by' => $this->session->userdata('m_fname'), // เพิ่มชื่อคนที่เพิ่มข้อมูล
+            // เพิ่มคอลัมน์อื่นๆ ที่ต้องการลบข้อมูล ให้ใส่ค่า null ด้วย
+        );
+        $this->db->where('p_cdc_bnry_id', $p_cdc_bnry_id);
+        $this->db->update('tbl_p_cdc_bnry', $data);
+    }
+
+    public function p_cdc_bnry_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_cdc_bnry');
+        $this->db->where('tbl_p_cdc_bnry.p_cdc_bnry_id', 1);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function p_cdc_bnry_under_one()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_p_cdc_bnry');
+        $this->db->where('tbl_p_cdc_bnry.p_cdc_bnry_id !=', 1);
+        $query = $this->db->get();
+        return $query->result();
     }
 
     public function p_cdc_bnry_frontend_one()
