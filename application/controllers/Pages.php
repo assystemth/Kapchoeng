@@ -3163,17 +3163,19 @@ class Pages extends CI_Controller
 
 	public function p_executives()
 	{
-		$data['rsOne'] = $this->p_executives_model->p_executives_frontend_one();
+		$data['query_one'] = $this->p_executives_model->p_executives_one();
+		$data['query_under_one'] = $this->p_executives_model->p_executives_under_one();
+		// $data['rsOne'] = $this->p_executives_model->p_executives_frontend_one();
 		// $data['rsData'] = $this->p_executives_model->p_executives_frontend_list();
-		$data['rsrow1'] = $this->p_executives_model->p_executives_row_1();
-		$data['rsrow2'] = $this->p_executives_model->p_executives_row_2();
-		$data['rsrow3'] = $this->p_executives_model->p_executives_row_3();
-		$data['rsrow4'] = $this->p_executives_model->p_executives_row_4();
-		$data['rsrow5'] = $this->p_executives_model->p_executives_row_5();
+		// $data['rsrow1'] = $this->p_executives_model->p_executives_row_1();
+		// $data['rsrow2'] = $this->p_executives_model->p_executives_row_2();
+		// $data['rsrow3'] = $this->p_executives_model->p_executives_row_3();
+		// $data['rsrow4'] = $this->p_executives_model->p_executives_row_4();
+		// $data['rsrow5'] = $this->p_executives_model->p_executives_row_5();
 
 		$this->load->view('frontend_templat/header');
 		$this->load->view('frontend_asset/css');
-		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend_templat/navbar_other');
 		$this->load->view('frontend/p_executives', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
