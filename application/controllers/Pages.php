@@ -63,6 +63,7 @@ class Pages extends CI_Controller
 		$this->load->model('canon_market_model');
 		$this->load->model('canon_rmwp_model');
 		$this->load->model('canon_rcp_model');
+		$this->load->model('canon_tambol_model');
 		$this->load->model('canon_rcsp_model');
 
 		$this->load->model('pbsv_cac_model');
@@ -990,6 +991,7 @@ class Pages extends CI_Controller
 	{
 		$this->canon_rcsp_model->increment_download_canon_rcsp($canon_rcsp_file_id);
 	}
+
 	public function canon_rcp()
 	{
 		$data['query'] = $this->canon_rcp_model->canon_rcp_frontend();
@@ -1031,6 +1033,49 @@ class Pages extends CI_Controller
 	public function increment_download_canon_rcp($canon_rcp_file_id)
 	{
 		$this->canon_rcp_model->increment_download_canon_rcp($canon_rcp_file_id);
+	}
+
+	public function canon_tambol()
+	{
+		$data['query'] = $this->canon_tambol_model->canon_tambol_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/canon_tambol', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function canon_tambol_detail($canon_tambol_id)
+	{
+		$this->canon_tambol_model->increment_view($canon_tambol_id);
+
+		$data['rsData'] = $this->canon_tambol_model->read($canon_tambol_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->canon_tambol_model->read_file($canon_tambol_id);
+		$data['rsImg'] = $this->canon_tambol_model->read_img($canon_tambol_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/canon_tambol_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_canon_tambol($canon_tambol_file_id)
+	{
+		$this->canon_tambol_model->increment_download_canon_tambol($canon_tambol_file_id);
 	}
 	public function plan_pdl()
 	{
