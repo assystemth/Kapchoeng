@@ -48,7 +48,7 @@
     <div class="row mt-5">
         <div class="col-4">
             <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo site_url('Pages/ita'); ?>" class="zoom-otop">
+                <a href="<?php echo site_url('Pages/ita_all'); ?>" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-eservice-top1v2.png">
                 </a>
             </div>
@@ -303,7 +303,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li> -->
                 </div>
                 <div class="dropdown-center">
-                    <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/ita'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ITA การประเมินคุณธรรมและความโปร่งใส</a>
+                    <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/ita_all'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ITA การประเมินคุณธรรมและความโปร่งใส</a>
                     </li>
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/lpa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;LPA การประเมินประสิทธิภาพขององค์กร</a></li>
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_policy_hr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;นโยบายบริหารทรัพยากรบุคคล</a></li>

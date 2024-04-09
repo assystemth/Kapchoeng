@@ -22,7 +22,7 @@ class Intra_announce extends CI_Controller
         $data['query'] = $this->Intra_announce_model->list_all();
 
         $this->load->view('intranet_templat/header');
-                $this->load->view('intranet_templat/btm_header');
+        $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/announce', $data);

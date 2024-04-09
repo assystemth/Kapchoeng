@@ -561,7 +561,7 @@ class Intra_share_file extends CI_Controller
         }
 
         $this->load->view('intranet_templat/header');
-                $this->load->view('intranet_templat/btm_header');
+        $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
         $this->load->view('intranet/sf_deputy', $data);
