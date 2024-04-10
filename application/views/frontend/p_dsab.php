@@ -19,7 +19,11 @@
                     <?php if (!empty($rs->p_dsab_rank)): ?>
                         <div class="bg-personnel-s">
                             <div class="rounded-image-s">
-                                <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <?php if (!empty($rs->p_dsab_img)): ?>
+                                    <img src="<?php echo base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                <?php else: ?>
+                                    <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="100%" height="100%">
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="mt-3 center-center">
@@ -37,10 +41,15 @@
             <div class="row " style="margin-top: 25px;">
                 <?php foreach ($query_under_one as $rs): ?>
                     <div class="col-4 col-md-4 mb-3 center-center">
-                    <?php if (!empty($rs->p_dsab_rank)) : ?>
+                        <?php if (!empty($rs->p_dsab_rank)): ?>
                             <div class="bg-personnel-s">
                                 <div class="rounded-image-s">
-                                    <img src="<?= base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%" height="100%">
+                                    <?php if (!empty($rs->p_dsab_img)): ?>
+                                        <img src="<?php echo base_url('docs/img/' . $rs->p_dsab_img); ?>" width="100%"
+                                            height="100%">
+                                    <?php else: ?>
+                                        <img src="<?php echo base_url('docs/ex_personnel.png'); ?>" width="100%" height="100%">
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <span class="font-p-name">
