@@ -192,7 +192,7 @@
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_dsab'); ?>" class="font-content-all-web">กองยุทธศาสตร์และงบประมาณ</a><br>
                             <div class="mt-1"></div>
-                            <a href="<?php echo site_url('Pages/p_cdc_brkm'); ?>" class="font-content-all-web">ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม</a><br>
+                            <a href="<?php echo site_url('Pages/p_cdc_brkm'); ?>" class="font-content-all-web">ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม่</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_cdc_bpsb'); ?>" class="font-content-all-web">ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง</a><br>
                             <div class="mt-1"></div>

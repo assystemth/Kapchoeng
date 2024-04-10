@@ -199,7 +199,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_maintenance'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองช่าง</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_education'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองการศึกษา</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_dsab'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กองยุทธศาสตร์และงบประมาณ</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_brkm'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_brkm'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านตาเกาว์ใหม่</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_bpsb'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านปราสาทเบง</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/p_cdc_bbj'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ศูนย์พัฒนาเด็กเล็กบ้านบักจรัง</a></li>
                 </div>
