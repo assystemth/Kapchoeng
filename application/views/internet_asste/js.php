@@ -37,7 +37,18 @@
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<!-- รูปภาพ preview -->
+<script src="<?= base_url('asset/'); ?>lightbox2/src/js/lightbox.js"></script>
+
 <script>
+  // รูปภาพ preview *********************************************************************
+  $(document).ready(function() {
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    });
+  });
+  // **************************************************************************************
   // คำหยาบ vulgar **********************************
   $(document).ready(function() {
     // เมื่อคลิกปุ่ม "จัดการ"

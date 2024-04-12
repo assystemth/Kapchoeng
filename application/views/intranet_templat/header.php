@@ -38,6 +38,9 @@
     <!-- Custom styles for this page -->
     <link href="<?= base_url(); ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    <!-- รูปภาพ preview -->
+  <link href="<?= base_url('asset/'); ?>lightbox2/src/css/lightbox.css" rel="stylesheet">
+
 </head>
 
 <body>

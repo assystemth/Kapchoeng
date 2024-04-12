@@ -22,7 +22,12 @@ class System_intranet extends CI_Controller
             $this->session->userdata('m_level') != 12 &&
             $this->session->userdata('m_level') != 13 &&
             $this->session->userdata('m_level') != 14 &&
-            $this->session->userdata('m_level') != 15
+            $this->session->userdata('m_level') != 15 &&
+            $this->session->userdata('m_level') != 16 &&
+            $this->session->userdata('m_level') != 17 &&
+            $this->session->userdata('m_level') != 18 &&
+            $this->session->userdata('m_level') != 19 &&
+            $this->session->userdata('m_level') != 20
         ) {
             redirect('user', 'refresh');
         }
@@ -47,7 +52,7 @@ class System_intranet extends CI_Controller
         $data['query'] = $this->Intra_news_model->list_all();
         $data['qBanner'] = $this->banner_model->banner_frontend();
 
-        $this->load->view('intranet_templat/header_news', $data);
+        $this->load->view('intranet_templat/header', $data);
         $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
@@ -58,7 +63,7 @@ class System_intranet extends CI_Controller
 
     public function adding()
     {
-        $this->load->view('intranet_templat/header_news');
+        $this->load->view('intranet_templat/header');
         $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
@@ -76,11 +81,13 @@ class System_intranet extends CI_Controller
     public function detail($intra_news_id)
     {
         $data['rsedit'] = $this->Intra_news_model->read($intra_news_id);
+        $data['rsFile'] = $this->Intra_news_model->read_file($intra_news_id);
+        $data['rsImg'] = $this->Intra_news_model->read_img($intra_news_id);
         // echo '<pre>';
         // print_r($data['rsedit']);
         // echo '</pre>';
         // exit();
-        $this->load->view('intranet_templat/header_news');
+        $this->load->view('intranet_templat/header');
         $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
@@ -95,7 +102,7 @@ class System_intranet extends CI_Controller
         $data['rsFile'] = $this->Intra_news_model->read_file($intra_news_id);
         $data['rsImg'] = $this->Intra_news_model->read_img($intra_news_id);
 
-        $this->load->view('intranet_templat/header_news');
+        $this->load->view('intranet_templat/header');
         $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
@@ -148,7 +155,7 @@ class System_intranet extends CI_Controller
             $data['query'] = $this->Intra_news_model->list_all();
         }
 
-        $this->load->view('intranet_templat/header_news');
+        $this->load->view('intranet_templat/header');
         $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
@@ -172,7 +179,7 @@ class System_intranet extends CI_Controller
         // echo '</pre>';
         // exit;
 
-        $this->load->view('intranet_templat/header_news');
+        $this->load->view('intranet_templat/header');
         $this->load->view('intranet_templat/btm_header');
         $this->load->view('internet_asste/css');
         $this->load->view('intranet_templat/navbar');
