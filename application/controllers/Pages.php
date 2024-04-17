@@ -92,6 +92,7 @@ class Pages extends CI_Controller
 		$this->load->model('operation_po_model');
 		$this->load->model('operation_eco_model');
 		$this->load->model('operation_pgn_model');
+		$this->load->model('operation_pgnm_model');
 		$this->load->model('operation_mcc_model');
 		$this->load->model('operation_aca_model');
 		$this->load->model('lpa_model');
@@ -2541,6 +2542,48 @@ class Pages extends CI_Controller
 	public function increment_download_operation_pgn($operation_pgn_file_id)
 	{
 		$this->operation_pgn_model->increment_download_operation_pgn($operation_pgn_file_id);
+	}
+	public function operation_pgnm()
+	{
+		$data['query'] = $this->operation_pgnm_model->operation_pgnm_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_pgnm', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function operation_pgnm_detail($operation_pgnm_id)
+	{
+		$this->operation_pgnm_model->increment_view($operation_pgnm_id);
+
+		$data['rsData'] = $this->operation_pgnm_model->read($operation_pgnm_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->operation_pgnm_model->read_file($operation_pgnm_id);
+		$data['rsImg'] = $this->operation_pgnm_model->read_img($operation_pgnm_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_pgnm_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_operation_pgnm($operation_pgnm_file_id)
+	{
+		$this->operation_pgnm_model->increment_download_operation_pgnm($operation_pgnm_file_id);
 	}
 	public function operation_mcc()
 	{
