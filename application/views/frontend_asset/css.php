@@ -172,6 +172,7 @@
       height: 2000px;
     }
   }
+
   @media (min-width: 1081px) and (max-width: 1119px) {
     main {
       transform: scale(0.83);
@@ -2990,5 +2991,10 @@
     /* สีปุ่มปิด */
     border: none;
     cursor: pointer;
+  }
+
+  .font-doc {
+    font-size: 20px;
+    text-shadow: 1px 1px #ccc;
   }
 </style>

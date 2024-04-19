@@ -23,9 +23,13 @@ class P_reb_backend extends CI_Controller
     {
         $p_reb = $this->p_reb_model->list_all();
 
-        foreach ($p_reb as $files) {
-            $files->file = $this->p_reb_model->list_all_pdf($files->p_reb_id);
+        foreach ($p_reb as $pdf) {
+            $pdf->pdf = $this->p_reb_model->list_all_pdf($pdf->p_reb_id);
         }
+        foreach ($p_reb as $doc) {
+            $doc->doc = $this->p_reb_model->list_all_doc($doc->p_reb_id);
+        }
+
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
@@ -55,7 +59,8 @@ class P_reb_backend extends CI_Controller
     public function editing($p_reb_id)
     {
         $data['rsedit'] = $this->p_reb_model->read($p_reb_id);
-        $data['rsFile'] = $this->p_reb_model->read_file($p_reb_id);
+        $data['rsPdf'] = $this->p_reb_model->read_pdf($p_reb_id);
+        $data['rsDoc'] = $this->p_reb_model->read_doc($p_reb_id);
         $data['rsImg'] = $this->p_reb_model->read_img($p_reb_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
@@ -81,10 +86,19 @@ class P_reb_backend extends CI_Controller
         $this->p_reb_model->update_p_reb_status();
     }
 
-    public function del_pdf($file_id)
+    public function del_pdf($pdf_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->p_reb_model->del_pdf($file_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
+        $this->p_reb_model->del_pdf($pdf_id);
+
+        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
+        echo '<script>window.history.back();</script>';
+    }
+
+    public function del_doc($doc_id)
+    {
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
+        $this->p_reb_model->del_doc($doc_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -103,6 +117,7 @@ class P_reb_backend extends CI_Controller
     {
         $this->p_reb_model->del_p_reb_img($p_reb_id);
         $this->p_reb_model->del_p_reb_pdf($p_reb_id);
+        $this->p_reb_model->del_p_reb_doc($p_reb_id);
         $this->p_reb_model->del_p_reb($p_reb_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('p_reb_backend');

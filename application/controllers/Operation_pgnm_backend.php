@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class P_rpo_backend extends CI_Controller
+class Operation_pgnm_backend extends CI_Controller
 {
     public function __construct()
     {
@@ -16,25 +16,21 @@ class P_rpo_backend extends CI_Controller
         }
         $this->load->model('member_model');
         $this->load->model('space_model');
-        $this->load->model('p_rpo_model');
+        $this->load->model('operation_pgnm_model');
     }
 
     public function index()
     {
-        $p_rpo = $this->p_rpo_model->list_all();
+        $operation_pgnm = $this->operation_pgnm_model->list_all();
 
-        foreach ($p_rpo as $pdf) {
-            $pdf->pdf = $this->p_rpo_model->list_all_pdf($pdf->p_rpo_id);
+        foreach ($operation_pgnm as $files) {
+            $files->file = $this->operation_pgnm_model->list_all_pdf($files->operation_pgnm_id);
         }
-        foreach ($p_rpo as $doc) {
-            $doc->doc = $this->p_rpo_model->list_all_doc($doc->p_rpo_id);
-        }
-
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
         $this->load->view('templat/navbar_system_admin');
-        $this->load->view('system_admin/p_rpo', ['p_rpo' => $p_rpo]);
+        $this->load->view('system_admin/operation_pgnm', ['operation_pgnm' => $operation_pgnm]);
         $this->load->view('asset/js');
         $this->load->view('templat/footer');
     }
@@ -44,24 +40,23 @@ class P_rpo_backend extends CI_Controller
         $this->load->view('templat/header');
         $this->load->view('asset/css');
         $this->load->view('templat/navbar_system_admin');
-        $this->load->view('system_admin/p_rpo_form_add');
+        $this->load->view('system_admin/operation_pgnm_form_add');
         $this->load->view('asset/js');
         $this->load->view('templat/footer');
     }
 
     public function add()
     {
-        $this->p_rpo_model->add();
-        redirect('p_rpo_backend');
+        $this->operation_pgnm_model->add();
+        redirect('operation_pgnm_backend');
     }
 
 
-    public function editing($p_rpo_id)
+    public function editing($operation_pgnm_id)
     {
-        $data['rsedit'] = $this->p_rpo_model->read($p_rpo_id);
-        $data['rsPdf'] = $this->p_rpo_model->read_pdf($p_rpo_id);
-        $data['rsDoc'] = $this->p_rpo_model->read_doc($p_rpo_id);
-        $data['rsImg'] = $this->p_rpo_model->read_img($p_rpo_id);
+        $data['rsedit'] = $this->operation_pgnm_model->read($operation_pgnm_id);
+        $data['rsFile'] = $this->operation_pgnm_model->read_file($operation_pgnm_id);
+        $data['rsImg'] = $this->operation_pgnm_model->read_img($operation_pgnm_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
         // echo '</pre>';
@@ -70,35 +65,26 @@ class P_rpo_backend extends CI_Controller
         $this->load->view('templat/header');
         $this->load->view('asset/css');
         $this->load->view('templat/navbar_system_admin');
-        $this->load->view('system_admin/p_rpo_form_edit', $data);
+        $this->load->view('system_admin/operation_pgnm_form_edit', $data);
         $this->load->view('asset/js');
         $this->load->view('templat/footer');
     }
 
-    public function edit($p_rpo_id)
+    public function edit($operation_pgnm_id)
     {
-        $this->p_rpo_model->edit($p_rpo_id);
-        redirect('p_rpo_backend');
+        $this->operation_pgnm_model->edit($operation_pgnm_id);
+        redirect('operation_pgnm_backend');
     }
 
-    public function update_p_rpo_status()
+    public function update_operation_pgnm_status()
     {
-        $this->p_rpo_model->update_p_rpo_status();
+        $this->operation_pgnm_model->update_operation_pgnm_status();
     }
 
-    public function del_pdf($pdf_id)
+    public function del_pdf($file_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
-        $this->p_rpo_model->del_pdf($pdf_id);
-
-        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
-        echo '<script>window.history.back();</script>';
-    }
-
-    public function del_doc($doc_id)
-    {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
-        $this->p_rpo_model->del_doc($doc_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
+        $this->operation_pgnm_model->del_pdf($file_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -107,19 +93,18 @@ class P_rpo_backend extends CI_Controller
     public function del_img($file_id)
     {
         // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->p_rpo_model->del_img($file_id);
+        $this->operation_pgnm_model->del_img($file_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
     }
 
-    public function del_p_rpo($p_rpo_id)
+    public function del_operation_pgnm($operation_pgnm_id)
     {
-        $this->p_rpo_model->del_p_rpo_img($p_rpo_id);
-        $this->p_rpo_model->del_p_rpo_pdf($p_rpo_id);
-        $this->p_rpo_model->del_p_rpo_doc($p_rpo_id);
-        $this->p_rpo_model->del_p_rpo($p_rpo_id);
+        $this->operation_pgnm_model->del_operation_pgnm_img($operation_pgnm_id);
+        $this->operation_pgnm_model->del_operation_pgnm_pdf($operation_pgnm_id);
+        $this->operation_pgnm_model->del_operation_pgnm($operation_pgnm_id);
         $this->session->set_flashdata('del_success', TRUE);
-        redirect('p_rpo_backend');
+        redirect('operation_pgnm_backend');
     }
 }

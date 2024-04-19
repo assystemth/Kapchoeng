@@ -23,9 +23,13 @@ class P_rpobuy_backend extends CI_Controller
     {
         $p_rpobuy = $this->p_rpobuy_model->list_all();
 
-        foreach ($p_rpobuy as $files) {
-            $files->file = $this->p_rpobuy_model->list_all_pdf($files->p_rpobuy_id);
+        foreach ($p_rpobuy as $pdf) {
+            $pdf->pdf = $this->p_rpobuy_model->list_all_pdf($pdf->p_rpobuy_id);
         }
+        foreach ($p_rpobuy as $doc) {
+            $doc->doc = $this->p_rpobuy_model->list_all_doc($doc->p_rpobuy_id);
+        }
+
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
@@ -55,7 +59,8 @@ class P_rpobuy_backend extends CI_Controller
     public function editing($p_rpobuy_id)
     {
         $data['rsedit'] = $this->p_rpobuy_model->read($p_rpobuy_id);
-        $data['rsFile'] = $this->p_rpobuy_model->read_file($p_rpobuy_id);
+        $data['rsPdf'] = $this->p_rpobuy_model->read_pdf($p_rpobuy_id);
+        $data['rsDoc'] = $this->p_rpobuy_model->read_doc($p_rpobuy_id);
         $data['rsImg'] = $this->p_rpobuy_model->read_img($p_rpobuy_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
@@ -81,10 +86,19 @@ class P_rpobuy_backend extends CI_Controller
         $this->p_rpobuy_model->update_p_rpobuy_status();
     }
 
-    public function del_pdf($file_id)
+    public function del_pdf($pdf_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->p_rpobuy_model->del_pdf($file_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
+        $this->p_rpobuy_model->del_pdf($pdf_id);
+
+        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
+        echo '<script>window.history.back();</script>';
+    }
+
+    public function del_doc($doc_id)
+    {
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
+        $this->p_rpobuy_model->del_doc($doc_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -103,6 +117,7 @@ class P_rpobuy_backend extends CI_Controller
     {
         $this->p_rpobuy_model->del_p_rpobuy_img($p_rpobuy_id);
         $this->p_rpobuy_model->del_p_rpobuy_pdf($p_rpobuy_id);
+        $this->p_rpobuy_model->del_p_rpobuy_doc($p_rpobuy_id);
         $this->p_rpobuy_model->del_p_rpobuy($p_rpobuy_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('p_rpobuy_backend');

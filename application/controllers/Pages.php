@@ -375,7 +375,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->procurement_model->read_file($procurement_id);
+		$data['rsPdf'] = $this->procurement_model->read_pdf($procurement_id);
+		$data['rsDoc'] = $this->procurement_model->read_doc($procurement_id);
 		$data['rsImg'] = $this->procurement_model->read_img($procurement_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2035,7 +2036,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->p_rpobuy_model->read_file($p_rpobuy_id);
+		$data['rsPdf'] = $this->p_rpobuy_model->read_pdf($p_rpobuy_id);
+		$data['rsDoc'] = $this->p_rpobuy_model->read_doc($p_rpobuy_id);
 		$data['rsImg'] = $this->p_rpobuy_model->read_img($p_rpobuy_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2077,7 +2079,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->p_rpo_model->read_file($p_rpo_id);
+		$data['rsPdf'] = $this->p_rpo_model->read_pdf($p_rpo_id);
+		$data['rsDoc'] = $this->p_rpo_model->read_doc($p_rpo_id);
 		$data['rsImg'] = $this->p_rpo_model->read_img($p_rpo_id);
 
 		$this->load->view('frontend_templat/header');
@@ -2119,7 +2122,8 @@ class Pages extends CI_Controller
 			return; // ให้จบการทำงานที่นี่
 		}
 
-		$data['rsFile'] = $this->p_reb_model->read_file($p_reb_id);
+		$data['rsPdf'] = $this->p_reb_model->read_pdf($p_reb_id);
+		$data['rsDoc'] = $this->p_reb_model->read_doc($p_reb_id);
 		$data['rsImg'] = $this->p_reb_model->read_img($p_reb_id);
 
 		$this->load->view('frontend_templat/header');

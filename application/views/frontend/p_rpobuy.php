@@ -37,27 +37,27 @@
             <div class="pages-select-pdf underline">
                 <div class="row">
                     <div class="col-1 style-col-img">
-                        <a href="<?php echo site_url('Pages/p_rpobuybuy_detail/' . $rs->p_rpobuybuy_id); ?>">
-                            <?php if (!empty($rs->p_rpobuybuy_img)) : ?>
-                                <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->p_rpobuybuy_img); ?>" width="94px" height="63px">
+                        <a href="<?php echo site_url('Pages/p_rpobuy_detail/' . $rs->p_rpobuy_id); ?>">
+                            <?php if (!empty($rs->p_rpobuy_img)) : ?>
+                                <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->p_rpobuy_img); ?>" width="94px" height="63px">
                             <?php else : ?>
                                 <img class="border-radius24" src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
                             <?php endif; ?>
                         </a>
                     </div>
                     <div class="col-9 font-pages-content">
-                        <a href="<?php echo site_url('Pages/p_rpobuybuy_detail/' . $rs->p_rpobuybuy_id); ?>">
-                            <span class="one-line-ellipsis mt-1"><?= $rs->p_rpobuybuy_name; ?></span>
+                        <a href="<?php echo site_url('Pages/p_rpobuy_detail/' . $rs->p_rpobuy_id); ?>">
+                            <span class="one-line-ellipsis mt-1"><?= $rs->p_rpobuy_name; ?></span>
                         </a>
                     </div>
                     <div class="col-2 span-time-pages-news">
-                        <a href="<?php echo site_url('Pages/p_rpobuybuy_detail/' . $rs->p_rpobuybuy_id); ?>">
+                        <a href="<?php echo site_url('Pages/p_rpobuy_detail/' . $rs->p_rpobuy_id); ?>">
                             <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="currentColor" class="bi bi-calendar-minus-fill" viewBox="0 0 16 16">
                                     <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z" />
                                 </svg>
                                 <?php
                                 // ในการใช้งาน setThaiMonth
-                                $date = new DateTime($rs->p_rpobuybuy_date);
+                                $date = new DateTime($rs->p_rpobuy_date);
                                 $day_th = $date->format('d');
                                 $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                 $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี

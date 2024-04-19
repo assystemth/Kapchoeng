@@ -23,9 +23,13 @@ class Procurement_backend extends CI_Controller
     {
         $procurement = $this->procurement_model->list_all();
 
-        foreach ($procurement as $files) {
-            $files->file = $this->procurement_model->list_all_pdf($files->procurement_id);
+        foreach ($procurement as $pdf) {
+            $pdf->pdf = $this->procurement_model->list_all_pdf($pdf->procurement_id);
         }
+        foreach ($procurement as $doc) {
+            $doc->doc = $this->procurement_model->list_all_doc($doc->procurement_id);
+        }
+
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
@@ -55,7 +59,8 @@ class Procurement_backend extends CI_Controller
     public function editing($procurement_id)
     {
         $data['rsedit'] = $this->procurement_model->read($procurement_id);
-        $data['rsFile'] = $this->procurement_model->read_file($procurement_id);
+        $data['rsPdf'] = $this->procurement_model->read_pdf($procurement_id);
+        $data['rsDoc'] = $this->procurement_model->read_doc($procurement_id);
         $data['rsImg'] = $this->procurement_model->read_img($procurement_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
@@ -81,10 +86,19 @@ class Procurement_backend extends CI_Controller
         $this->procurement_model->update_procurement_status();
     }
 
-    public function del_pdf($file_id)
+    public function del_pdf($pdf_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->procurement_model->del_pdf($file_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
+        $this->procurement_model->del_pdf($pdf_id);
+
+        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
+        echo '<script>window.history.back();</script>';
+    }
+
+    public function del_doc($doc_id)
+    {
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
+        $this->procurement_model->del_doc($doc_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -103,6 +117,7 @@ class Procurement_backend extends CI_Controller
     {
         $this->procurement_model->del_procurement_img($procurement_id);
         $this->procurement_model->del_procurement_pdf($procurement_id);
+        $this->procurement_model->del_procurement_doc($procurement_id);
         $this->procurement_model->del_procurement($procurement_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('procurement_backend');
