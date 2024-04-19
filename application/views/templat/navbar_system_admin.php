@@ -187,6 +187,8 @@
                         <!-- <h6 class="collapse-header">Custom Components:</h6> -->
                         <a class="collapse-item" href="<?php echo site_url('Operation_reauf_backend'); ?>">รายงานติดตาม<br>และประเมินผลแผน</a>
                         <a class="collapse-item" href="<?php echo site_url('P_rpobuy_backend'); ?>">รายงานผลการดำเนินงาน<br>การจัดซื้อจัดจ้าง</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_sopopip_backend'); ?>">ความก้าวหน้าการจัดซื้อจัดจ้าง<br>หรือการจัดหาพัสดุ</a>
+                        <a class="collapse-item" href="<?php echo site_url('P_sopopaortsr_backend'); ?>">รายงานสรุปผล<br>การจัดซื้อจัดจ้างหรือ<br>การจัดหาพัสดุประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('P_rpo_backend'); ?>">รายงานผลการดำเนินงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('P_reb_backend'); ?>">รายงานใช้จ่ายงบประมาณ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_sap_backend'); ?>">การปฏิบัติงาน<br>และการให้บริการ</a>

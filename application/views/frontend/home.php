@@ -297,10 +297,6 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_pgn'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;นโยบายไม่รับของขวัญ no gift policy</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_po'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การเปิดโอกาสให้มีส่วนร่วม</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_eco'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การเสริมสร้างวัฒนธรรมองค์กร</a></li>
-
-
-                    <!-- <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="#"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li> -->
                 </div>
                 <div class="dropdown-center">
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/ita_all'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ITA การประเมินคุณธรรมและความโปร่งใส</a>
@@ -308,20 +304,18 @@
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/lpa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;LPA การประเมินประสิทธิภาพขององค์กร</a></li>
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_policy_hr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;นโยบายบริหารทรัพยากรบุคคล</a></li>
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_am_hr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การดำเนินการบริหารทรัพยากรบุคคล</a></li>
-                    <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_rdam_hr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการบริหารและพัฒนาทรัพยากรบุคคล</a>
-                    </li>
+                    <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_rdam_hr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการบริหารและพัฒนาทรัพยากรบุคคล</a></li>
                     <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_cdm_topic'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักเกณฑ์และการบริหารและพัฒนา</a></li>
-
+                    <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กิจการสภา</a></li>
+                    <li><a class="mar-left-6 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การมีส่วนร่วมของผู้บริหาร</a></li>
 
 
                 </div>
                 <div class="dropdown-right">
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กิจการสภา</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การมีส่วนร่วมของผู้บริหาร</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_aditn'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หน่วยตรวจสอบภายใน</a></li>
-                    <!-- <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpo'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงาน</a></li> -->
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpobuy'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
-                    <!-- <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_reb'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานการใช้จ่ายงบประมาณจัดซื้อจัดจ้าง</a></li> -->
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_sopopip'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ความก้าวหน้าการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุ</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_sopopaortsr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_eg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
                     </li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_ameg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a>
@@ -816,18 +810,18 @@
             $limited_data = array_slice($limited_data, 0, 8);
 
             // ตรวจสอบว่ามีข้อมูลหรือไม่และแสดงผลลัพธ์
-            if (!empty($limited_data)):
-                foreach ($limited_data as $data):
-                    ?>
+            if (!empty($limited_data)) :
+                foreach ($limited_data as $data) :
+            ?>
                     <div class="content-news-detail">
                         <span class="text-news"><a href="<?= htmlspecialchars($data['url']) ?>" target="_blank">
                                 <img src="<?php echo base_url("docs/e-gp.png"); ?>" style="width: 40; height: 40px;">
                                 <?= htmlspecialchars($data['project_name']) ?>
                             </a></span>
                     </div>
-                    <?php
+                <?php
                 endforeach;
-            else: ?>
+            else : ?>
                 <div class="text-center">
                     <span style="font-size: 23px;">เนื่องจากระบบส่วนกลางมีปัญหา เว็บไซต์ไม่สามารถดึงข้อมูลจากระบบการจัดซื้อจัดจ้างภาครัฐได้<br>
                         แก้ไขเบื้องต้นโดยการ Refresh หน้าเว็บอีกครั้ง หรือรอการแก้ไขจากผู้ดูแลระบบเว็บฯ ส่วนกลาง<br>
