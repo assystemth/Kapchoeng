@@ -41,7 +41,7 @@
                             <?php if (!empty($rs->operation_eco_img)) : ?>
                                 <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->operation_eco_img); ?>" width="94px" height="63px">
                             <?php else : ?>
-                                <img class="border-radius24" src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
+                                <img class="border-radius24" src="<?php echo base_url('docs/k.logo.png'); ?>" width="94px" height="63px">
                             <?php endif; ?>
                         </a>
                     </div>
