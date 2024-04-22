@@ -23,9 +23,13 @@ class Plan_pdpa_backend extends CI_Controller
     {
         $plan_pdpa = $this->plan_pdpa_model->list_all();
 
-        foreach ($plan_pdpa as $files) {
-            $files->file = $this->plan_pdpa_model->list_all_pdf($files->plan_pdpa_id);
+        foreach ($plan_pdpa as $pdf) {
+            $pdf->pdf = $this->plan_pdpa_model->list_all_pdf($pdf->plan_pdpa_id);
         }
+        foreach ($plan_pdpa as $doc) {
+            $doc->doc = $this->plan_pdpa_model->list_all_doc($doc->plan_pdpa_id);
+        }
+
 
         $this->load->view('templat/header');
         $this->load->view('asset/css');
@@ -55,7 +59,8 @@ class Plan_pdpa_backend extends CI_Controller
     public function editing($plan_pdpa_id)
     {
         $data['rsedit'] = $this->plan_pdpa_model->read($plan_pdpa_id);
-        $data['rsFile'] = $this->plan_pdpa_model->read_file($plan_pdpa_id);
+        $data['rsPdf'] = $this->plan_pdpa_model->read_pdf($plan_pdpa_id);
+        $data['rsDoc'] = $this->plan_pdpa_model->read_doc($plan_pdpa_id);
         $data['rsImg'] = $this->plan_pdpa_model->read_img($plan_pdpa_id);
         // echo '<pre>';
         // print_r($data['rsfile']);
@@ -81,10 +86,19 @@ class Plan_pdpa_backend extends CI_Controller
         $this->plan_pdpa_model->update_plan_pdpa_status();
     }
 
-    public function del_pdf($file_id)
+    public function del_pdf($pdf_id)
     {
-        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $file_id
-        $this->plan_pdpa_model->del_pdf($file_id);
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $pdf_id
+        $this->plan_pdpa_model->del_pdf($pdf_id);
+
+        // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
+        echo '<script>window.history.back();</script>';
+    }
+
+    public function del_doc($doc_id)
+    {
+        // เรียกใช้ฟังก์ชันใน Model เพื่อลบไฟล์ PDF ด้วย $doc_id
+        $this->plan_pdpa_model->del_doc($doc_id);
 
         // ใส่สคริปต์ JavaScript เพื่อรีเฟรชหน้าเดิม
         echo '<script>window.history.back();</script>';
@@ -103,6 +117,7 @@ class Plan_pdpa_backend extends CI_Controller
     {
         $this->plan_pdpa_model->del_plan_pdpa_img($plan_pdpa_id);
         $this->plan_pdpa_model->del_plan_pdpa_pdf($plan_pdpa_id);
+        $this->plan_pdpa_model->del_plan_pdpa_doc($plan_pdpa_id);
         $this->plan_pdpa_model->del_plan_pdpa($plan_pdpa_id);
         $this->session->set_flashdata('del_success', TRUE);
         redirect('plan_pdpa_backend');

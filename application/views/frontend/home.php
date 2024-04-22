@@ -316,10 +316,11 @@
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpobuy'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_sopopip'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ความก้าวหน้าการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุ</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_sopopaortsr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_eg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a>
-                    </li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_ameg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a>
-                    </li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_eg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_ameg'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_rcaa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดําเนินการ<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ป้องกันการทุจริตประจําปี</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_caar'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินความเสี่ยงเพื่อป้องกันการทุจริต</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_mccs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลสถิติเรื่องร้องเรียนการทุจริต<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;และประพฤติมิชอบ</a></li>
                 </div>
             </ul>
         </div>

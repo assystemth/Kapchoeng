@@ -206,6 +206,9 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_aditn_backend'); ?>">ตรวจสอบภายใน</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับ<br>เจ้าหน้าที่ของรัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">การประเมินจริยธรรม<br>เจ้าหน้าที่ของรัฐ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_rcaa_backend'); ?>">รายงานผลการดําเนินการ<br>ป้องกันการทุจริตประจําปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_caar_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_mccs_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
                     </div>
                 </div>
             </li>
