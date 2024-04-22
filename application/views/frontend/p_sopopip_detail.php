@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
     <div class="head-pages-three">
-                <span class="font-pages-head">ความก้าวหน้าการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
+                <span class="font-pages-head">ความก้าวหน้าการจัดซื้อจัดจ้าง<br>หรือการจัดหาพัสดุ</span>
             </div>
     </div>
     <div class="bg-pages-in ">

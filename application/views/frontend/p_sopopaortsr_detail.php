@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
     <div class="head-pages-three">
-                <span class="font-pages-head">รายงานสรุปผลการจัดซื้อจัดจ้างหรือการจัดหาพัสดุประจำปี</span>
+                <span class="font-pages-head">รายงานสรุปผลการจัดซื้อจัดจ้าง<br>หรือการจัดหาพัสดุประจำปี</span>
             </div>
     </div>
     <div class="bg-pages-in ">
