@@ -6,7 +6,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 <!-- Add Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+ <!-- reCAPTCHA 3 -->
+ <script src="https://www.google.com/recaptcha/api.js?render=6LcfiLYpAAAAAI7_U3nkRRxKF7e8B_fwOGqi7g6x"></script>
 <!-- reCAPTCHA2  -->
 <script src="https://www.google.com/recaptcha/api.js?hl=th"></script>
 
@@ -41,8 +42,11 @@
     }
     // **************************************************************************************
     // เมื่อ reCAPTCHA ผ่านการตรวจสอบหน้า home ************************************
-    function enableLoginButton() {
-        document.getElementById("loginBtn").removeAttribute("disabled");
+    // function enableLoginButton() {
+    //     document.getElementById("loginBtn").removeAttribute("disabled");
+    // }
+    function onSubmit(token) {
+        document.getElementById("reCAPTCHA3").submit();
     }
     // ****************************************************************************
 
@@ -299,9 +303,9 @@
     });
 
     // เมื่อ reCAPTCHA ผ่านการตรวจสอบ
-    function enableSubmit() {
-        document.getElementById("SubmitLike").removeAttribute("disabled");
-    }
+    // function enableSubmit() {
+    //     document.getElementById("SubmitLike").removeAttribute("disabled");
+    // }
 
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 4,
@@ -327,7 +331,7 @@
     $(document).ready(function() {
         <?php if ($this->session->flashdata('save_success')) { ?>
             Swal.fire({
-                position: 'top-end',
+                // position: 'top-end',
                 icon: 'success',
                 title: 'บันทึกข้อมูลสำเร็จ',
                 showConfirmButton: false,
@@ -361,7 +365,7 @@
     $(document).ready(function() {
         <?php if ($this->session->flashdata('del_success')) { ?>
             Swal.fire({
-                position: 'top-end',
+                // position: 'top-end',
                 icon: 'success',
                 title: 'ลบข้อมูลสำเร็จ',
                 showConfirmButton: false,
