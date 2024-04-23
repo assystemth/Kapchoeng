@@ -208,7 +208,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">การประเมินจริยธรรม<br>เจ้าหน้าที่ของรัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_rcaa_backend'); ?>">รายงานผลการดําเนินการ<br>ป้องกันการทุจริตประจําปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_caar_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_mccs_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_mccs_backend'); ?>">ข้อมูลสถิติเรื่องร้องเรียน<br>การทุจริตและประพฤติมิชอบ</a>
                     </div>
                 </div>
             </li>
@@ -1152,30 +1152,50 @@
                     </li>
                 </a>
                 <a href="<?php echo site_url('Operation_aa_backend'); ?>" class="link">
-
                     <li class="hide">
                         <span>กิจการสภา</span>
                     </li>
                 </a>
                 <a href="<?php echo site_url('Operation_aditn_backend'); ?>" class="link">
-
                     <li class="hide">
                         <span>ตรวจสอบภายใน</span>
                     </li>
                 </a>
                 <a href="<?php echo site_url('Operation_eg_backend'); ?>" class="link">
-
                     <li class="hide">
                         <span>ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</span>
                     </li>
                 </a>
                 <a href="<?php echo site_url('Operation_ameg_backend'); ?>" class="link">
-
                     <li class="hide">
                         <span>การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</span>
                     </li>
                 </a>
-
+                <a href="<?php echo site_url('P_sopopip_backend'); ?>" class="link">
+                    <li class="hide">
+                        <span>ความก้าวหน้าการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('P_sopopaortsr_backend'); ?>" class="link">
+                    <li class="hide">
+                        <span>รายงานสรุปผลการจัดซื้อจัดจ้างหรือการจัดหาพัสดุประจำปี</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('Operation_rcaa_backend'); ?>" class="link">
+                    <li class="hide">
+                        <span>รายงานผลการดําเนินการป้องกันการทุจริตประจําปี</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('Operation_caar_backend'); ?>" class="link">
+                    <li class="hide">
+                        <span>การประเมินความเสี่ยงเพื่อป้องกันการทุจริต</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('Operation_mccs_backend'); ?>" class="link">
+                    <li class="hide">
+                        <span>ข้อมูลสถิติเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</span>
+                    </li>
+                </a>
                 <!-- มาตราการภายใน -->
                 <a href="<?php echo site_url('Order_backend'); ?>" class="link">
 
