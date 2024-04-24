@@ -171,6 +171,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_ems_backend'); ?>">งานกู้ชีพ/บริการ<br>การแพทย์ฉุกเฉิน(EMS)</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_sags_backend'); ?>">คู่มือและ<br>มาตราฐานการให้บริการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_gup_backend'); ?>">คู่มือสำหรับประชาชน</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pbsv_dss_backend'); ?>">ข้อมูลเชิงสถิติการให้บริการ</a>
                     </div>
                 </div>
             </li>
@@ -1018,10 +1019,14 @@
                         <span>คู่มือสำหรับประชาชน</span>
                     </li>
                 </a>
-
                 <li class="hide">
                     <a href="<?php echo site_url('Pbsv_e_book_backend'); ?>" class="link">
                         <span>ดาวโหลดแบบฟอร์ม E-book</span>
+                    </a>
+                </li>
+                <li class="hide">
+                    <a href="<?php echo site_url('Pbsv_dss_backend'); ?>" class="link">
+                        <span>ข้อมูลเชิงสถิติการให้บริการ</span>
                     </a>
                 </li>
                 <!-- การดำเนินงาน -->

@@ -77,6 +77,7 @@ class Pages extends CI_Controller
 		$this->load->model('pbsv_gup_model');
 		$this->load->model('pbsv_e_book_model');
 		$this->load->model('pbsv_tax_model');
+		$this->load->model('pbsv_dss_model');
 
 		$this->load->model('operation_reauf_model');
 		$this->load->model('operation_rcaa_model');
@@ -1981,6 +1982,49 @@ class Pages extends CI_Controller
 	public function increment_download_pbsv_e_book($pbsv_e_book_file_id)
 	{
 		$this->pbsv_e_book_model->increment_download_pbsv_e_book($pbsv_e_book_file_id);
+	}
+	public function pbsv_dss()
+	{
+		$data['query'] = $this->pbsv_dss_model->pbsv_dss_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_dss', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function pbsv_dss_detail($pbsv_dss_id)
+	{
+		$this->pbsv_dss_model->increment_view($pbsv_dss_id);
+
+		$data['rsData'] = $this->pbsv_dss_model->read($pbsv_dss_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->pbsv_dss_model->read_pdf($pbsv_dss_id);
+		$data['rsDoc'] = $this->pbsv_dss_model->read_doc($pbsv_dss_id);
+		$data['rsImg'] = $this->pbsv_dss_model->read_img($pbsv_dss_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pbsv_dss_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_pbsv_dss($pbsv_dss_file_id)
+	{
+		$this->pbsv_dss_model->increment_download_pbsv_dss($pbsv_dss_file_id);
 	}
 	public function operation_reauf()
 	{
