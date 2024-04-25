@@ -534,7 +534,7 @@ class Plan_pds3y_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_plan_pds3y');
         $this->db->where('tbl_plan_pds3y.plan_pds3y_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_plan_pds3y.plan_pds3y_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

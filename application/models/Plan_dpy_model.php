@@ -534,7 +534,7 @@ class Plan_dpy_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_plan_dpy');
         $this->db->where('tbl_plan_dpy.plan_dpy_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_plan_dpy.plan_dpy_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

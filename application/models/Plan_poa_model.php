@@ -534,7 +534,7 @@ class Plan_poa_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_plan_poa');
         $this->db->where('tbl_plan_poa.plan_poa_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_plan_poa.plan_poa_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

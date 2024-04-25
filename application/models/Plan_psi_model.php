@@ -534,7 +534,7 @@ class Plan_psi_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_plan_psi');
         $this->db->where('tbl_plan_psi.plan_psi_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_plan_psi.plan_psi_date', 'DESC');
         $query = $this->db->get();
         return $query->result();

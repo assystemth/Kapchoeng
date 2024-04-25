@@ -534,7 +534,7 @@ class Plan_pcra_model extends CI_Model
         $this->db->select('*');
         $this->db->from('tbl_plan_pcra');
         $this->db->where('tbl_plan_pcra.plan_pcra_status', 'show');
-        $this->db->limit(8);
+        
         $this->db->order_by('tbl_plan_pcra.plan_pcra_date', 'DESC');
         $query = $this->db->get();
         return $query->result();
