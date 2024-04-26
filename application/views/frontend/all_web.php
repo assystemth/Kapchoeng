@@ -135,6 +135,7 @@
                             <a href="<?php echo site_url('Pages/pbsv_tax'); ?>" class="font-content-all-web">ข้อมูลชำระภาษี</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/pbsv_dss'); ?>" class="font-content-all-web">ข้อมูลเชิงสถิติการให้บริการ</a><br>
+                            <div class="mt-1"></div>
                         </div>
                     </div>
 
