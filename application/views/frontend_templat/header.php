@@ -39,7 +39,10 @@
 
   <!-- รูปภาพ preview -->
   <link href="<?= base_url('asset/'); ?>lightbox2/src/css/lightbox.css" rel="stylesheet">
-  
+
+  <!-- Search Google -->
+  <script async src="https://cse.google.com/cse.js?cx=86e4018abbae645f9"></script>
+
   <!-- facebook -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v19.0" nonce="MXdATBI7"></script>
