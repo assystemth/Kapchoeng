@@ -133,6 +133,8 @@
                             <a href="<?php echo site_url('Pages/pbsv_e_book'); ?>" class="font-content-all-web">ดาวน์โหลดแบบฟอร์ม E-book</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/pbsv_tax'); ?>" class="font-content-all-web">ข้อมูลชำระภาษี</a><br>
+                            <div class="mt-1"></div>
+                            <a href="<?php echo site_url('Pages/pbsv_dss'); ?>" class="font-content-all-web">ข้อมูลเชิงสถิติการให้บริการ</a><br>
                         </div>
                     </div>
 
