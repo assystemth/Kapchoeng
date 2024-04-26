@@ -98,6 +98,7 @@
                             <a href="<?php echo site_url('Pages/operation_eg'); ?>" class="font-content-all-web">ประมวลจริยธรรมสำหรับเจ้าหน้าที่ของรัฐ</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/operation_ameg'); ?>" class="font-content-all-web">การประเมินจริยธรรมเจ้าหน้าที่ของรัฐ</a><br>
+                            <div class="mt-1"></div>
                             <a class="font-content-all-web">การจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_rpobuy'); ?>" class="font-content-all-web dot-laws">รายการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</a><br>
@@ -105,7 +106,6 @@
                             <a href="<?php echo site_url('Pages/p_sopopip'); ?>" class="font-content-all-web dot-laws">รายงานความก้าวหน้าการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุ</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_sopopaortsr'); ?>" class="font-content-all-web dot-laws">รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a><br>
-                            <div class="mt-1"></div>
                         </div>
                     </div>
 
