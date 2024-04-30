@@ -210,7 +210,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับ<br>เจ้าหน้าที่ของรัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">การประเมินจริยธรรม<br>เจ้าหน้าที่ของรัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_rcaa_backend'); ?>">รายงานผลการดําเนินการ<br>ป้องกันการทุจริตประจําปี</a>
-                        <a class="collapse-item" href="<?php echo site_url('Operation_rpa_backend'); ?>">รายงานผลการดำเนินงาน<br>ประจำปี</a>
+                        <!-- <a class="collapse-item" href="<?php echo site_url('Operation_rpa_backend'); ?>">รายงานผลการดำเนินงาน<br>ประจำปี</a> -->
                         <a class="collapse-item" href="<?php echo site_url('Operation_caar_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_mccs_backend'); ?>">ข้อมูลสถิติเรื่องร้องเรียน<br>การทุจริตและประพฤติมิชอบ</a>
                     </div>
@@ -1057,12 +1057,12 @@
                         <span>ความก้าวหน้าการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
                     </li>
                 </a>
-                <a href="<?php echo site_url('Operation_rpa_backend'); ?>" class="link">
+                <!-- <a href="<?php echo site_url('Operation_rpa_backend'); ?>" class="link">
 
                     <li class="hide">
                         <span>xxxxxxx</span>
                     </li>
-                </a>
+                </a> -->
                 <a href="<?php echo site_url('P_rpo_backend'); ?>" class="link">
 
                     <li class="hide">
