@@ -128,6 +128,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Plan_paca_backend'); ?>">แผนปฏิบัติการป้องกัน<br>การทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_psi_backend'); ?>">แผนแม่บทสารสนเทศ</a>
                         <a class="collapse-item" href="<?php echo site_url('Plan_pmda_backend'); ?>">แผนป้องกันและบรรเทา<br>สาธารณภัยประจำปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Plan_pbawa_backend'); ?>">แผนและควาวก้าวหน้าใน<br>การดำเนินงานและการใช้<br>จ่ายงบประมาณประจำปี</a>
 
                     </div>
                 </div>
@@ -209,6 +210,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับ<br>เจ้าหน้าที่ของรัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_ameg_backend'); ?>">การประเมินจริยธรรม<br>เจ้าหน้าที่ของรัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_rcaa_backend'); ?>">รายงานผลการดําเนินการ<br>ป้องกันการทุจริตประจําปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_rpa_backend'); ?>">รายงานผลการดำเนินงาน<br>ประจำปี</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_caar_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_mccs_backend'); ?>">ข้อมูลสถิติเรื่องร้องเรียน<br>การทุจริตและประพฤติมิชอบ</a>
                     </div>
@@ -895,6 +897,12 @@
                         <span>ข้อมูลแผนป้องกันและบรรเทาสาธารณภัยประจำปี</span>
                     </li>
                 </a>
+                <a href="<?php echo site_url('Plan_pbawa_backend'); ?>" class="link">
+
+                    <li class="hide">
+                        <span>แผนและควาวก้าวหน้าในการดำเนินงานและการใช้จ่ายงบประมาณประจำปี</span>
+                    </li>
+                </a>
 
                 <!-- ข้อมูลเทศบัญญัติ -->
                 <a href="<?php echo site_url('Canon_bgps_backend'); ?>" class="link">
@@ -1049,10 +1057,10 @@
                         <span>ความก้าวหน้าการจัดซื้อจัดจ้างหรือการจัดหาพัสดุ</span>
                     </li>
                 </a>
-                <a href="<?php echo site_url('P_sopopaortsr_backend'); ?>" class="link">
+                <a href="<?php echo site_url('Operation_rpa_backend'); ?>" class="link">
 
                     <li class="hide">
-                        <span>รายงานสรุปผลการจัดซื้อจัดจ้างหรือการจัดหาพัสดุประจำปี</span>
+                        <span>xxxxxxx</span>
                     </li>
                 </a>
                 <a href="<?php echo site_url('P_rpo_backend'); ?>" class="link">

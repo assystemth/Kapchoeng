@@ -56,6 +56,7 @@ class Pages extends CI_Controller
 		$this->load->model('plan_paca_model');
 		$this->load->model('plan_psi_model');
 		$this->load->model('plan_pmda_model');
+		$this->load->model('plan_pbawa_model');
 
 		$this->load->model('canon_bgps_model');
 		$this->load->model('canon_chh_model');
@@ -85,6 +86,7 @@ class Pages extends CI_Controller
 		$this->load->model('operation_mccs_model');
 		$this->load->model('p_sopopip_model');
 		$this->load->model('p_sopopaortsr_model');
+		$this->load->model('operation_rpa_model');
 		$this->load->model('p_rpobuy_model');
 		$this->load->model('p_rpo_model');
 		$this->load->model('p_reb_model');
@@ -1563,6 +1565,49 @@ class Pages extends CI_Controller
 	{
 		$this->plan_pmda_model->increment_download_plan_pmda($plan_pmda_file_id);
 	}
+	public function plan_pbawa()
+	{
+		$data['query'] = $this->plan_pbawa_model->plan_pbawa_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_pbawa', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function plan_pbawa_detail($plan_pbawa_id)
+	{
+		$this->plan_pbawa_model->increment_view($plan_pbawa_id);
+
+		$data['rsData'] = $this->plan_pbawa_model->read($plan_pbawa_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->plan_pbawa_model->read_pdf($plan_pbawa_id);
+		$data['rsDoc'] = $this->plan_pbawa_model->read_doc($plan_pbawa_id);
+		$data['rsImg'] = $this->plan_pbawa_model->read_img($plan_pbawa_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/plan_pbawa_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_plan_pbawa($plan_pbawa_file_id)
+	{
+		$this->plan_pbawa_model->increment_download_plan_pbawa($plan_pbawa_file_id);
+	}
 	public function pbsv_cac()
 	{
 		$data['query'] = $this->pbsv_cac_model->pbsv_cac_frontend();
@@ -2239,6 +2284,49 @@ class Pages extends CI_Controller
 	public function increment_download_p_sopopaortsr($p_sopopaortsr_file_id)
 	{
 		$this->p_sopopaortsr_model->increment_download_p_sopopaortsr($p_sopopaortsr_file_id);
+	}
+	public function operation_rpa()
+	{
+		$data['query'] = $this->operation_rpa_model->operation_rpa_frontend_list();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_rpa', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function operation_rpa_detail($operation_rpa_id)
+	{
+		$this->operation_rpa_model->increment_view($operation_rpa_id);
+
+		$data['rsData'] = $this->operation_rpa_model->read($operation_rpa_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->operation_rpa_model->read_pdf($operation_rpa_id);
+		$data['rsDoc'] = $this->operation_rpa_model->read_doc($operation_rpa_id);
+		$data['rsImg'] = $this->operation_rpa_model->read_img($operation_rpa_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/operation_rpa_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_operation_rpa($operation_rpa_file_id)
+	{
+		$this->operation_rpa_model->increment_download_operation_rpa($operation_rpa_file_id);
 	}
 	public function p_sopopip()
 	{

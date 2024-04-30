@@ -274,6 +274,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_paca'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนปฏิบัติการป้องกันการทุจริต</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_psi'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนแม่บทสารสนเทศ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pmda'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนป้องกันและบรรเทาสาธารณะภัยประจำปี</a>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/plan_pbawa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;แผนและควาวก้าวหน้าในการดำเนินงาน<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;และการใช้จ่ายงบประมาณประจำปี</a>
                     </li>
                 </div>
             </ul>
@@ -316,7 +317,8 @@
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_rpobuy'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานจัดซื้อจัดจ้าง</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_sopopip'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ความก้าวหน้าการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุ</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/p_sopopaortsr'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a></li>
-                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_rcaa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดําเนินการ<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ป้องกันการทุจริตประจําปี</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_rcaa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดําเนินการป้องกัน<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การทุจริตประจําปี</a></li>
+                    <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_rpa'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการดำเนินงานประจำปี</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_caar'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การประเมินความเสี่ยงเพื่อป้องกันการทุจริต</a></li>
                     <li><a class="mar-left-3 dropdown-item" href="<?php echo site_url('Pages/operation_mccs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ข้อมูลสถิติเรื่องร้องเรียนการทุจริต<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;และประพฤติมิชอบ</a></li>
                 </div>

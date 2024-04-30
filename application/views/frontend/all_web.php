@@ -106,6 +106,8 @@
                             <a href="<?php echo site_url('Pages/p_sopopip'); ?>" class="font-content-all-web dot-laws">รายงานความก้าวหน้าการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุ</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/p_sopopaortsr'); ?>" class="font-content-all-web dot-laws">รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a><br>
+                            <div class="mt-1"></div>
+                            <a href="<?php echo site_url('Pages/operation_rpa'); ?>" class="font-content-all-web dot-laws">รายงานสรุปผลการจัดซื้อจัดจ้าง<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หรือการจัดหาพัสดุประจำปี</a><br>
                         </div>
                     </div>
 
@@ -258,6 +260,8 @@
                             <a href="<?php echo site_url('Pages/plan_psi'); ?>" class="font-content-all-web">แผนแม่บทสารสนเทศ</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/plan_pmda'); ?>" class="font-content-all-web">แผนป้องกันและบรรเทาสาธารณภัยประจำปี</a><br>
+                            <div class="mt-1"></div>
+                            <a href="<?php echo site_url('Pages/plan_pbawa'); ?>" class="font-content-all-web">แผนและควาวก้าวหน้าในการดำเนินงานและ<br>การใช้จ่ายงบประมาณประจำปี</a><br>
                         </div>
                     </div>
 
