@@ -40,7 +40,7 @@
                     <img src="<?php echo base_url("docs/intranet/t.nav-intranet-btn8.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
                 </a>
                 <a class="navbar-link" data-image-src="<?php echo base_url("docs/intranet/t.nav-intranet-btn-hover9.png"); ?>" href="<?php echo site_url('Intra_it'); ?>">
-                    <img src="<?php echo base_url("docs/intranet/t.nav-intranet-btn9.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
+                    <img src="<?php echo base_url("docs/intranet/t.nav-intranet-btn9v2.png"); ?>" width="100%" height="100%" style="padding-top: 5%;">
                 </a>
             </div>
         </div>

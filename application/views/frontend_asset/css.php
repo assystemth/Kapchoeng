@@ -1419,6 +1419,22 @@
     margin-left: -10px;
   }
 
+  .path1-1 a{
+    color: #FFF;
+  }
+
+  .path2-1 a{
+    color: #002D53;
+  }
+
+  .path2-2 a{
+    color: #002D53;
+  }
+
+  .path2-3 a{
+    color: #002D53;
+  }
+
   .page-center {
     text-align: center;
     display: flex;
@@ -1851,6 +1867,12 @@
     padding-top: 7px;
   }
 
+  .font-pages-content a{
+    color: #000;
+  }
+
+
+
   .font-otop-head {
     color: #000;
     font-family: Kanit;
@@ -2106,6 +2128,10 @@
     line-height: normal;
     margin-top: 6px;
     margin-left: 15px;
+  }
+
+  .span-time-pages-news a{
+    color: #6D758F;
   }
 
   .span-time2 {
