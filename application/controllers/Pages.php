@@ -105,6 +105,7 @@ class Pages extends CI_Controller
 		$this->load->model('operation_aca_model');
 		$this->load->model('lpa_model');
 		$this->load->model('ita_model');
+		$this->load->model('ita_point_model');
 		$this->load->model('operation_procurement_model');
 		$this->load->model('operation_aa_model');
 		$this->load->model('operation_aditn_model');
@@ -3128,6 +3129,48 @@ class Pages extends CI_Controller
 	public function increment_download_ita($ita_file_id)
 	{
 		$this->ita_model->increment_download_ita($ita_file_id);
+	}
+	public function ita_point()
+	{
+		$data['query'] = $this->ita_point_model->ita_point_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/ita_point', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function ita_point_detail($ita_point_id)
+	{
+		$this->ita_point_model->increment_view($ita_point_id);
+
+		$data['rsData'] = $this->ita_point_model->read($ita_point_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsFile'] = $this->ita_point_model->read_file($ita_point_id);
+		$data['rsImg'] = $this->ita_point_model->read_img($ita_point_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/ita_point_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_ita_point($ita_point_file_id)
+	{
+		$this->ita_point_model->increment_download_ita_point($ita_point_file_id);
 	}
 
 	public function ita_year()

@@ -96,7 +96,7 @@
                                     <?php endforeach; ?>
                                 </td>
                                 <td class="limited-text"><?= $complain->complain_topic; ?></td>
-                                <td class="limited-text"><?= $complain->complain_detail; ?></td>
+                                <td class=""><?= $complain->complain_detail; ?></td>
                                 <td class="limited-text"><?= $complain->complain_by; ?></td>
                                 <td class="limited-text"><?= $complain->complain_phone; ?></td>
                                 <td><a href="<?= site_url('Complain_backend/detail/' . $complain->complain_id); ?>"><i class="bi bi-pencil-square fa-lg "></i></a></td>

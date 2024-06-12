@@ -205,6 +205,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Lpa_backend'); ?>">LPA การประเมินประสิทธิภาพ<br>ขององค์กร</a>
                         <a class="collapse-item" href="<?php echo site_url('Ita_backend'); ?>">ITA การประเมินคุณธรรม<br>ของหน่วยงานภาครัฐ</a>
                         <a class="collapse-item" href="<?php echo site_url('Ita_year_backend'); ?>">ITA ประจำปี</a>
+                        <a class="collapse-item" href="<?php echo site_url('Ita_point_backend'); ?>">คะแนนผลการประเมินคุณธรรม<br>และความโปร่งใส (ITA)</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aa_backend'); ?>">กิจการสภา</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_aditn_backend'); ?>">ตรวจสอบภายใน</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_eg_backend'); ?>">ประมวลจริยธรรมสำหรับ<br>เจ้าหน้าที่ของรัฐ</a>
@@ -1163,6 +1164,12 @@
 
                     <li class="hide">
                         <span>ITA ประจำปี</span>
+                    </li>
+                </a>
+                <a href="<?php echo site_url('Ita_point_backend'); ?>" class="link">
+
+                    <li class="hide">
+                        <span>คะแนนผลการประเมินคุณธรรมและความโปร่งใส (ITA)</span>
                     </li>
                 </a>
                 <a href="<?php echo site_url('Operation_aa_backend'); ?>" class="link">

@@ -73,7 +73,7 @@
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/operation_eco'); ?>" class="font-content-all-web">การเสริมสร้างวัฒนธรรมองค์กร</a><br>
                             <div class="mt-1"></div>
-                            <a href="<?php echo site_url('Pages/ita'); ?>" class="font-content-all-web">ITA การประเมินคุณธรรมของหน่วยงานภาครัฐ</a><br>
+                            <a href="<?php echo site_url('Pages/ita_all'); ?>" class="font-content-all-web">ITA การประเมินคุณธรรมของหน่วยงานภาครัฐ</a><br>
                             <div class="mt-1"></div>
                             <a href="<?php echo site_url('Pages/lpa'); ?>" class="font-content-all-web">LPA การประเมินประสิทธิภาพขององค์กร</a><br>
                             <div class="mt-1"></div>
