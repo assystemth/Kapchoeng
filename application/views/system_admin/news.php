@@ -43,7 +43,7 @@
                                    <?php if (!empty($rs->news_img)) : ?>
                                        <img src="<?php echo base_url('docs/img/' . $rs->news_img); ?>" width="150px" height="100px">
                                    <?php else : ?>
-                                       <img src="<?php echo base_url('docs/coverphoto.png'); ?>" width="150px" height="100px">
+                                       <img src="<?php echo base_url('docs/k.logo.png'); ?>" width="150px" height="100px">
                                    <?php endif; ?>
                                     <?php foreach ($rs->file as $pdf) : ?>
                                         <a class="btn btn-info btn-sm mt-1" href="<?php echo base_url('docs/file/' . $pdf->news_file_pdf); ?>" target="_blank">ดูไฟล์เดิม!</a>
