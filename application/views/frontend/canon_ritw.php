@@ -10,7 +10,7 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages-three">
-                <span class="font-pages-head-long">ข้อบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
+                <span class="font-pages-head-long">เทศบัญญัติการติดตั้งระบบบำบัดน้ำเสียในอาคาร</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>

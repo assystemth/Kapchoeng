@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages">
-            <span class="font-pages-head">ข้อบัญญัติตลาด</span>
+            <span class="font-pages-head">เทศบัญญัติตลาด</span>
         </div>
     </div>
     <div class="bg-pages-in ">

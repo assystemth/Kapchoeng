@@ -10,7 +10,7 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages-three">
-                <span class="font-pages-head">ข้อบัญญัติหลักเกณฑ์การคัดมูลฝอย</span>
+                <span class="font-pages-head">เทศบัญญัติหลักเกณฑ์การคัดมูลฝอย</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>

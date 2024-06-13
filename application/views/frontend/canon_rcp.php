@@ -10,7 +10,7 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages-three">
-                <span class="font-pages-head-long">ข้อบัญญัติควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</span>
+                <span class="font-pages-head-long">เทศบัญญัติควบคุมการเลี้ยงหรือปล่อยสุนัขและแมว</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>

@@ -10,7 +10,7 @@
     <div class="container-pages-news">
         <div class="page-center">
             <div class="head-pages">
-                <span class="font-pages-head">ข้อบัญญัติงบประมาณ</span>
+                <span class="font-pages-head">เทศบัญญัติงบประมาณ</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>

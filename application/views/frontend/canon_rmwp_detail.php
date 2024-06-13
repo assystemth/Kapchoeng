@@ -9,7 +9,7 @@
     </div>
     <div class="page-center">
         <div class="head-pages-three">
-            <span class="font-pages-head-long">ข้อบัญญัติการจัดการสิ่งปฏิกูลและมูลฝอย</span>
+            <span class="font-pages-head-long">เทศบัญญัติการจัดการสิ่งปฏิกูลและมูลฝอย</span>
         </div>
     </div>
     <div class="bg-pages-in ">
