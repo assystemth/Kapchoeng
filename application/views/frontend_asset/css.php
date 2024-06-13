@@ -2224,9 +2224,9 @@
   }
 
   .pagination .page-item.active .page-link {
-    background-color: #082555;
+    background-color: #50B1E5;
     /* สีเขียว */
-    border-color: #082555;
+    border-color: #50B1E5;
     color: #fff;
   }
 
@@ -2234,16 +2234,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 51px;
-    height: 51px;
+    width: 45px;
+    height: 45px;
     overflow: hidden;
-    border-radius: 50%;
-    background-image: url('<?php echo base_url("docs/s.pages-next-pre.png"); ?>');
-    background-size: 100% 100%;
+    /* border-radius: 50%; */
+    /* background-image: url('<?php echo base_url("docs/s.pages-next-pre.png"); ?>');
+    background-size: 100% 100%; */
     /* แก้เป็น 100% 100% */
     background-repeat: no-repeat;
     /* เพิ่มบรรทัดนี้ */
     background-position: center;
+    padding-left: 1px;
   }
 
   .pagination .page-link {
@@ -2253,14 +2254,39 @@
     justify-content: center;
     align-items: center;
     color: #000;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     background-size: cover;
   }
 
 
   .pagination .page-link:hover {
     color: #F1F3F7;
-    background-color: #07834D;
+    background-color: #006CA6;
+  }
+
+  /* เปลี่ยนรูปภาพเมื่อ hover */
+  .pages-first:hover {
+    content: url('<?php echo base_url("docs/s.pages-first-hover.png"); ?>');
+  }
+
+  .pages-pre:hover {
+    content: url('<?php echo base_url("docs/s.pages-pre-hover.png"); ?>');
+  }
+
+  .pages-last:hover {
+    content: url('<?php echo base_url("docs/s.pages-last-hover.png"); ?>');
+  }
+
+  .pages-next:hover {
+    content: url('<?php echo base_url("docs/s.pages-next-hover.png"); ?>');
+  }
+
+  .pagination-jump-to-page {
+    margin-left: -8px;
+  }
+
+  .pages-go:hover {
+    content: url('<?php echo base_url("docs/s.pages-go-hover.png"); ?>');
   }
 
 
@@ -2319,7 +2345,7 @@
   }
 
   .margin-top-delete-topic {
-    margin-top: -30px;
+    margin-top: 5px;
   }
 
   .margin-top-delete-q-a {
@@ -3023,4 +3049,6 @@
     font-size: 20px;
     text-shadow: 1px 1px #ccc;
   }
+
+  
 </style>
