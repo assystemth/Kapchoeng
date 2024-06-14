@@ -173,7 +173,7 @@
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_sags_backend'); ?>">คู่มือและ<br>มาตราฐานการให้บริการ</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_gup_backend'); ?>">คู่มือสำหรับประชาชน</a>
                         <a class="collapse-item" href="<?php echo site_url('Pbsv_dss_backend'); ?>">ข้อมูลเชิงสถิติการให้บริการ</a>
-                        <a class="collapse-item" href="<?php echo site_url('Pbsv_open_data_backend'); ?>">ฐานข้อมูลเปิดภาครัฐ<br>(Open Data)</a>
+                        <a class="collapse-item" href="<?php echo site_url('Odata_backend'); ?>">ฐานข้อมูลเปิดภาครัฐ<br>(Open Data)</a>
                     </div>
                 </div>
             </li>
@@ -1041,7 +1041,7 @@
                     </a>
                 </li>
                 <li class="hide">
-                    <a href="<?php echo site_url('Pbsv_open_data_backend'); ?>" class="link">
+                    <a href="<?php echo site_url('Odata_backend'); ?>" class="link">
                         <span>ฐานข้อมูลเปิดภาครัฐ (Open Data)</span>
                     </a>
                 </li>

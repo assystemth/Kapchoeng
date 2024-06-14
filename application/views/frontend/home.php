@@ -65,7 +65,7 @@
                 </a>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <a href="<?php echo site_url('Pages/pbsv_open_data'); ?>" class="zoom-otop">
+                <a href="<?php echo site_url('Pages/odata'); ?>" class="zoom-otop">
                     <img class="mark-logo" src="docs/k.menu-open-data.png">
                 </a>
             </div>
@@ -228,7 +228,7 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_sags'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือและมาตรฐานการให้บริการ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_gup'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;คู่มือสำหรับประชาชน</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_ahs'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;หลักประกันสุขภาพเทศบาลตำบลกาบเชิง</a></li>
-                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pbsv_open_data'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ฐานข้อมูลเปิดภาครัฐ (Open Data) </a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/odata'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ฐานข้อมูลเปิดภาครัฐ (Open Data) </a></li>
                 </div>
                 <div class="dropdown-center">
                     <!-- <li>
