@@ -25,13 +25,20 @@
             </div>
             <br>
             <div class="form-group row">
+                <div class="col-sm-2 control-label">ลิงค์ </div>
+                <div class="col-sm-5">
+                    <input type="text" name="odata_sub_file_doc" class="form-control" required>
+                </div>
+            </div>
+            <br>
+            <!-- <div class="form-group row">
                 <div class="col-sm-2 control-label">ไฟล์เอกสาร</div>
                 <div class="col-sm-5">
                     <input type="file" name="odata_sub_file_doc" class="form-control" accept=".pdf, .docx, .xls, .doc, .xlsx" required>
                     <span class="red-add">( ใส่เฉพาะตัวไฟล์ pdf, doc, docx, xls, xlsx, ppt, pptx)</span>
                 </div>
             </div>
-            <br>
+            <br> -->
             <div class="form-group row">
                 <div class="col-sm-1 control-label"></div>
                 <div class="col-sm-5">
@@ -57,7 +64,7 @@
                     <tr>
                         <th style="width: 3%;">ลำดับ</th>
                         <th style="width: 30%;">ชื่อ</th>
-                        <th style="width: 20%;">ไฟล์</th>
+                        <th style="width: 20%;">ลิงค์</th>
                         <th style="width: 13%;">อัพโหลด</th>
                         <th style="width: 7%;">วันที่</th>
                         <th style="width: 17%;">จัดการ</th>
@@ -69,7 +76,8 @@
                         <tr role="row">
                             <td align="center"><?= $Index; ?></td>
                             <td><?= $rs->odata_sub_file_name; ?></td>
-                            <td><a class="mt-1" href="<?php echo base_url('docs/file/' . $rs->odata_sub_file_doc); ?>" target="_blank"><?= $rs->odata_sub_file_doc; ?></a></td>
+                            <td><a href="<?= $rs->odata_sub_file_doc; ?>"><?= $rs->odata_sub_file_doc; ?></a></td>
+                            <!-- <td><a class="mt-1" href="<?php echo base_url('docs/file/' . $rs->odata_sub_file_doc); ?>" target="_blank"><?= $rs->odata_sub_file_doc; ?></a></td> -->
                             <td><?= $rs->odata_sub_file_by; ?></td>
                             <td><?= date('d/m/Y H:i', strtotime($rs->odata_sub_file_datesave . '+543 years')) ?> น.</td>
                             <td>

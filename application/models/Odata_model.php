@@ -157,45 +157,61 @@ class Odata_model extends CI_Model
         $result = $query->result();
         return $result;
     }
-    public function add_odata_sub_file($odata_sub_file_ref_id, $odata_sub_file_name, $uploaded_filename)
+
+    
+    public function add_odata_sub_file($odata_sub_file_ref_id, $odata_sub_file_name, $odata_sub_file_doc)
     {
-        // เตรียมข้อมูลที่จะบันทึกลงฐานข้อมูล
         $data = array(
             'odata_sub_file_ref_id' => $odata_sub_file_ref_id,
             'odata_sub_file_name' => $odata_sub_file_name,
-            'odata_sub_file_doc' => $uploaded_filename
+            'odata_sub_file_doc' => $odata_sub_file_doc
         );
 
-        // บันทึกข้อมูลลงฐานข้อมูล
         $this->db->insert('tbl_odata_sub_file', $data);
 
-        // อัปเดตพื้นที่ที่ใช้งานปัจจุบันบนเซิร์ฟเวอร์
         $this->space_model->update_server_current();
+        $this->session->set_flashdata('save_success', TRUE);
     }
+    // public function add_odata_sub_file($odata_sub_file_ref_id, $odata_sub_file_name, $uploaded_filename)
+    // {
+    //     // เตรียมข้อมูลที่จะบันทึกลงฐานข้อมูล
+    //     $data = array(
+    //         'odata_sub_file_ref_id' => $odata_sub_file_ref_id,
+    //         'odata_sub_file_name' => $odata_sub_file_name,
+    //         'odata_sub_file_doc' => $uploaded_filename
+    //     );
+
+    //     // บันทึกข้อมูลลงฐานข้อมูล
+    //     $this->db->insert('tbl_odata_sub_file', $data);
+
+    //     // อัปเดตพื้นที่ที่ใช้งานปัจจุบันบนเซิร์ฟเวอร์
+    //     $this->space_model->update_server_current();
+    // }
 
     public function edit_odata_sub_file($odata_sub_file_id, $odata_sub_file_ref_id, $odata_sub_file_name, $odata_sub_file_doc = null)
     {
-        // รับข้อมูลไฟล์เดิมจากฐานข้อมูล
-        $this->db->select('odata_sub_file_doc');
-        $this->db->from('tbl_odata_sub_file');
-        $this->db->where('odata_sub_file_id', $odata_sub_file_id);
-        $old_file = $this->db->get()->row()->odata_sub_file_doc;
+        // // รับข้อมูลไฟล์เดิมจากฐานข้อมูล
+        // $this->db->select('odata_sub_file_doc');
+        // $this->db->from('tbl_odata_sub_file');
+        // $this->db->where('odata_sub_file_id', $odata_sub_file_id);
+        // $old_file = $this->db->get()->row()->odata_sub_file_doc;
 
-        // ถ้ามีไฟล์ใหม่ที่แตกต่างจากไฟล์เดิม ให้ลบไฟล์เก่าออกจากโฟลเดอร์
-        if ($old_file && $odata_sub_file_doc && $old_file != $odata_sub_file_doc) {
-            $this->delete_file_from_server($old_file);
-        }
+        // // ถ้ามีไฟล์ใหม่ที่แตกต่างจากไฟล์เดิม ให้ลบไฟล์เก่าออกจากโฟลเดอร์
+        // if ($old_file && $odata_sub_file_doc && $old_file != $odata_sub_file_doc) {
+        //     $this->delete_file_from_server($old_file);
+        // }
 
         // เตรียมข้อมูลสำหรับอัปเดตในฐานข้อมูล
         $data = array(
             'odata_sub_file_ref_id' => $odata_sub_file_ref_id,
             'odata_sub_file_name' => $odata_sub_file_name,
+            'odata_sub_file_doc' => $odata_sub_file_doc,
         );
 
-        // ถ้ามีการอัพโหลดไฟล์ใหม่ ให้เพิ่มข้อมูลไฟล์ใหม่ในฐานข้อมูล
-        if ($odata_sub_file_doc) {
-            $data['odata_sub_file_doc'] = $odata_sub_file_doc;
-        }
+        // // ถ้ามีการอัพโหลดไฟล์ใหม่ ให้เพิ่มข้อมูลไฟล์ใหม่ในฐานข้อมูล
+        // if ($odata_sub_file_doc) {
+        //     $data['odata_sub_file_doc'] = $odata_sub_file_doc;
+        // }
 
         // อัปเดตข้อมูลในฐานข้อมูล
         $this->db->where('odata_sub_file_id', $odata_sub_file_id);

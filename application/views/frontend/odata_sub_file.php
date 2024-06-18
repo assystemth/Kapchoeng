@@ -17,46 +17,15 @@
         <div class="bg-pages-ita">
             <div class="scrollable-container-news">
                 <span class="font-ita-head"><b><?= $query->odata_sub_name; ?></b></span>
-                <?php foreach ($query_odata_sub_file as $rs) {
-                    // ดึงข้อมูลของไฟล์
-                    $fileInfo = pathinfo($rs->odata_sub_file_doc);
-
-                    // ตรวจสอบลงท้ายของไฟล์
-                    $fileExtension = strtolower($fileInfo['extension']);
-
-                    // กำหนดรูปภาพตามลงท้ายของไฟล์
-                    $iconImage = "";
-                    if ($fileExtension === 'pdf') {
-                        $iconImage = "docs/icon-file-pdf.png";
-                    } elseif ($fileExtension === 'doc' || $fileExtension === 'docx') {
-                        $iconImage = "docs/icon-file-doc.png";
-                    } elseif ($fileExtension === 'xls' || $fileExtension === 'xlsx') {
-                        $iconImage = "docs/icon-file-xls.png";
-                    } elseif ($fileExtension === 'pptx' || $fileExtension === 'ppt') {
-                        $iconImage = "docs/icon-file-ppt.png";
-                    }
-                ?>
+                <?php foreach ($query_odata_sub_file as $rs) { ?>
                     <div class="bg-ita-empty">
                         <div class="row mb-2 mt-3">
                             <div class="col-1"></div>
                             <div class="col-9 ml-5">
-                                <div class="row">
-                                    <div class="col-1 mt-2">
-                                        <img src="<?php echo base_url($iconImage); ?>" width="50px">
-                                    </div>
-                                    <div class="col-11">
-                                        <span class="font-ita-head"><?= $rs->odata_sub_file_name; ?></span>
-                                        <br>
-                                        <span class="font-doc">&nbsp;&nbsp;&nbsp;&nbsp;จำนวนดาวน์โหลด <?= $rs->odata_sub_file_download; ?> ครั้ง</span>
-                                    </div>
-                                </div>
-
-
+                                <span class="font-ita-head"><?= $rs->odata_sub_file_name; ?></span>
                             </div>
                             <div class="col-2">
-                                <a onclick="downloadFile(event, <?= $rs->odata_sub_file_id; ?>)" href="<?= base_url('docs/file/' . $rs->odata_sub_file_doc); ?>" download>
-                                    <img src="<?php echo base_url("docs/s.btn-download.png"); ?>">
-                                </a>
+                                <a class="btn btn-ita-open" target="_blank" href="<?= $rs->odata_sub_file_doc; ?>">เปิด</a>
                                 <script>
                                     function downloadFile(event, odata_sub_file_id) {
                                         // ทำการส่งคำร้องขอ AJAX ไปยัง URL ที่บันทึกการดาวน์โหลดพร้อมกับ ID

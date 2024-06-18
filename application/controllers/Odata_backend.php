@@ -128,43 +128,53 @@ class Odata_backend extends CI_Controller
     }
     public function add_odata_sub_file()
     {
-        // รับค่าไอดีและชื่อจากฟอร์ม
         $odata_sub_file_ref_id = $this->input->post('odata_sub_file_ref_id');
         $odata_sub_file_name = $this->input->post('odata_sub_file_name');
+        $odata_sub_file_doc = $this->input->post('odata_sub_file_doc');
 
-        // ตรวจสอบว่ามีไฟล์ที่อัพโหลดมาหรือไม่
-        if (!empty($_FILES['odata_sub_file_doc']['name'])) {
-            // ตั้งค่า upload library
-            $config['upload_path'] = './docs/file'; // เปลี่ยนเป็นเส้นทางที่เหมาะสมของคุณ
-            $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx'; // ประเภทไฟล์ที่อนุญาต
+        $this->odata_model->add_odata_sub_file($odata_sub_file_ref_id, $odata_sub_file_name,  $odata_sub_file_doc);
 
-            // โหลด library upload ด้วย config ที่กำหนด
-            $this->upload->initialize($config);
-
-            // ทำการอัพโหลดไฟล์
-            if ($this->upload->do_upload('odata_sub_file_doc')) {
-                // ถ้าอัพโหลดสำเร็จ
-                $data = $this->upload->data();
-                $uploaded_filename = $data['file_name'];
-
-                // เรียกใช้ฟังก์ชัน Model เพื่อบันทึกข้อมูลไฟล์
-                $this->odata_model->add_odata_sub_file($odata_sub_file_ref_id, $odata_sub_file_name, $uploaded_filename);
-
-                // ตั้งค่า flashdata เพื่อแจ้งเตือนว่าการบันทึกสำเร็จ
-                $this->session->set_flashdata('save_success', TRUE);
-            } else {
-                // ถ้าอัพโหลดล้มเหลว
-                $error = $this->upload->display_errors();
-                $this->session->set_flashdata('upload_error', $error);
-            }
-        } else {
-            // ถ้าไม่มีไฟล์ที่อัพโหลด
-            $this->session->set_flashdata('upload_error', 'No file selected for upload.');
-        }
-
-        // เปลี่ยนเส้นทางกลับไปที่หน้าที่กำหนด
-        redirect('odata_backend/index_odata_sub_file/' . $odata_sub_file_ref_id);
+        redirect('odata_backend/index_odata_sub/' . $odata_sub_file_ref_id);
     }
+    // public function add_odata_sub_file()
+    // {
+    //     // รับค่าไอดีและชื่อจากฟอร์ม
+    //     $odata_sub_file_ref_id = $this->input->post('odata_sub_file_ref_id');
+    //     $odata_sub_file_name = $this->input->post('odata_sub_file_name');
+
+    //     // ตรวจสอบว่ามีไฟล์ที่อัพโหลดมาหรือไม่
+    //     if (!empty($_FILES['odata_sub_file_doc']['name'])) {
+    //         // ตั้งค่า upload library
+    //         $config['upload_path'] = './docs/file'; // เปลี่ยนเป็นเส้นทางที่เหมาะสมของคุณ
+    //         $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx'; // ประเภทไฟล์ที่อนุญาต
+
+    //         // โหลด library upload ด้วย config ที่กำหนด
+    //         $this->upload->initialize($config);
+
+    //         // ทำการอัพโหลดไฟล์
+    //         if ($this->upload->do_upload('odata_sub_file_doc')) {
+    //             // ถ้าอัพโหลดสำเร็จ
+    //             $data = $this->upload->data();
+    //             $uploaded_filename = $data['file_name'];
+
+    //             // เรียกใช้ฟังก์ชัน Model เพื่อบันทึกข้อมูลไฟล์
+    //             $this->odata_model->add_odata_sub_file($odata_sub_file_ref_id, $odata_sub_file_name, $uploaded_filename);
+
+    //             // ตั้งค่า flashdata เพื่อแจ้งเตือนว่าการบันทึกสำเร็จ
+    //             $this->session->set_flashdata('save_success', TRUE);
+    //         } else {
+    //             // ถ้าอัพโหลดล้มเหลว
+    //             $error = $this->upload->display_errors();
+    //             $this->session->set_flashdata('upload_error', $error);
+    //         }
+    //     } else {
+    //         // ถ้าไม่มีไฟล์ที่อัพโหลด
+    //         $this->session->set_flashdata('upload_error', 'No file selected for upload.');
+    //     }
+
+    //     // เปลี่ยนเส้นทางกลับไปที่หน้าที่กำหนด
+    //     redirect('odata_backend/index_odata_sub_file/' . $odata_sub_file_ref_id);
+    // }
     public function editing_odata_sub_file($odata_sub_file_id)
     {
         $data['rsedit'] = $this->odata_model->read_odata_sub_file($odata_sub_file_id);
@@ -187,34 +197,35 @@ class Odata_backend extends CI_Controller
         $odata_sub_file_id = $this->input->post('odata_sub_file_id');
         $odata_sub_file_ref_id = $this->input->post('odata_sub_file_ref_id');
         $odata_sub_file_name = $this->input->post('odata_sub_file_name');
+        $odata_sub_file_doc = $this->input->post('odata_sub_file_doc');
 
-        $uploaded_filename = null;
+        // $uploaded_filename = null;
 
-        // ตรวจสอบว่ามีการอัพโหลดไฟล์ใหม่หรือไม่
-        if (!empty($_FILES['odata_sub_file_doc']['name'])) {
-            // ตั้งค่า upload library
-            $config['upload_path'] = './docs/file';
-            $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx';
+        // // ตรวจสอบว่ามีการอัพโหลดไฟล์ใหม่หรือไม่
+        // if (!empty($_FILES['odata_sub_file_doc']['name'])) {
+        //     // ตั้งค่า upload library
+        //     $config['upload_path'] = './docs/file';
+        //     $config['allowed_types'] = 'pdf|doc|docx|xls|xlsx';
 
-            // โหลด library upload ด้วย config ที่กำหนด
-            $this->upload->initialize($config);
+        //     // โหลด library upload ด้วย config ที่กำหนด
+        //     $this->upload->initialize($config);
 
-            // ทำการอัปโหลดไฟล์
-            if ($this->upload->do_upload('odata_sub_file_doc')) {
-                // ถ้าอัพโหลดสำเร็จ
-                $data = $this->upload->data();
-                $uploaded_filename = $data['file_name'];
-            } else {
-                // ถ้าอัพโหลดล้มเหลว
-                $error = $this->upload->display_errors();
-                $this->session->set_flashdata('upload_error', $error);
-                redirect('odata_backend/index_odata_sub_file/' . $odata_sub_file_ref_id);
-                return;
-            }
-        }
+        //     // ทำการอัปโหลดไฟล์
+        //     if ($this->upload->do_upload('odata_sub_file_doc')) {
+        //         // ถ้าอัพโหลดสำเร็จ
+        //         $data = $this->upload->data();
+        //         $uploaded_filename = $data['file_name'];
+        //     } else {
+        //         // ถ้าอัพโหลดล้มเหลว
+        //         $error = $this->upload->display_errors();
+        //         $this->session->set_flashdata('upload_error', $error);
+        //         redirect('odata_backend/index_odata_sub_file/' . $odata_sub_file_ref_id);
+        //         return;
+        //     }
+        // }
 
         // เรียกใช้ฟังก์ชัน Model เพื่ออัปเดตข้อมูล
-        $this->odata_model->edit_odata_sub_file($odata_sub_file_id, $odata_sub_file_ref_id, $odata_sub_file_name, $uploaded_filename);
+        $this->odata_model->edit_odata_sub_file($odata_sub_file_id, $odata_sub_file_ref_id, $odata_sub_file_name, $odata_sub_file_doc);
 
         // เปลี่ยนเส้นทางกลับไปที่หน้าที่กำหนด
         redirect('odata_backend/index_odata_sub_file/' . $odata_sub_file_ref_id);

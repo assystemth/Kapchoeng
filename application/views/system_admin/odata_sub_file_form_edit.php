@@ -12,6 +12,13 @@
                 </div>
                 <br>
                 <div class="form-group row">
+                    <div class="col-sm-3 control-label">ลิงค์ </div>
+                    <div class="col-sm-7">
+                        <input type="text" name="odata_sub_file_doc" class="form-control" value="<?= $rsedit->odata_sub_file_doc; ?>">
+                    </div>
+                </div>
+                <br>
+                <!-- <div class="form-group row">
                     <div class="col-sm-3 control-label">ไฟล์เอกสาร</div>
                     <div class="col-sm-7">
                         <?php if (!empty($rsedit->odata_sub_file_name)) { ?>
@@ -21,7 +28,7 @@
                     <span class="red-add">( ใส่เฉพาะตัวไฟล์ pdf, doc, docx, xls, xlsx, ppt, pptx)</span>
                     </div>
                 </div>
-                <br>
+                <br> -->
                 <input type="hidden" name="odata_sub_file_ref_id" value="<?= $rsedit->odata_sub_file_ref_id; ?>" class="form-control">
                 <input type="hidden" name="odata_sub_file_id" value="<?= $rsedit->odata_sub_file_id; ?>" class="form-control">
                 <div class="form-group row">
