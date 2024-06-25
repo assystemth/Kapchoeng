@@ -13,7 +13,8 @@
         </div>
     </div>
     <div class="bg-pages-in ">
-    <?php foreach ($q2567 as $egp) { ?>
+        <div class="scrollable-container-news">
+        <?php foreach ($q2567 as $egp) { ?>
             <div class="pages-select-e-gp underline">
                 <div class="row">
                     <div class="col-2" style="padding-left: 30px;">
@@ -278,5 +279,6 @@
                 </div>
             </div>
         <?php } ?>
+        </div>
     </div>
 </div>

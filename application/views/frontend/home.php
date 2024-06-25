@@ -782,7 +782,7 @@
                 <a href="https://process3.gprocurement.go.th/egp2procmainWeb/jsp/procsearch.sch?servlet=gojsp&proc_id=ShowHTMLFile&processFlows=Procure&projectId=<?= $egp->project_id; ?>&templateType=W2&temp_Announ=A&temp_itemNo=0&seqNo=1" target="_blank">
                         <div class="row">
                             <div class="col-10">
-                                <span class="text-news"><img src="docs/k.logo.png" width="30px" height="34px">&nbsp;&nbsp;
+                                <span class="text-news"><img src="docs/e-gp.png" width="30px" height="34px">&nbsp;&nbsp;
                                     <?= strip_tags($egp->project_name); ?>
                                 </span>
                             </div>
