@@ -347,7 +347,8 @@
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/km'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;Knowledge Management :
                             KM<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; การจัดการความรู้ของท้องถิ่น</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/loadform'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;ดาวน์โหลดแบบฟอร์ม</a></li>
-
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/pppw'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;พรบ./พรก ที่ใช้การปฏิบัติงาน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/laws_topic'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;กฏหมายที่เกี่ยวข้อง</a></li>
                 </div>
             </ul>
         </div>

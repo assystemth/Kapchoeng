@@ -233,6 +233,8 @@
                         <a class="collapse-item" href="<?php echo site_url('Guide_work_backend'); ?>">คู่มือการปฏิบัติงาน</a>
                         <a class="collapse-item" href="<?php echo site_url('Km_backend'); ?>">การจัดการความรู้ท้องถิ่น KM</a>
                         <a class="collapse-item" href="<?php echo site_url('Loadform_backend'); ?>">ดาวน์โหลดแบบฟอร์ม</a>
+                        <a class="collapse-item" href="<?php echo site_url('Pppw_backend'); ?>">พรบ./พรก ที่ใช้การปฏิบัติงาน</a>
+                        <a class="collapse-item" href="<?php echo site_url('Laws_backend'); ?>">กฏหมายที่เกี่ยวข้อง</a>
                     </div>
                 </div>
             </li>

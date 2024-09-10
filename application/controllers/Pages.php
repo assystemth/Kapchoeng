@@ -86,6 +86,7 @@ class Pages extends CI_Controller
 		$this->load->model('operation_caar_model');
 		$this->load->model('operation_mccs_model');
 		$this->load->model('operation_rsas_model');
+		$this->load->model('pppw_model');
 		$this->load->model('p_sopopip_model');
 		$this->load->model('p_sopopaortsr_model');
 		$this->load->model('operation_rpa_model');
@@ -2338,6 +2339,49 @@ class Pages extends CI_Controller
 	public function increment_download_operation_rsas($operation_rsas_file_id)
 	{
 		$this->operation_rsas_model->increment_download_operation_rsas($operation_rsas_file_id);
+	}
+	public function pppw()
+	{
+		$data['query'] = $this->pppw_model->pppw_frontend();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pppw', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function pppw_detail($pppw_id)
+	{
+		$this->pppw_model->increment_view($pppw_id);
+
+		$data['rsData'] = $this->pppw_model->read($pppw_id);
+
+		// เพิ่มเงื่อนไขเพื่อตรวจสอบว่ามีข้อมูลหรือไม่
+		if (!$data['rsData']) {
+			$this->load->view('frontend_templat/header');
+			$this->load->view('frontend_asset/css');
+			$this->load->view('frontend_templat/navbar');
+			$this->load->view('frontend/empty_detail_pages');
+			$this->load->view('frontend_asset/js');
+			$this->load->view('frontend_templat/footer');
+			return; // ให้จบการทำงานที่นี่
+		}
+
+		$data['rsPdf'] = $this->pppw_model->read_pdf($pppw_id);
+		$data['rsDoc'] = $this->pppw_model->read_doc($pppw_id);
+		$data['rsImg'] = $this->pppw_model->read_img($pppw_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/pppw_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+	public function increment_download_pppw($pppw_file_id)
+	{
+		$this->pppw_model->increment_download_pppw($pppw_file_id);
 	}
 	public function p_sopopaortsr()
 	{
