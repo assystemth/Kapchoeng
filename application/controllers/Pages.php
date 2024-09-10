@@ -129,6 +129,7 @@ class Pages extends CI_Controller
 		$this->load->model('laws_act_model');
 		$this->load->model('laws_ec_model');
 		$this->load->model('laws_la_model');
+		$this->load->model('laws_model');
 		$this->load->model('form_esv_model');
 		$this->load->model('esv_ods_model');
 		$this->load->model('ita_year_model');
@@ -3344,7 +3345,8 @@ class Pages extends CI_Controller
 		$this->load->view('frontend/ita_year_detail', $data);
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
-	}	public function operation_aditn()
+	}
+	public function operation_aditn()
 	{
 		$data['query'] = $this->operation_aditn_model->operation_aditn_frontend();
 
@@ -4085,6 +4087,32 @@ class Pages extends CI_Controller
 		$this->load->view('frontend_asset/js');
 		$this->load->view('frontend_templat/footer');
 	}
+
+	public function laws_topic()
+	{
+		$data['query'] = $this->laws_model->list_all();
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/laws_topic', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+
+	public function laws_detail($laws_topic_id)
+	{
+		$data['query'] = $this->laws_model->list_all_laws($laws_topic_id);
+		$data['query_topic'] = $this->laws_model->read($laws_topic_id);
+
+		$this->load->view('frontend_templat/header');
+		$this->load->view('frontend_asset/css');
+		$this->load->view('frontend_templat/navbar');
+		$this->load->view('frontend/laws_detail', $data);
+		$this->load->view('frontend_asset/js');
+		$this->load->view('frontend_templat/footer');
+	}
+
 
 	public function laws_all()
 	{

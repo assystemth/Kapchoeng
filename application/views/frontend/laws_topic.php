@@ -1,3 +1,4 @@
+
 <div class="bg-pages">
     <div class="row pad-path">
         <div class="path1-1">
@@ -9,14 +10,15 @@
     </div>
     <div class="container-pages-news">
         <div class="page-center">
-            <div class="head-pages-three">
-                <span class="font-pages-head-long">พรบ./พรก ที่ใช้การปฏิบัติงาน</span>
+            <div class="head-pages-two">
+                <span class="font-pages-head-long">กฏหมายที่เกี่ยวข้อง</span>
             </div>
         </div>
         <div style="padding-top: 80px;"></div>
+    <!-- <div class="container-pages-news"> -->
         <?php
         $count = count($query);
-        $itemsPerPage = 10; // จำนวนรายการต่อหน้า
+        $itemsPerPage = 27; // จำนวนรายการต่อหน้า
         $totalPages = ceil($count / $itemsPerPage);
 
         $currentPage = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -34,30 +36,26 @@
         for ($i = $startIndex; $i <= $endIndex; $i++) {
             $rs = $query[$i];
         ?>
-            <div class="pages-select-pdf underline">
+           <div class="pages-select-pdf underline">
                 <div class="row">
-                    <div class="col-1 style-col-img">
-                        <a href="<?php echo site_url('Pages/pppw_detail/' . $rs->pppw_id); ?>">
-                            <?php if (!empty($rs->pppw_img)) : ?>
-                                <img class="border-radius24" src="<?php echo base_url('docs/img/' . $rs->pppw_img); ?>" width="94px" height="63px">
-                            <?php else : ?>
-                                <img class="border-radius24" src="<?php echo base_url('docs/logo.png'); ?>" width="94px" height="63px">
-                            <?php endif; ?>
+                    <div class="col-1" style="margin-left: 10px;">
+                        <a href="<?php echo site_url('Pages/laws_detail/' . $rs->laws_topic_id); ?>">
+                            <img class="border-radius24" src="<?php echo base_url('docs/logo.png'); ?>" width="50px" height="50px">
                         </a>
                     </div>
                     <div class="col-9 font-pages-content">
-                        <a href="<?php echo site_url('Pages/pppw_detail/' . $rs->pppw_id); ?>">
-                            <span class="one-line-ellipsis"><?= $rs->pppw_name; ?></span>
+                        <a href="<?php echo site_url('Pages/laws_detail/' . $rs->laws_topic_id); ?>">
+                            <span class="one-line-ellipsis"><?= $rs->laws_topic_topic; ?></span>
                         </a>
                     </div>
-                    <div class="col-2 span-time-pages-news">
-                        <a href="<?php echo site_url('Pages/pppw_detail/' . $rs->pppw_id); ?>">
-                            <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="currentColor" class="bi bi-calendar-minus-fill" viewBox="0 0 16 16">
+                    <!-- <div class="col-2 span-time-pages-news">
+                        <a href="<?php echo site_url('Pages/laws_detail/' . $rs->laws_topic_id); ?>">
+                            <span><svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" fill="currentColor" class="bi bi-calendar-minus-fill" viewBox="0 0 16 16">
                                     <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM6 10h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z" />
                                 </svg>
                                 <?php
                                 // ในการใช้งาน setThaiMonth
-                                $date = new DateTime($rs->pppw_date);
+                                $date = new DateTime($rs->laws_topic_date);
                                 $day_th = $date->format('d');
                                 $month_th = setThaiMonthAbbreviation($date->format('F')); // เรียกใช้ setThaiMonth สำหรับชื่อเดือน
                                 $year_th = $date->format('Y') + 543; // เพิ่มขึ้น 543 ปี
@@ -66,7 +64,7 @@
                                 ?>
                             </span>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         <?php } ?>
@@ -86,7 +84,7 @@
 
                     <!-- ปุ่ม Previous -->
                     <?php if ($currentPage > 1) : ?>
-                        <li class="page-item" style="width: 55px; margin-left: 12px;">
+                        <li class="page-item" style="width: 55px; margin-left: -12px;">
                             <a class="" href="?page=<?php echo $currentPage - 1; ?>" aria-label="Previous">
                                 <img src="<?php echo base_url('docs/s.pages-pre.png'); ?>" alt="Previous" class="pages-pre">
                                 <span aria-hidden="true"></span>
@@ -119,7 +117,7 @@
                             </li>
                             <li class="page-item pagination-item disabled">
                                 <span class="page-link">...</span>
-                            </li>&nbsp;
+                            </li>
                         <?php endif; ?>
                     <?php
                     }
@@ -156,7 +154,7 @@
                     ?>
                     <!-- ปุ่ม Next -->
                     <?php if ($currentPage < $totalPages) : ?>
-                        <li class="page-item" style="width: 55px; margin-left: 10px;">
+                        <li class="page-item" style="width: 55px; margin-left: -10px;">
                             <a class="" href="?page=<?php echo $currentPage + 1; ?>" aria-label="Next">
                                 <img src="<?php echo base_url('docs/s.pages-next.png'); ?>" alt="Next" class="pages-next">
                                 <span aria-hidden="true"></span>
@@ -179,14 +177,12 @@
 
         <!-- ฟอร์มกรอกหมายเลขหน้า -->
         <div class="pagination-jump-to-page d-flex justify-content-end">
-            <form action="" method="GET" class="d-flex">
+                            <form action="" method="GET" class="d-flex" id="pageForm" onsubmit="return validatePageInput();">
+
                 <label style="font-size: 24px;">ไปหน้าที่&nbsp;&nbsp;</label>
-                <input type="number" name="page" min="1" max="<?php echo $totalPages; ?>" value="<?php echo $currentPage; ?>" class="form-control" style="width: 60px; margin-right: 10px;">
+                <input type="number" name="page" min="1" max="<?php echo $totalPages; ?>" value="<?php echo $currentPage; ?>" class="form-control" style="width: 60px; margin-right: 10px;" id="pageInput">
                 <input type="image" src="<?php echo base_url('docs/s.pages-go.png'); ?>" alt="Go" class="pages-go" style="width: 40px; height: 40px;">
             </form>
         </div>
-        <div class="margin-top-delete-topic d-flex justify-content-end">
-            <a href="<?php echo site_url('Home'); ?>"><img src="<?php echo base_url("docs/k.btn-back.png"); ?>"></a>
-        </div>
-    </div>
+    <!-- </div> -->
 </div>
