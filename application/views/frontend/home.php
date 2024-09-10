@@ -294,6 +294,7 @@
                             <div class="dropdown-item mb-3 mt-5"><img class="mx-5" src="docs/navmid-head6.png"></div>
                         </li> -->
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_reauf'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานติดตามและประเมินผลแผน</a></li>
+                    <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_rsas'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;รายงานผลการประเมินตนตาม<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การดำเนินงานและการให้บริการ</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_aca'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การปฏิบัติการป้องกันการทุจริต</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_mcc'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การจัดการเรื่องร้องเรียนการทุจริต</a></li>
                     <li><a class="mar-left-9 dropdown-item" href="<?php echo site_url('Pages/operation_sap'); ?>"><img src="docs/k.item-img-navmid.png">&nbsp;&nbsp;การปฏิบัติงานและการให้บริการ</a></li>
@@ -777,9 +778,9 @@
             </div>
         </div>
         <div id="tab2" class="tab-content">
-        <?php foreach ($qEgp as $egp) { ?>
+            <?php foreach ($qEgp as $egp) { ?>
                 <div class="content-news-detail">
-                <a href="https://process3.gprocurement.go.th/egp2procmainWeb/jsp/procsearch.sch?servlet=gojsp&proc_id=ShowHTMLFile&processFlows=Procure&projectId=<?= $egp->project_id; ?>&templateType=W2&temp_Announ=A&temp_itemNo=0&seqNo=1" target="_blank">
+                    <a href="https://process3.gprocurement.go.th/egp2procmainWeb/jsp/procsearch.sch?servlet=gojsp&proc_id=ShowHTMLFile&processFlows=Procure&projectId=<?= $egp->project_id; ?>&templateType=W2&temp_Announ=A&temp_itemNo=0&seqNo=1" target="_blank">
                         <div class="row">
                             <div class="col-10">
                                 <span class="text-news"><img src="docs/e-gp.png" width="30px" height="34px">&nbsp;&nbsp;
@@ -791,7 +792,7 @@
                                     <div class="col-10">
                                         <div class="d-flex justify-content-end ">
                                             <span class="text-news-time">
-                                            <?php
+                                                <?php
                                                 // สมมติว่าค่าที่ได้รับมาจากตัวแปร $rs['doc_date'] อยู่ในรูปแบบ "10 ม.ค. 67"
                                                 $dateStr = $egp->transaction_date;
 
@@ -834,7 +835,7 @@
                                         </div>
                                     </div>
                                     <div class="col-2" style="margin-top: -28px; margin-left: -32px;">
-                                    <?php
+                                        <?php
                                         // วันที่ของข่าว
                                         $contract_contract_date = new DateTime($egp->contract_contract_date);
 

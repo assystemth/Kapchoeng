@@ -215,6 +215,7 @@
                         <!-- <a class="collapse-item" href="<?php echo site_url('Operation_rpa_backend'); ?>">รายงานผลการดำเนินงาน<br>ประจำปี</a> -->
                         <a class="collapse-item" href="<?php echo site_url('Operation_caar_backend'); ?>">การประเมินความเสี่ยง<br>เพื่อป้องกันการทุจริต</a>
                         <a class="collapse-item" href="<?php echo site_url('Operation_mccs_backend'); ?>">ข้อมูลสถิติเรื่องร้องเรียน<br>การทุจริตและประพฤติมิชอบ</a>
+                        <a class="collapse-item" href="<?php echo site_url('Operation_rsas_backend'); ?>">รายงานผลการประเมินตนตาม<br>การดำเนินงานและการให้บริการ</a>
                     </div>
                 </div>
             </li>
